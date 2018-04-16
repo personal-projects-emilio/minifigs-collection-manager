@@ -1,0 +1,18 @@
+.header {
+	text-align: center;
+}
+
+@font-face {
+	font-family:"STARWARS";
+	src:url("../../assets/fonts/starWars/STARWARS.eot?") format("eot"),
+		url("../../assets/fonts/starWars/STARWARS.woff") format("woff"),
+		url("../../assets/fonts/starWars/STARWARS.ttf") format("truetype"),
+		url("../../assets/fonts/starWars/STARWARS.svg#STARWARS") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+.title{
+	font-family: 'STARWARS';
+	text-transform: uppercase;
+}
