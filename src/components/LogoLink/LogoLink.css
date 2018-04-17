@@ -1,0 +1,9 @@
+.LogoLink img {
+	height: 2.5rem;
+}
+
+@media (max-width: 500px){
+		.LogoLink img{
+		height: 2rem;
+	}
+}
