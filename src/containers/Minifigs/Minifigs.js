@@ -1,33 +1,47 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-import axios from '../../axios';
 import classes from './Minifigs.css';
 import Minifig from '../../components/Minifig/Minifig';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import * as actions from '../../store/actions/index';
+
 
 class Minifigs extends Component {
 	// We'll get a complet list in a database with redux and axios later on
 	state = {
-		minifigs: null,
-		error: false
+		numberPerPage: 100,
+		activePage: 1,
+		numberOfPages: null
 	}
 
+	//Initiate the minifigs
 	componentDidMount () {
-		axios.get('/minifigs.json')
-			.then(response => {
-			this.setState({minifigs: response.data, error: false});
-			})
-			.catch(error =>{
-				this.setState({error: true });
-			})
+		this.props.onInitMinifigs();
+	}
+
+	handlePageChange(pageNumber) {
+	    this.setState({activePage: pageNumber});
+	}
+
+	handleNumberOfPages(numberOfPages){
+		this.setState({numberOfPages: numberOfPages});
 	}
 
 	render () {
-		let minifigs = this.state.error ? <p>Minifigs can't be loaded!</p> : <Spinner />;
+		// While the minifigs aren't loaded we show a spinner, if we have an error we show a message
+		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <Spinner />;
 
-		if(this.state.minifigs){
-			minifigs = Object.keys(this.state.minifigs).map(minifig => {
-				const minifigInfo = {...this.state.minifigs[minifig]};
+		// If we hve minifigs we display them
+		if(this.props.minifigs){
+			const numberOfPages = Math.ceil((Object.keys(this.props.minifigs).length) / this.state.numberPerPage);
+			handleNumberOfPages(numberOfPages);
+			const begin = ((this.state.activePage-1) * this.state.numberPerPage);
+			const end = begin + this.state.numberPerPage;
+			const minifigsList = Object.keys(this.props.minifigs).slice(begin, end);
+
+			minifigs = minifigsList.map(minifig => {
+				const minifigInfo = {...this.props.minifigs[minifig]};
 					return (
 						<Minifig
 							key={minifig}
@@ -47,6 +61,19 @@ class Minifigs extends Component {
 	}
 }
 
-export default Minifigs;
+const mapStateToProps = state => {
+	return {
+		minifigs: state.minifigs,
+		error: state.error
+	}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		onInitMinifigs: () => dispatch(actions.initMinifigs())
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Minifigs);
 
 

@@ -1,49 +1,26 @@
-import * as actionTypes from './actions';
+import * as actionTypes from './actions/actionTypes';
+import {updateObject} from '../shared/utility';
 
 const initialState = {
-	minifigs: [
-		{
-			ref: 'SW001a',
-			name: 'Battle Droid Tan with Back Plate',
-			possesed: false
-		},
-		{
-			ref: 'SW001b',
-			name: 'Battle Droid Tan without Back Plate',
-			possesed: true
-		},
-		{
-			ref: 'SW001c',
-			name: 'Battle Droid Tan with 1 straight Arm',
-			possesed: true
-		},
-		{
-			ref: 'SW001d',
-			name: 'Battle Droid Tan with 2 straight arms',
-			possesed: true
-		},
-		{
-			ref: 'SW002',
-			name: 'Boba Fett - Classic Grays',
-			possesed: true
-		},
-		{
-			ref: 'SW002a',
-			name: 'Boba Fett - Bluish Grays',
-			possesed: true
-		}
-	]
+	minifigs: null,
+	error: false
+}
+
+const setMinifigs = (state, action) => {
+	return updateObject(state, {
+		minifigs: action.minifigs,
+		error: false
+	});
+}
+
+const setMinifigsFailed = (state, action) => {
+	return updateObject(state, {error: true} );
 }
 
 const reducer = (state = initialState, action) => {
-	switch(action.type){
-		case actionTypes.CHANGE_POSSESSED:
-		return {
-			...state,
-			minifigs: {
-				...state.minifigs
-			}
-		}
+	switch( action.type ) {
+		case actionTypes.SET_MINIFIGS: return setMinifigs(state, action);
+		case actionTypes.SET_MINIFIGS_FAILED: return setMinifigsFailed(state, action);
 		default: return state;
 	}
 };

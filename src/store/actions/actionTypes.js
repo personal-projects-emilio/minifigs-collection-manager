@@ -1,0 +1,2 @@
+export const SET_MINIFIGS = 'SET_MINIFIGS';
+export const SET_MINIFIGS_FAILED = 'SET_MINIFIGS_FAILED';

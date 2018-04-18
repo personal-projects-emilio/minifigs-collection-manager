@@ -1,0 +1,3 @@
+export {
+	initMinifigs
+} from './minifigs';
