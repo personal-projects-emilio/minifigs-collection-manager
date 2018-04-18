@@ -1,58 +1,47 @@
 import React, {Component} from 'react';
 
+import axios from '../../axios';
 import classes from './Minifigs.css';
 import Minifig from '../../components/Minifig/Minifig';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 class Minifigs extends Component {
 	// We'll get a complet list in a database with redux and axios later on
 	state = {
-		minifigs: [
-			{
-				ref: 'SW001a',
-				name: 'Battle Droid Tan with Back Plate',
-				possesed: false
-			},
-			{
-				ref: 'SW001b',
-				name: 'Battle Droid Tan without Back Plate',
-				possesed: true
-			},
-			{
-				ref: 'SW001c',
-				name: 'Battle Droid Tan with 1 straight Arm',
-				possesed: true
-			},
-			{
-				ref: 'SW001d',
-				name: 'Battle Droid Tan with 2 straight arms',
-				possesed: true
-			},
-			{
-				ref: 'SW002',
-				name: 'Boba Fett - Classic Grays',
-				possesed: true
-			},
-			{
-				ref: 'SW002a',
-				name: 'Boba Fett - Bluish Grays',
-				possesed: true
-			}
-		]
-		/*bricklink and brickset links will be add with the ref in a modele url,
-		the same for the picture from bricklink so we don't need much more for the moment.*/
+		minifigs: null,
+		error: false
+	}
+
+	componentDidMount () {
+		axios.get('/minifigs.json')
+			.then(response => {
+			this.setState({minifigs: response.data, error: false});
+			})
+			.catch(error =>{
+				this.setState({error: true });
+			})
 	}
 
 	render () {
+		let minifigs = this.state.error ? <p>Minifigs can't be loaded!</p> : <Spinner />;
+
+		if(this.state.minifigs){
+			minifigs = Object.keys(this.state.minifigs).map(minifig => {
+				const minifigInfo = {...this.state.minifigs[minifig]};
+					return (
+						<Minifig
+							key={minifig}
+							reference={minifig}
+							name={minifigInfo.name}
+							possesed={minifigInfo.possesed}
+						/>
+					);
+			})
+		}
+
 		return (
 			<div className={classes.Minifigs}>
-				{this.state.minifigs.map(minifig => (
-					<Minifig 
-						key={minifig.ref}
-						reference={minifig.ref}
-						name={minifig.name}
-						possesed={minifig.possesed}
-					/>
-				))}
+				{minifigs}
 			</div>
 		);
 	}
