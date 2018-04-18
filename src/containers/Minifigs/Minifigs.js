@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Pagination from "react-js-pagination";
+import Aux from '../../hoc/Auxilliary/Auxilliary'
 import classes from './Minifigs.css';
 import Minifig from '../../components/Minifig/Minifig';
 import Spinner from '../../components/UI/Spinner/Spinner';
@@ -20,22 +22,17 @@ class Minifigs extends Component {
 		this.props.onInitMinifigs();
 	}
 
-	handlePageChange(pageNumber) {
+	handlePageChange = (pageNumber) => {
 	    this.setState({activePage: pageNumber});
-	}
-
-	handleNumberOfPages(numberOfPages){
-		this.setState({numberOfPages: numberOfPages});
 	}
 
 	render () {
 		// While the minifigs aren't loaded we show a spinner, if we have an error we show a message
 		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <Spinner />;
-
-		// If we hve minifigs we display them
+		let pagination = null;
+		// If we have minifigs we display them and manage the pagination
 		if(this.props.minifigs){
-			const numberOfPages = Math.ceil((Object.keys(this.props.minifigs).length) / this.state.numberPerPage);
-			handleNumberOfPages(numberOfPages);
+			const totalMinifigs = Object.keys(this.props.minifigs).length;
 			const begin = ((this.state.activePage-1) * this.state.numberPerPage);
 			const end = begin + this.state.numberPerPage;
 			const minifigsList = Object.keys(this.props.minifigs).slice(begin, end);
@@ -49,14 +46,27 @@ class Minifigs extends Component {
 							name={minifigInfo.name}
 							possesed={minifigInfo.possesed}
 						/>
-					);
+					)
 			})
+			pagination = <Pagination
+				hideDisabled
+		    	activePage={this.state.activePage}
+		    	itemsCountPerPage={this.state.numberPerPage}
+		    	totalItemsCount={totalMinifigs}
+		    	onChange={this.handlePageChange}
+			/>
+
 		}
 
 		return (
-			<div className={classes.Minifigs}>
-				{minifigs}
-			</div>
+			<Aux>
+				<div className={classes.Minifigs}>
+					{minifigs}
+				</div>
+				<div className={classes.Pagination}>
+					{pagination}
+				</div>
+			</Aux>
 		);
 	}
 }
