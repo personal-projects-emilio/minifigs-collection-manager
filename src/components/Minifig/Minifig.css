@@ -1,10 +1,13 @@
 .Minifig {
-	width: 17%;
+	width: 13%;
 	padding: 0.5rem;
 	border: 1px solid #ccc;
-	margin: 10px;
+	margin: 5px 0.5%;
 	box-sizing: border-box;
 	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
 }
 
 .MinifigPicture {
@@ -21,14 +24,14 @@
 
 @media (max-width:900px){
 	.Minifig{
-		width: 30%;
+		width: 17%;
 		margin: 5px;
 	}
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
 		.Minifig{
-		width: 47%;
+		width: 30%;
 	}
 }
 

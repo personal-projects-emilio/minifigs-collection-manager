@@ -12,14 +12,17 @@ import * as actions from '../../store/actions/index';
 class Minifigs extends Component {
 	// We'll get a complet list in a database with redux and axios later on
 	state = {
-		numberPerPage: 100,
-		activePage: 1,
-		numberOfPages: null
-	}
+		numberPerPage: 98,
+		activePage: 1
+		}
 
 	//Initiate the minifigs
 	componentDidMount () {
 		this.props.onInitMinifigs();
+	}
+	
+	componentDidUpdate(){
+		
 	}
 
 	handlePageChange = (pageNumber) => {
@@ -47,6 +50,7 @@ class Minifigs extends Component {
 							possesed={minifigInfo.possesed}
 						/>
 					)
+
 			})
 			pagination = <Pagination
 				hideDisabled
