@@ -10,7 +10,7 @@ import * as actions from '../../store/actions/index';
 
 
 class Minifigs extends Component {
-	// We'll get a complet list in a database with redux and axios later on
+	// It's the only state that is managed locally, everything else is manage by redux (on the bottom of the file)
 	state = {
 		activePage: 1
 		}
@@ -20,9 +20,6 @@ class Minifigs extends Component {
 		this.props.onInitMinifigs();
 	}
 	
-	componentDidUpdate(){
-		
-	}
 
 	handlePageChange = (pageNumber) => {
 	    this.setState({activePage: pageNumber});
@@ -32,7 +29,7 @@ class Minifigs extends Component {
 		// While the minifigs aren't loaded we show a spinner, if we have an error we show a message
 		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <Spinner />;
 		let pagination = null;
-		// If we have minifigs we display them and manage the pagination
+		// If we have minifigs and the numberPerPage we display them and manage the pagination
 		if(this.props.minifigs && this.props.numberPerPage){
 			const totalMinifigs = Object.keys(this.props.minifigs).length;
 			const begin = ((this.state.activePage-1) * this.props.numberPerPage);
@@ -51,16 +48,24 @@ class Minifigs extends Component {
 					)
 
 			})
+			// react-js-pagination package used, you can check the info on github
 			pagination = <Pagination
+			    firstPageText='first'
+    			lastPageText='last'
 				hideDisabled
+				linkClassPrev={classes.DisplayNone}
+				linkClassNext={classes.DisplayNone}
 		    	activePage={this.state.activePage}
 		    	itemsCountPerPage={this.props.numberPerPage}
 		    	totalItemsCount={totalMinifigs}
 		    	onChange={this.handlePageChange}
+		    	innerClass={classes.PaginationUl}
+		    	activeClass={classes.Active}
 			/>
 
 		}
 
+		// We render the minifigs with Pagination top and bottom
 		return (
 			<Aux>
 				<div className={classes.Pagination}>
@@ -77,6 +82,7 @@ class Minifigs extends Component {
 	}
 }
 
+// We get store state and action from redux with connect
 const mapStateToProps = state => {
 	return {
 		minifigs: state.minifigs,
