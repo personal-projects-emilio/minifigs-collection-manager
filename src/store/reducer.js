@@ -5,7 +5,8 @@ const initialState = {
 	minifigs: null,
 	error: false,
 	totalNumber: null,
-	numberOwned: null
+	numberOwned: null,
+	numberPerPage: 100
 }
 
 const setMinifigs = (state, action) => {
@@ -16,16 +17,19 @@ const setMinifigs = (state, action) => {
 }
 
 const setMinifigsFailed = (state, action) => {
-	return updateObject(state, {error: true} );
+	return updateObject( state, {error: true} );
 }
 
 const setTotalOwned = (state, action) => {
-	console.log(action)
-	return updateObject(state, {numberOwned: action.numberOwned} );
+	return updateObject( state, {numberOwned: action.numberOwned} );
 }
 
 const setTotalNumber = (state, action) => {
-	return updateObject(state, {totalNumber: action.totalNumber} );
+	return updateObject( state, {totalNumber: action.totalNumber} );
+}
+
+const setNumberPerPage = (state, action) => {
+	return updateObject( state, {numberPerPage: action.numberPerPage} );
 }
 
 const reducer = (state = initialState, action) => {
@@ -34,6 +38,7 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.SET_MINIFIGS_FAILED: return setMinifigsFailed(state, action);
 		case actionTypes.SET_TOTAL_OWNED: return setTotalOwned(state, action);
 		case actionTypes.SET_TOTAL_NUMBER: return setTotalNumber(state, action);
+		case actionTypes.SET_NUMBER_PER_PAGE: return setNumberPerPage(state, action);
 		default: return state;
 	}
 };

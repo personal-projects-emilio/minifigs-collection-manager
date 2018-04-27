@@ -1,0 +1,24 @@
+.MinifigsMenu {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: 90%;
+	margin: auto;
+}
+
+.MinifigsMenuHalf {
+	width: calc(50% - 5px);
+	padding: 1rem;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.NumberPerPage {
+	text-align: center;
+}
+
+@media (max-width: 600px){
+	.MinifigsMenuHalf{
+		width: calc(100% - 5px);
+	}
+}

@@ -32,7 +32,6 @@ export const initMinifigs = () => {
 					const owned = response.data[val].possesed;
 					if(owned){numberOwned++}
 				});
-				console.log(numberOwned);
 				dispatch(setTotalOwned(numberOwned));
 			})
 			.catch(error =>{
@@ -52,5 +51,12 @@ export const setTotalOwned = (numberOwned) => {
 	return {
 		type: actionTypes.SET_TOTAL_OWNED,
 		numberOwned: numberOwned
+	}
+}
+
+export const setNumberPerPage = (numberPerPage) => {
+	return {
+		type: actionTypes.SET_NUMBER_PER_PAGE,
+		numberPerPage: numberPerPage
 	}
 }

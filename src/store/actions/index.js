@@ -1,3 +1,4 @@
 export {
-	initMinifigs
+	initMinifigs,
+	setNumberPerPage
 } from './minifigs';

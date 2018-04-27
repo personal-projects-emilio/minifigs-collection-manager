@@ -12,7 +12,6 @@ import * as actions from '../../store/actions/index';
 class Minifigs extends Component {
 	// We'll get a complet list in a database with redux and axios later on
 	state = {
-		numberPerPage: 98,
 		activePage: 1
 		}
 
@@ -34,10 +33,10 @@ class Minifigs extends Component {
 		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <Spinner />;
 		let pagination = null;
 		// If we have minifigs we display them and manage the pagination
-		if(this.props.minifigs){
+		if(this.props.minifigs && this.props.numberPerPage){
 			const totalMinifigs = Object.keys(this.props.minifigs).length;
-			const begin = ((this.state.activePage-1) * this.state.numberPerPage);
-			const end = begin + this.state.numberPerPage;
+			const begin = ((this.state.activePage-1) * this.props.numberPerPage);
+			const end = begin + this.props.numberPerPage;
 			const minifigsList = Object.keys(this.props.minifigs).slice(begin, end);
 
 			minifigs = minifigsList.map(minifig => {
@@ -55,7 +54,7 @@ class Minifigs extends Component {
 			pagination = <Pagination
 				hideDisabled
 		    	activePage={this.state.activePage}
-		    	itemsCountPerPage={this.state.numberPerPage}
+		    	itemsCountPerPage={this.props.numberPerPage}
 		    	totalItemsCount={totalMinifigs}
 		    	onChange={this.handlePageChange}
 			/>
@@ -64,6 +63,9 @@ class Minifigs extends Component {
 
 		return (
 			<Aux>
+				<div className={classes.Pagination}>
+					{pagination}
+				</div>
 				<div className={classes.Minifigs}>
 					{minifigs}
 				</div>
@@ -78,6 +80,7 @@ class Minifigs extends Component {
 const mapStateToProps = state => {
 	return {
 		minifigs: state.minifigs,
+		numberPerPage: state.numberPerPage,
 		error: state.error
 	}
 }
