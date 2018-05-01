@@ -31,7 +31,7 @@ class MinifigsMenu extends Component {
 				style={{margin:6}}
 				// If this is the active number it shows a primay button (blue background) with white text
 				primary={(number === this.props.numberPerPage) ? true : false}
-				labelColor={(number === this.props.numberPerPage) ? "white" : "black"}
+				labelColor={(number === this.props.numberPerPage) ? "white" : "rgb(0,0,0)"}
 				onClick={() => this.props.setNumberPerPage(number)} />
 		})
 

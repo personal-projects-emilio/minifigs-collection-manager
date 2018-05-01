@@ -10,11 +10,6 @@ import * as actions from '../../store/actions/index';
 
 
 class Minifigs extends Component {
-	// It's the only state that is managed locally, everything else is manage by redux (on the bottom of the file)
-	state = {
-		activePage: 1
-		}
-
 	//Initiate the minifigs
 	componentDidMount () {
 		this.props.onInitMinifigs();
@@ -22,7 +17,7 @@ class Minifigs extends Component {
 	
 
 	handlePageChange = (pageNumber) => {
-	    this.setState({activePage: pageNumber});
+		this.props.setActivePage(pageNumber);
 	}
 
 	render () {
@@ -32,7 +27,7 @@ class Minifigs extends Component {
 		// If we have minifigs and the numberPerPage we display them and manage the pagination
 		if(this.props.minifigs && this.props.numberPerPage){
 			const totalMinifigs = Object.keys(this.props.minifigs).length;
-			const begin = ((this.state.activePage-1) * this.props.numberPerPage);
+			const begin = ((this.props.activePage-1) * this.props.numberPerPage);
 			const end = begin + this.props.numberPerPage;
 			const minifigsList = Object.keys(this.props.minifigs).slice(begin, end);
 
@@ -55,7 +50,7 @@ class Minifigs extends Component {
 				hideDisabled
 				linkClassPrev={classes.DisplayNone}
 				linkClassNext={classes.DisplayNone}
-		    	activePage={this.state.activePage}
+		    	activePage={this.props.activePage}
 		    	itemsCountPerPage={this.props.numberPerPage}
 		    	totalItemsCount={totalMinifigs}
 		    	onChange={this.handlePageChange}
@@ -87,13 +82,15 @@ const mapStateToProps = state => {
 	return {
 		minifigs: state.minifigs,
 		numberPerPage: state.numberPerPage,
+		activePage: state.activePage,
 		error: state.error
 	}
 }
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onInitMinifigs: () => dispatch(actions.initMinifigs())
+		onInitMinifigs: () => dispatch(actions.initMinifigs()),
+		setActivePage: (activePage) => dispatch(actions.setActivePage(activePage))
 	}
 }
 

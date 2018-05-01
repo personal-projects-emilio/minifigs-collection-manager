@@ -60,3 +60,10 @@ export const setNumberPerPage = (numberPerPage) => {
 		numberPerPage: numberPerPage
 	}
 }
+
+export const setActivePage = (activePage) => {
+	return {
+		type: actionTypes.SET_ACTIVE_PAGE,
+		activePage: activePage
+	}
+}

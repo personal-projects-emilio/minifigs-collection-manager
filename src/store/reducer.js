@@ -6,7 +6,8 @@ const initialState = {
 	error: false,
 	totalNumber: null,
 	numberOwned: null,
-	numberPerPage: 100
+	numberPerPage: 100,
+	activePage: 1
 }
 
 const setMinifigs = (state, action) => {
@@ -29,7 +30,17 @@ const setTotalNumber = (state, action) => {
 }
 
 const setNumberPerPage = (state, action) => {
-	return updateObject( state, {numberPerPage: action.numberPerPage} );
+	// If the active page is greater than the new number of page we set the activePage to the last page.
+	let activePage = state.activePage;
+	const numberOfPage =Math.ceil(state.totalNumber/action.numberPerPage);
+	if ( numberOfPage < state.activePage) {
+		activePage = numberOfPage;
+	}
+	return updateObject( state, {numberPerPage: action.numberPerPage, activePage: activePage} );
+}
+
+const setActivePage = (state, action) => {
+	return updateObject( state, {activePage: action.activePage} );
 }
 
 const reducer = (state = initialState, action) => {
@@ -39,6 +50,7 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.SET_TOTAL_OWNED: return setTotalOwned(state, action);
 		case actionTypes.SET_TOTAL_NUMBER: return setTotalNumber(state, action);
 		case actionTypes.SET_NUMBER_PER_PAGE: return setNumberPerPage(state, action);
+		case actionTypes.SET_ACTIVE_PAGE: return setActivePage(state, action);
 		default: return state;
 	}
 };
