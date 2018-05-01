@@ -1,5 +1,6 @@
 export {
 	initMinifigs,
 	setNumberPerPage,
-	setActivePage
+	setActivePage,
+	setPossessed
 } from './minifigs';

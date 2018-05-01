@@ -2,6 +2,7 @@ import React from 'react';
 
 import classes from './Minifig.css';
 import LogoLink from '../LogoLink/LogoLink';
+import Checkbox from 'material-ui/Checkbox';
 
 const minifig = (props) => (
 	<div className={classes.Minifig}>
@@ -15,6 +16,11 @@ const minifig = (props) => (
 			<LogoLink minifigRef={props.reference} type={'bricklink'} />
 			<LogoLink minifigRef={props.reference} type={'brickset'} />
 		</div>
+		<Checkbox
+			checked={props.possessed}
+			label="Owned"
+			onCheck={() => props.onChange()}
+		/>
 	</div>
 )
 

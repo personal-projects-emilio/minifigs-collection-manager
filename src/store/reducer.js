@@ -43,6 +43,12 @@ const setActivePage = (state, action) => {
 	return updateObject( state, {activePage: action.activePage} );
 }
 
+const setPossessed = (state, action) => {
+	const updatedMinifig = updateObject(state.minifigs[action.minifig], {possesed: !state.minifigs[action.minifig].possesed});
+	const updatedMinifigs = updateObject(state.minifigs, {[action.minifig]: updatedMinifig});
+	return updateObject( state, {minifigs: updatedMinifigs});
+}
+
 const reducer = (state = initialState, action) => {
 	switch( action.type ) {
 		case actionTypes.SET_MINIFIGS: return setMinifigs(state, action);
@@ -51,6 +57,7 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.SET_TOTAL_NUMBER: return setTotalNumber(state, action);
 		case actionTypes.SET_NUMBER_PER_PAGE: return setNumberPerPage(state, action);
 		case actionTypes.SET_ACTIVE_PAGE: return setActivePage(state, action);
+		case actionTypes.SET_POSSESSED: return setPossessed(state, action);
 		default: return state;
 	}
 };

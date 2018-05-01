@@ -38,7 +38,8 @@ class Minifigs extends Component {
 							key={minifig}
 							reference={minifig}
 							name={minifigInfo.name}
-							possesed={minifigInfo.possesed}
+							possessed={minifigInfo.possesed}
+							onChange={()=> this.props.setPossessed(minifig)}
 						/>
 					)
 
@@ -90,7 +91,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
 	return {
 		onInitMinifigs: () => dispatch(actions.initMinifigs()),
-		setActivePage: (activePage) => dispatch(actions.setActivePage(activePage))
+		setActivePage: (activePage) => dispatch(actions.setActivePage(activePage)),
+		setPossessed: (minifigRef) => dispatch(actions.setPossessed(minifigRef))
 	}
 }
 

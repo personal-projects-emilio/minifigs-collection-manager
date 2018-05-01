@@ -1,5 +1,7 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../axios';
+import {updateObject} from '../../shared/utility';
+
 
 export const setMinifigsFailed = () => {
 	return {
@@ -65,5 +67,25 @@ export const setActivePage = (activePage) => {
 	return {
 		type: actionTypes.SET_ACTIVE_PAGE,
 		activePage: activePage
+	}
+}
+
+export const setPossessed = (minifigRef) => {
+
+	return {
+		type: actionTypes.SET_POSSESSED,
+		minifig: minifigRef
+	}
+}
+
+//If we want to update the database we could use something like that, but since i'm using my data
+//the changes are just to the redux state to show it works without changing my data
+export const setPossessedOnServer = (minifig, minifigRef) => {
+	const updatedMinifig = updateObject(minifig, {possesed: !minifig.possesed} )
+	return dispatch => {
+		axios.patch('/minifigs/'+minifigRef+'.json', updatedMinifig)
+			.then(response => {
+				setPossessed(minifigRef);
+			});
 	}
 }
