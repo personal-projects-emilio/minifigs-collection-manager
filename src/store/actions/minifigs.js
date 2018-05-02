@@ -31,7 +31,7 @@ export const initMinifigs = () => {
 				let numberOwned = 0;
 				const minifigsArray = Object.keys(response.data);
 				minifigsArray.forEach((val) => {
-					const owned = response.data[val].possesed;
+					const owned = response.data[val].possessed;
 					if(owned){numberOwned++}
 				});
 				dispatch(setTotalOwned(numberOwned));
@@ -71,7 +71,6 @@ export const setActivePage = (activePage) => {
 }
 
 export const setPossessed = (minifigRef) => {
-
 	return {
 		type: actionTypes.SET_POSSESSED,
 		minifig: minifigRef
@@ -81,11 +80,18 @@ export const setPossessed = (minifigRef) => {
 //If we want to update the database we could use something like that, but since i'm using my data
 //the changes are just to the redux state to show it works without changing my data
 export const setPossessedOnServer = (minifig, minifigRef) => {
-	const updatedMinifig = updateObject(minifig, {possesed: !minifig.possesed} )
+	const updatedMinifig = updateObject(minifig, {possessed: !minifig.possessed} )
 	return dispatch => {
 		axios.patch('/minifigs/'+minifigRef+'.json', updatedMinifig)
 			.then(response => {
 				setPossessed(minifigRef);
 			});
+	}
+}
+
+export const setPossessionToAll = (possessed) => {
+	return {
+		type: actionTypes.SET_POSSESSION_TO_ALL,
+		possessed: possessed
 	}
 }

@@ -38,7 +38,7 @@ class Minifigs extends Component {
 							key={minifig}
 							reference={minifig}
 							name={minifigInfo.name}
-							possessed={minifigInfo.possesed}
+							possessed={minifigInfo.possessed}
 							onChange={()=> this.props.setPossessed(minifig)}
 						/>
 					)

@@ -41,8 +41,10 @@ class MinifigsMenu extends Component {
 				{/*The first part consist of the number of minifig in the database, the one we owned and a LinearProgress with that percetage*/}
 				<div className={classes.MinifigsMenuHalf}>
 					<p>Number of minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : null}</p>
-					<p>Number of minifigs you own: {this.props.numberOwned ? this.props.numberOwned : null}</p>
+					<p>Number of minifigs you own: {this.props.numberOwned >= 0 ? this.props.numberOwned : null}</p>
 					<LinearProgress mode="determinate" value={percentageOwned}/>
+					<RaisedButton label="Set all to possessed" style={{margin:6}} onClick={() => this.props.setPossessionToAll(true)} />
+					<RaisedButton label="Set all to not possessed" style={{margin:6}} onClick={() => this.props.setPossessionToAll(false)} />
 				</div>
 				{/*The second part is the button to choose how many minifigs we show*/}
 				<div className={classes.MinifigsMenuHalf}>
@@ -68,7 +70,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		setNumberPerPage: (numberPerPage) => dispatch(actions.setNumberPerPage(numberPerPage))
+		setNumberPerPage: (numberPerPage) => dispatch(actions.setNumberPerPage(numberPerPage)),
+		setPossessionToAll: (possessed) => dispatch(actions.setPossessionToAll(possessed))
 	}
 }
 

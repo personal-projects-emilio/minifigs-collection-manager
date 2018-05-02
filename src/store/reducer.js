@@ -44,9 +44,21 @@ const setActivePage = (state, action) => {
 }
 
 const setPossessed = (state, action) => {
-	const updatedMinifig = updateObject(state.minifigs[action.minifig], {possesed: !state.minifigs[action.minifig].possesed});
+	const updatedMinifig = updateObject(state.minifigs[action.minifig], {possessed: !state.minifigs[action.minifig].possessed});
 	const updatedMinifigs = updateObject(state.minifigs, {[action.minifig]: updatedMinifig});
-	return updateObject( state, {minifigs: updatedMinifigs});
+	return updateObject( state, {minifigs: updatedMinifigs} );
+}
+
+const setPossessionToAll = (state, action) => {
+	let updatedMinifigs = {};
+	Object.keys(state.minifigs).forEach(minifig => {
+		updatedMinifigs[minifig] = updateObject(state.minifigs[minifig], {possessed: action.possessed});
+	})
+	let numberOwned = 0;
+	if (action.possessed === true){
+		numberOwned = state.totalNumber;
+	}
+	return updateObject( state, {minifigs: updatedMinifigs, numberOwned: numberOwned} );
 }
 
 const reducer = (state = initialState, action) => {
@@ -58,6 +70,7 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.SET_NUMBER_PER_PAGE: return setNumberPerPage(state, action);
 		case actionTypes.SET_ACTIVE_PAGE: return setActivePage(state, action);
 		case actionTypes.SET_POSSESSED: return setPossessed(state, action);
+		case actionTypes.SET_POSSESSION_TO_ALL: return setPossessionToAll(state, action);
 		default: return state;
 	}
 };
