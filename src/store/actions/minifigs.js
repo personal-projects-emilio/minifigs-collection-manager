@@ -77,8 +77,15 @@ export const setPossessed = (minifigRef) => {
 	}
 }
 
+export const setPossessionToAll = (possessed) => {
+	return {
+		type: actionTypes.SET_POSSESSION_TO_ALL,
+		possessed: possessed
+	}
+}
+
 //If we want to update the database we could use something like that, but since i'm using my data
-//the changes are just to the redux state to show it works without changing my data
+//the changes are only made to the redux state to show it works without changing my data
 export const setPossessedOnServer = (minifig, minifigRef) => {
 	const updatedMinifig = updateObject(minifig, {possessed: !minifig.possessed} )
 	return dispatch => {
@@ -89,9 +96,15 @@ export const setPossessedOnServer = (minifig, minifigRef) => {
 	}
 }
 
-export const setPossessionToAll = (possessed) => {
-	return {
-		type: actionTypes.SET_POSSESSION_TO_ALL,
-		possessed: possessed
+export const setPossessionToAllOnServer = (minifigs, possessed) => {
+	let updatedMinifigs = {};
+	Object.keys(minifigs).forEach(minifig => {
+		updatedMinifigs[minifig] = updateObject(minifigs[minifig], {possessed: possessed});
+	})
+	return dispatch => {
+		axios.patch('/minifigs.json', updatedMinifigs)
+			.then(response => {
+				setPossessionToAll(possessed);
+			});
 	}
 }

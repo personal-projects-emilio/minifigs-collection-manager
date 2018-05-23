@@ -62,4 +62,6 @@
 	border-bottom-right-radius: 4px;
 }
 
-.Active {}
+.Spinner {
+	margin: 200px 0;
+}

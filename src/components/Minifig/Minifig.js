@@ -1,28 +1,60 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import classes from './Minifig.css';
 import LogoLink from '../LogoLink/LogoLink';
 import Checkbox from 'material-ui/Checkbox';
+import Modal from '../UI/Modal/Modal';
+import Aux from '../../hoc/Auxilliary/Auxilliary';
 
-const minifig = (props) => (
-	<div className={classes.Minifig}>
-		{/*Picture and reference of the minifig*/}
-		<div>
-			<img className={classes.MinifigPicture} src={'http://img.bricklink.com/ItemImage/MN/0/'+props.reference+'.png'} alt={props.reference + ' pictures'} />
-			<span>{props.reference}</span>		
-		</div>
-		<div className={classes.LogoLinks}>
-			{/*Bricklink and Brickset logo with links*/}
-			<LogoLink minifigRef={props.reference} type={'bricklink'} />
-			<LogoLink minifigRef={props.reference} type={'brickset'} />
-		</div>
-		<Checkbox
-			checked={props.possessed}
-			label="Owned"
-			onCheck={() => props.onChange()}
-		/>
-	</div>
-)
 
-export default minifig;
+class Minifig extends Component {
+	state = {
+		showModal: false
+	}
+
+	showModalHandler = () => {
+		this.setState({showModal: true});
+	}
+
+	removeModalHandler = () => {
+		this.setState({showModal: false});
+	}
+
+	render () {
+		let minifigModal = null
+
+		if (this.state.showModal) {
+			minifigModal = (
+				<img className={classes.ModalPicture} src={'http://img.bricklink.com/ItemImage/MN/0/'+this.props.reference+'.png'} alt={this.props.reference + ' pictures'} />
+			);
+		}
+		return (
+			<Aux>
+				<Modal show={this.state.showModal} modalClosed={this.removeModalHandler}>
+					{minifigModal}
+				</Modal>
+				<div className={classes.Minifig}>
+					{/*Picture and reference of the minifig*/}
+					<div onClick={this.showModalHandler}>
+						<img className={classes.MinifigPicture} src={'http://img.bricklink.com/ItemImage/MN/0/'+this.props.reference+'.png'} alt={this.props.reference + ' pictures'} />
+						<span>{this.props.reference}</span>		
+					</div>
+					<div className={classes.LogoLinks}>
+						{/*Bricklink and Brickset logo with links*/}
+						<LogoLink minifigRef={this.props.reference} type={'bricklink'} />
+						<LogoLink minifigRef={this.props.reference} type={'brickset'} />
+					</div>
+					<Checkbox
+						checked={this.props.possessed}
+						label="Owned"
+						onCheck={() => this.props.onChange()}
+					/>
+				</div>
+			</Aux>
+		);
+	}
+}
+
+export default Minifig;
 	
+

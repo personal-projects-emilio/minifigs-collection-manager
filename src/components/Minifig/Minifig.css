@@ -13,6 +13,14 @@
 .MinifigPicture {
 	width: 95%;
 	margin: 5px 0;
+	cursor: zoom-in;
+}
+
+.ModalPicture {
+	height: 100%;
+	max-width: 100%;
+	display: block;
+	margin: auto;
 }
 
 .LogoLinks{

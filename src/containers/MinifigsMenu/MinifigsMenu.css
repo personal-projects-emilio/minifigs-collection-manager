@@ -11,10 +11,11 @@
 	padding: 1rem;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
+	text-align: center;
 }
 
-.NumberPerPage {
-	text-align: center;
+.Spinner {
+	margin-left: 10px;
 }
 
 @media (max-width: 600px){

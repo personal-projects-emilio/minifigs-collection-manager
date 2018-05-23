@@ -4,12 +4,13 @@ import {connect} from 'react-redux';
 import classes from './MinifigsMenu.css';
 import * as actions from '../../store/actions/index';
 import LinearProgress from 'material-ui/LinearProgress';
+import CircularProgress from 'material-ui/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class MinifigsMenu extends Component {
 	// The number per page is set at 100 by default in the redux reducer, if you remove 100 from the state change the reducer accordingly
 	state= {
-		numberPerPageChoice : [25,50,100,200]
+		numberPerPageChoices : [25,50,100,200]
 	}
 
 	handlerNumberPerPage = (numberPerPage) => {
@@ -24,7 +25,7 @@ class MinifigsMenu extends Component {
 		}
 
 		// List of button for the choise of numberPerPage
-		const buttonNumberPerPage = this.state.numberPerPageChoice.map(number => {
+		const buttonNumberPerPage = this.state.numberPerPageChoices.map(number => {
 			return <RaisedButton
 				key={number}
 				label={number}
@@ -35,23 +36,28 @@ class MinifigsMenu extends Component {
 				onClick={() => this.props.setNumberPerPage(number)} />
 		})
 
+		const spinner = <CircularProgress className={classes.Spinner} size={10} />;
 
 		return (
 			<div className={classes.MinifigsMenu}>
 				{/*The first part consist of the number of minifig in the database, the one we owned and a LinearProgress with that percetage*/}
 				<div className={classes.MinifigsMenuHalf}>
-					<p>Number of minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : null}</p>
-					<p>Number of minifigs you own: {this.props.numberOwned >= 0 ? this.props.numberOwned : null}</p>
+					<p>Number of minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : spinner}</p>
+					<p>Number of minifigs you own: {this.props.numberOwned > 0 ? this.props.numberOwned : spinner}</p>
 					<LinearProgress mode="determinate" value={percentageOwned}/>
-					<RaisedButton label="Set all to possessed" style={{margin:6}} onClick={() => this.props.setPossessionToAll(true)} />
-					<RaisedButton label="Set all to not possessed" style={{margin:6}} onClick={() => this.props.setPossessionToAll(false)} />
+					<RaisedButton 
+						label="Set all to possessed" 
+						style={{margin:6}} 
+						onClick={() => this.props.setPossessionToAll(true)} />
+					<RaisedButton 
+						label="Set all to not possessed" 
+						style={{margin:6}} 
+						onClick={() => this.props.setPossessionToAll(false)} />
 				</div>
 				{/*The second part is the button to choose how many minifigs we show*/}
 				<div className={classes.MinifigsMenuHalf}>
-					<div className={classes.NumberPerPage}>
 						<p>Number of minifigs per page</p>
 						{buttonNumberPerPage}
-					</div>
 				</div>
 			</div>
 		);

@@ -1,0 +1,14 @@
+/* body {
+	background-image: url('../../assets/images/background.jpg');
+} */
+
+.Main {
+	max-width: 1200px;
+	margin: auto;
+}
+
+@media (min-width: 1100px){
+	.Main {
+	width: 70%;
+	}
+}

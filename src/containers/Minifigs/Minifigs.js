@@ -5,7 +5,7 @@ import Pagination from "react-js-pagination";
 import Aux from '../../hoc/Auxilliary/Auxilliary'
 import classes from './Minifigs.css';
 import Minifig from '../../components/Minifig/Minifig';
-import Spinner from '../../components/UI/Spinner/Spinner';
+import CircularProgress from 'material-ui/CircularProgress';
 import * as actions from '../../store/actions/index';
 
 
@@ -22,7 +22,7 @@ class Minifigs extends Component {
 
 	render () {
 		// While the minifigs aren't loaded we show a spinner, if we have an error we show a message
-		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <Spinner />;
+		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <CircularProgress className={classes.Spinner} size={200}  />;
 		let pagination = null;
 		// If we have minifigs and the numberPerPage we display them and manage the pagination
 		if(this.props.minifigs && this.props.numberPerPage){
