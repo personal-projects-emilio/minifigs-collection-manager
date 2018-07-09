@@ -18,6 +18,39 @@
 	margin-left: 10px;
 }
 
+.Tooltip {
+	position: relative;
+}
+
+.Tooltip .TooltipText {
+	visibility: hidden;
+	background-color: black;
+    color: #fff;
+	width: 80px;
+	text-align: center;
+	padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 222%;
+    left: 50%;
+    margin-left: -40px;
+}
+.Tooltip .TooltipText::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.Tooltip:hover .TooltipText {
+    visibility: visible;
+}
+
 @media (max-width: 600px){
 	.MinifigsMenuHalf{
 		width: calc(100% - 5px);

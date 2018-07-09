@@ -25,7 +25,10 @@ class Minifig extends Component {
 
 		if (this.state.showModal) {
 			minifigModal = (
-				<img className={classes.ModalPicture} src={'http://img.bricklink.com/ItemImage/MN/0/'+this.props.reference+'.png'} alt={this.props.reference + ' pictures'} />
+				<Aux>
+					<p className={classes.ModalTitle}>{this.props.name}</p>
+					<img className={classes.ModalPicture} src={'http://img.bricklink.com/ItemImage/MN/0/'+this.props.reference+'.png'} alt={this.props.reference + ' pictures'} />
+				</Aux>
 			);
 		}
 		return (

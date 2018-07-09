@@ -18,10 +18,10 @@ class MinifigsMenu extends Component {
 	}
 
 	render () {
-		// We calculate the percetage of minifigs owned
+		// We calculate and round to 2 decimal the percentage of minifigs owned
 		let percentageOwned = null;
 		if (this.props.numberOwned & this.props.totalNumber){
-			percentageOwned = (this.props.numberOwned/this.props.totalNumber)*100;
+			percentageOwned = Math.round((this.props.numberOwned/this.props.totalNumber)*10000)/100;
 		}
 
 		// List of button for the choise of numberPerPage
@@ -44,15 +44,22 @@ class MinifigsMenu extends Component {
 				<div className={classes.MinifigsMenuHalf}>
 					<p>Number of minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : spinner}</p>
 					<p>Number of minifigs you own: {this.props.numberOwned > 0 ? this.props.numberOwned : spinner}</p>
-					<LinearProgress mode="determinate" value={percentageOwned}/>
-					<RaisedButton 
-						label="Set all to possessed" 
-						style={{margin:6}} 
-						onClick={() => this.props.setPossessionToAll(true)} />
-					<RaisedButton 
-						label="Set all to not possessed" 
-						style={{margin:6}} 
-						onClick={() => this.props.setPossessionToAll(false)} />
+					<div className={classes.Tooltip}>
+						<span className={classes.TooltipText}>{percentageOwned}%</span>
+						<LinearProgress mode="determinate" value={percentageOwned}/>
+					</div>
+					<div>
+						<span>Set all to:</span>
+						<RaisedButton 
+							label="Possessed" 
+							style={{margin:6}} 
+							onClick={() => this.props.setPossessionToAll(true)} />
+						<RaisedButton 
+							label="Not possessed" 
+							style={{margin:6}} 
+							onClick={() => this.props.setPossessionToAll(false)} />
+					</div>
+					
 				</div>
 				{/*The second part is the button to choose how many minifigs we show*/}
 				<div className={classes.MinifigsMenuHalf}>
