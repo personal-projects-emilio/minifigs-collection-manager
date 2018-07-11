@@ -7,7 +7,8 @@ const initialState = {
 	totalNumber: null,
 	numberOwned: null,
 	numberPerPage: 100,
-	activePage: 1
+	activePage: 1,
+	show: "all"
 }
 
 const setMinifigs = (state, action) => {
@@ -46,7 +47,8 @@ const setActivePage = (state, action) => {
 const setPossessed = (state, action) => {
 	const updatedMinifig = updateObject(state.minifigs[action.minifig], {possessed: !state.minifigs[action.minifig].possessed});
 	const updatedMinifigs = updateObject(state.minifigs, {[action.minifig]: updatedMinifig});
-	return updateObject( state, {minifigs: updatedMinifigs} );
+	const updatedTotalOwned = !state.minifigs[action.minifig].possessed ? state.numberOwned+1 : state.numberOwned-1;
+	return updateObject( state, {minifigs: updatedMinifigs, numberOwned: updatedTotalOwned} );
 }
 
 const setPossessionToAll = (state, action) => {
@@ -61,6 +63,10 @@ const setPossessionToAll = (state, action) => {
 	return updateObject( state, {minifigs: updatedMinifigs, numberOwned: numberOwned} );
 }
 
+const setShow = (state, action) => {
+	return updateObject(state, {show: action.show})
+}
+
 const reducer = (state = initialState, action) => {
 	switch( action.type ) {
 		case actionTypes.SET_MINIFIGS: return setMinifigs(state, action);
@@ -71,6 +77,7 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.SET_ACTIVE_PAGE: return setActivePage(state, action);
 		case actionTypes.SET_POSSESSED: return setPossessed(state, action);
 		case actionTypes.SET_POSSESSION_TO_ALL: return setPossessionToAll(state, action);
+		case actionTypes.SET_SHOW: return setShow(state, action);
 		default: return state;
 	}
 };

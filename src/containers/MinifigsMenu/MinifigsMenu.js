@@ -42,8 +42,8 @@ class MinifigsMenu extends Component {
 			<div className={classes.MinifigsMenu}>
 				{/*The first part consist of the number of minifig in the database, the one we owned and a LinearProgress with that percetage*/}
 				<div className={classes.MinifigsMenuHalf}>
-					<p>Number of minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : spinner}</p>
-					<p>Number of minifigs you own: {this.props.numberOwned > 0 ? this.props.numberOwned : spinner}</p>
+					<div className={classes.MinifigMenuText}>Number of minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : spinner}</div>
+					<div className={classes.MinifigMenuText}>Number of minifigs you own: {this.props.numberOwned !== null ? this.props.numberOwned : spinner}</div>
 					<div className={classes.Tooltip}>
 						<span className={classes.TooltipText}>{percentageOwned}%</span>
 						<LinearProgress mode="determinate" value={percentageOwned}/>
@@ -59,7 +59,27 @@ class MinifigsMenu extends Component {
 							style={{margin:6}} 
 							onClick={() => this.props.setPossessionToAll(false)} />
 					</div>
-					
+					<div>
+						<span>Show:</span>
+						<RaisedButton
+							label="All"
+							style={{margin:6}}
+							primary={(this.props.show === "all") ? true: false}
+							labelColor={(this.props.show === "all") ? "white": "rgb(0,0,0)"}
+							onClick={() => this.props.setShow("all")} />
+						<RaisedButton
+							label="Owned"
+							style={{margin:6}}
+							primary={(this.props.show === "owned") ? true: false}
+							labelColor={(this.props.show === "owned") ? "white": "rgb(0,0,0)"}
+							onClick={() => this.props.setShow("owned")} />
+						<RaisedButton
+							label="Missing"
+							style={{margin:6}}
+							primary={(this.props.show === "missing") ? true: false}
+							labelColor={(this.props.show === "missing") ? "white": "rgb(0,0,0)"}
+							onClick={() => this.props.setShow("missing")} />
+					</div>
 				</div>
 				{/*The second part is the button to choose how many minifigs we show*/}
 				<div className={classes.MinifigsMenuHalf}>
@@ -77,14 +97,16 @@ const mapStateToProps = state => {
 		numberOwned: state.numberOwned,
 		totalNumber: state.totalNumber,
 		numberPerPage: state.numberPerPage,
-		error: state.error
+		error: state.error,
+		show: state.show
 	}
 }
 
 const mapDispatchToProps = dispatch => {
 	return {
 		setNumberPerPage: (numberPerPage) => dispatch(actions.setNumberPerPage(numberPerPage)),
-		setPossessionToAll: (possessed) => dispatch(actions.setPossessionToAll(possessed))
+		setPossessionToAll: (possessed) => dispatch(actions.setPossessionToAll(possessed)),
+		setShow: (show) => dispatch(actions.setShow(show))
 	}
 }
 

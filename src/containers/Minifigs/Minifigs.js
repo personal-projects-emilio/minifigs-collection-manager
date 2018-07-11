@@ -26,24 +26,39 @@ class Minifigs extends Component {
 		let pagination = null;
 		// If we have minifigs and the numberPerPage we display them and manage the pagination
 		if(this.props.minifigs && this.props.numberPerPage){
-			const totalMinifigs = Object.keys(this.props.minifigs).length;
+			// The begin and the end of the active page
 			const begin = ((this.props.activePage-1) * this.props.numberPerPage);
 			const end = begin + this.props.numberPerPage;
-			const minifigsList = Object.keys(this.props.minifigs).slice(begin, end);
+			
+			// The complete list of minifigs we are showing (all, owned or missing)
+			let minifigListObject = {};
+			Object.keys(this.props.minifigs).forEach(minifig => {
+				const possession = this.props.minifigs[minifig].possessed;
+				if ((this.props.show === "all") 
+					|| (this.props.show === "owned" && possession)
+					|| (this.props.show === "missing" && !possession)){
+					minifigListObject[minifig] = minifig;
+				} 
+			})
+			// The number of minifigs we are showing for the pagination
+			const totalItemsCount = Object.keys(minifigListObject).length;
+			// The minifigs that we are showing on our active page 
+			const minifigsList = Object.keys(minifigListObject).slice(begin, end);
 
+			// We map our list to show each minifig on the page
 			minifigs = minifigsList.map(minifig => {
 				const minifigInfo = {...this.props.minifigs[minifig]};
-					return (
-						<Minifig
-							key={minifig}
-							reference={minifig}
-							name={minifigInfo.name}
-							possessed={minifigInfo.possessed}
-							onChange={()=> this.props.setPossessed(minifig)}
-						/>
-					)
-
+				return (
+					<Minifig
+						key={minifig}
+						reference={minifig}
+						name={minifigInfo.name}
+						possessed={minifigInfo.possessed}
+						onChange={()=> this.props.setPossessed(minifig)}
+					/>
+				)
 			})
+
 			// react-js-pagination package used, you can check the info on github
 			pagination = <Pagination
 			    firstPageText='first'
@@ -53,7 +68,7 @@ class Minifigs extends Component {
 				linkClassNext={classes.DisplayNone}
 		    	activePage={this.props.activePage}
 		    	itemsCountPerPage={this.props.numberPerPage}
-		    	totalItemsCount={totalMinifigs}
+		    	totalItemsCount={totalItemsCount}
 		    	onChange={this.handlePageChange}
 		    	innerClass={classes.PaginationUl}
 		    	activeClass={classes.Active}
@@ -84,7 +99,10 @@ const mapStateToProps = state => {
 		minifigs: state.minifigs,
 		numberPerPage: state.numberPerPage,
 		activePage: state.activePage,
-		error: state.error
+		error: state.error,
+		show: state.show,
+		totalNumber: state.totalNumber,
+		numberOwned: state.numberOwned
 	}
 }
 

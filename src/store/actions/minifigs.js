@@ -108,3 +108,10 @@ export const setPossessionToAllOnServer = (minifigs, possessed) => {
 			});
 	}
 }
+
+export const setShow = (show) => {
+	return {
+		type: actionTypes.SET_SHOW,
+		show: show
+	}
+}

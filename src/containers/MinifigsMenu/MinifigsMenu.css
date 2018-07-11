@@ -14,12 +14,17 @@
 	text-align: center;
 }
 
+.MinifigMenuText {
+	margin-bottom: 0.5rem;
+}
+
 .Spinner {
 	margin-left: 10px;
 }
 
 .Tooltip {
 	position: relative;
+	margin-bottom: 0.5rem;
 }
 
 .Tooltip .TooltipText {

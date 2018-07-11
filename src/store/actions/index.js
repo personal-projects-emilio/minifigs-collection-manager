@@ -3,5 +3,6 @@ export {
 	setNumberPerPage,
 	setActivePage,
 	setPossessed,
-	setPossessionToAll
+	setPossessionToAll,
+	setShow
 } from './minifigs';
