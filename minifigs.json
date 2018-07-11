@@ -1,0 +1,3942 @@
+{
+   "30564":{
+      "name":"Aldar Beedo",
+      "possessed":false
+   },
+   "sw001a":{
+      "name":"Battle Droid Tan with Back Plate",
+      "possessed":false
+   },
+   "sw001b":{
+      "name":"Battle Droid Tan without Back Plate",
+      "possessed":true
+   },
+   "sw001c":{
+      "name":"Battle Droid with 1 Straight Arm",
+      "possessed":true
+   },
+   "sw001d":{
+      "name":"Battle Droid with 2 Straight Arms ",
+      "possessed":true
+   },
+   "sw002":{
+      "name":"Boba Fett - Classic Grays",
+      "possessed":true
+   },
+   "sw002a":{
+      "name":"Boba Fett - Bluish Grays",
+      "possessed":true
+   },
+   "sw002b":{
+      "name":"Boba Fett - Bluish Grays - Dark Red Helmet Highlights",
+      "possessed":true
+   },
+   "sw003":{
+      "name":"Darth Maul",
+      "possessed":true
+   },
+   "sw004":{
+      "name":"Darth Vader",
+      "possessed":true
+   },
+   "sw004a":{
+      "name":"Darth Vader (Light Bluish Gray Head)",
+      "possessed":false
+   },
+   "sw005":{
+      "name":"Scout Trooper",
+      "possessed":true
+   },
+   "sw005a":{
+      "name":"Scout Trooper (Black Head, Dark Bluish Gray Torso Pattern)",
+      "possessed":true
+   },
+   "sw005b":{
+      "name":"Scout Trooper (Patterned Head, Dark Bluish Gray Torso Pattern) (9489)",
+      "possessed":true
+   },
+   "sw006":{
+      "name":"Aldar Beedo",
+      "possessed":false
+   },
+   "sw007":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw008":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw009":{
+      "name":"Biggs Darklighter",
+      "possessed":true
+   },
+   "sw010":{
+      "name":"C-3PO - Pearl Light Gold",
+      "possessed":true
+   },
+   "sw011":{
+      "name":"Chewbacca (Brown)",
+      "possessed":true
+   },
+   "sw011a":{
+      "name":"Chewbacca (Reddish Brown)",
+      "possessed":true
+   },
+   "sw012":{
+      "name":"Dak Ralter",
+      "possessed":true
+   },
+   "sw012a":{
+      "name":"Dak Ralter (with Dark Bluish Gray Hips)",
+      "possessed":true
+   },
+   "sw012b":{
+      "name":"Dak Ralter (with Dark Bluish Gray Hips and Light Flesh Head)",
+      "possessed":false
+   },
+   "sw013":{
+      "name":"Gungan Soldier",
+      "possessed":true
+   },
+   "sw014":{
+      "name":"Han Solo, Blue Legs (Falcon)",
+      "possessed":false
+   },
+   "sw015":{
+      "name":"Han Solo, Brown Legs without Holster Pattern ",
+      "possessed":true
+   },
+   "sw016":{
+      "name":"Hoth Rebel",
+      "possessed":true
+   },
+   "sw017":{
+      "name":"Jar Jar Binks",
+      "possessed":true
+   },
+   "sw018":{
+      "name":"Luke Skywalker (Endor)",
+      "possessed":true
+   },
+   "sw019":{
+      "name":"Luke Skywalker (Pilot)",
+      "possessed":true
+   },
+   "sw019a":{
+      "name":"Luke Skywalker (Pilot with Dark Bluish Gray Hips)",
+      "possessed":true
+   },
+   "sw020":{
+      "name":"Luke Skywalker (Skiff)",
+      "possessed":true
+   },
+   "sw021":{
+      "name":"Luke Skywalker (Tatooine)",
+      "possessed":true
+   },
+   "sw022":{
+      "name":"Naboo Security Officer",
+      "possessed":true
+   },
+   "sw023":{
+      "name":"Obi-Wan Kenobi (Old)",
+      "possessed":true
+   },
+   "sw023a":{
+      "name":"Obi-Wan Kenobi (Old with Light Bluish Gray Hair)",
+      "possessed":true
+   },
+   "sw024":{
+      "name":"Obi-Wan Kenobi (young with hood and cape)",
+      "possessed":true
+   },
+   "sw025":{
+      "name":"Padme Naberrie",
+      "possessed":true
+   },
+   "sw026":{
+      "name":"Princess Leia",
+      "possessed":false
+   },
+   "sw027":{
+      "name":"Qui-Gon Jinn",
+      "possessed":true
+   },
+   "sw028":{
+      "name":"R2-D2",
+      "possessed":true
+   },
+   "sw028a":{
+      "name":"R2-D2 with Serving Tray (2 x 4 plate)",
+      "possessed":true
+   },
+   "sw029":{
+      "name":"R5-D4",
+      "possessed":true
+   },
+   "sw029a":{
+      "name":"R5-D4",
+      "possessed":false
+   },
+   "sw030":{
+      "name":"Rebel Engineer",
+      "possessed":true
+   },
+   "sw031":{
+      "name":"Rebel Pilot A-wing",
+      "possessed":true
+   },
+   "sw031a":{
+      "name":"Rebel Pilot A-wing (Light Flesh, Trans-Black Visor)",
+      "possessed":true
+   },
+   "sw031b":{
+      "name":"Rebel Pilot A-wing (Light Flesh, Trans-Yellow Visor)",
+      "possessed":true
+   },
+   "sw032":{
+      "name":"Rebel Pilot B-wing",
+      "possessed":true
+   },
+   "sw032a":{
+      "name":"Rebel Pilot B-wing (Light Flesh)",
+      "possessed":true
+   },
+   "sw033":{
+      "name":"Rebel Pilot Y-wing (Dutch Vander)",
+      "possessed":true
+   },
+   "sw033a":{
+      "name":"Rebel Pilot Y-wing, Dark Bluish Gray Hips (Dutch Vander)",
+      "possessed":false
+   },
+   "sw034":{
+      "name":"Rebel Technician",
+      "possessed":true
+   },
+   "sw035":{
+      "name":"TIE Fighter Pilot (Brown Head)",
+      "possessed":true
+   },
+   "sw035a":{
+      "name":"TIE Fighter Pilot (Reddish Brown Head)",
+      "possessed":false
+   },
+   "sw035b":{
+      "name":"TIE Interceptor Pilot (Black Head)",
+      "possessed":true
+   },
+   "sw036":{
+      "name":"Stormtrooper (Yellow Head)",
+      "possessed":true
+   },
+   "sw036a":{
+      "name":"Stormtrooper (Light Flesh Head)",
+      "possessed":true
+   },
+   "sw036b":{
+      "name":"Stormtrooper (Black Head)",
+      "possessed":true
+   },
+   "sw037":{
+      "name":"Pit Droid (Anakin's)",
+      "possessed":true
+   },
+   "sw038":{
+      "name":"Watto",
+      "possessed":false
+   },
+   "sw039":{
+      "name":"Pit Droid (Gasgano's)",
+      "possessed":false
+   },
+   "sw040":{
+      "name":"Royal Guard",
+      "possessed":true
+   },
+   "sw040b":{
+      "name":"Royal Guard with Black Hands",
+      "possessed":true
+   },
+   "sw041":{
+      "name":"Emperor Palpatine - Yellow Head, Yellow Hands",
+      "possessed":true
+   },
+   "sw042":{
+      "name":"Imperial Shuttle Pilot",
+      "possessed":false
+   },
+   "sw043":{
+      "name":"Gasgano",
+      "possessed":false
+   },
+   "sw044":{
+      "name":"Gasgano",
+      "possessed":true
+   },
+   "sw045":{
+      "name":"Han Solo, Brown Legs with Holster Pattern",
+      "possessed":false
+   },
+   "sw046":{
+      "name":"Imperial Officer - Captain",
+      "possessed":true
+   },
+   "sw047":{
+      "name":"Battle Droid Security",
+      "possessed":true
+   },
+   "sw048":{
+      "name":"Battle Droid Commander",
+      "possessed":true
+   },
+   "sw049":{
+      "name":"Lobot",
+      "possessed":true
+   },
+   "sw050":{
+      "name":"Ewok, Brown Hood (Wicket)",
+      "possessed":true
+   },
+   "sw051":{
+      "name":"Yoda",
+      "possessed":true
+   },
+   "sw052":{
+      "name":"Tusken Raider",
+      "possessed":true
+   },
+   "sw053":{
+      "name":"Jango Fett",
+      "possessed":true
+   },
+   "sw054":{
+      "name":"Boba Fett, Young",
+      "possessed":true
+   },
+   "sw055":{
+      "name":"Obi-Wan Kenobi (headset)",
+      "possessed":true
+   },
+   "sw055a":{
+      "name":"Obi-Wan Kenobi (no Headset)",
+      "possessed":true
+   },
+   "sw056":{
+      "name":"Super Battle Droid - Metal Blue",
+      "possessed":false
+   },
+   "sw057":{
+      "name":"Jedi Knight (Dark Gray Tunic, Brown Hood)",
+      "possessed":false
+   },
+   "sw058":{
+      "name":"Clone Trooper Ep.2",
+      "possessed":false
+   },
+   "sw059":{
+      "name":"Zam Wesell",
+      "possessed":true
+   },
+   "sw060":{
+      "name":"Count Dooku",
+      "possessed":false
+   },
+   "sw061":{
+      "name":"Battle Droid Geonosian",
+      "possessed":true
+   },
+   "sw062":{
+      "name":"Geonosian",
+      "possessed":true
+   },
+   "sw063":{
+      "name":"Destroyer Droid (Original)",
+      "possessed":true
+   },
+   "sw064":{
+      "name":"Pit Droid (Sebulba's)",
+      "possessed":false
+   },
+   "sw065":{
+      "name":"Battle Droid Pilot with Tan Torso with Blue Insignia",
+      "possessed":true
+   },
+   "sw067":{
+      "name":"Ewok, Tan Hood (Paploo)",
+      "possessed":true
+   },
+   "sw068":{
+      "name":"Luke Skywalker with Black Right Hand",
+      "possessed":true
+   },
+   "sw069":{
+      "name":"Obi-Wan Kenobi (young with Padawan Braid Pattern)",
+      "possessed":true
+   },
+   "sw070":{
+      "name":"Princess Leia (Jabba Slave with Neck Bracket with Back Stud)",
+      "possessed":true
+   },
+   "sw071":{
+      "name":"Jabba the Hutt",
+      "possessed":true
+   },
+   "sw072":{
+      "name":"EV-9D9",
+      "possessed":true
+   },
+   "sw073":{
+      "name":"Gonk Droid (GNK Power Droid)",
+      "possessed":true
+   },
+   "sw073a":{
+      "name":"Gonk Droid (GNK Power Droid), Bluish Grays",
+      "possessed":false
+   },
+   "sw074":{
+      "name":"B'Omarr Monk",
+      "possessed":true
+   },
+   "sw075":{
+      "name":"Gamorrean Guard",
+      "possessed":false
+   },
+   "sw076":{
+      "name":"Bib Fortuna",
+      "possessed":true
+   },
+   "sw077":{
+      "name":"T-16 Skyhopper Pilot - Red Helmet",
+      "possessed":true
+   },
+   "sw078":{
+      "name":"Geonosian with Wings",
+      "possessed":true
+   },
+   "sw079":{
+      "name":"Luke Skywalker (Jabba's Palace)",
+      "possessed":true
+   },
+   "sw080":{
+      "name":"Snowtrooper, Light Bluish Gray Hips, Black Hands",
+      "possessed":false
+   },
+   "sw081":{
+      "name":"Han Solo, Tan Legs, Reddish Brown Male Hair ",
+      "possessed":false
+   },
+   "sw082":{
+      "name":"Rebel Technician",
+      "possessed":true
+   },
+   "sw083":{
+      "name":"Luke Skywalker (Skiff, Light Flesh)",
+      "possessed":true
+   },
+   "sw084":{
+      "name":"Han Solo, Reddish Brown Legs without Holster",
+      "possessed":true
+   },
+   "sw085":{
+      "name":"Princess Leia (Jabba Slave with Neck Bracket with Back Stud, Light Flesh)",
+      "possessed":true
+   },
+   "sw085a":{
+      "name":"Princess Leia (Jabba Slave, Light Flesh)",
+      "possessed":true
+   },
+   "sw086":{
+      "name":"Lando Calrissian - Skiff Guard, Reddish Brown ",
+      "possessed":true
+   },
+   "sw087":{
+      "name":"Gamorrean Guard (Sail Barge)",
+      "possessed":true
+   },
+   "sw088":{
+      "name":"Han Solo, Reddish Brown Legs with Holster Pattern ",
+      "possessed":true
+   },
+   "sw088a":{
+      "name":"Han Solo, Reddish Brown Legs with Holster Pattern (Light Flesh 2010 Head Pattern)",
+      "possessed":true
+   },
+   "sw089":{
+      "name":"Wedge Antilles",
+      "possessed":true
+   },
+   "sw090":{
+      "name":"Luke Skywalker (Pilot, Light Flesh)",
+      "possessed":true
+   },
+   "sw090a":{
+      "name":"Luke Skywalker (Pilot, Light Flesh 2010 Head Pattern)",
+      "possessed":true
+   },
+   "sw091":{
+      "name":"Clone Trooper Ep.3, Red Markings, 'Shock Trooper'",
+      "possessed":true
+   },
+   "sw092":{
+      "name":"Super Battle Droid - Pearl Dark Gray",
+      "possessed":true
+   },
+   "sw093":{
+      "name":"Imperial AT-ST Pilot",
+      "possessed":true
+   },
+   "sw094":{
+      "name":"Rebel Pilot Y-wing, Light Flesh (Dutch Vander)",
+      "possessed":true
+   },
+   "sw095":{
+      "name":"Battle Droid Pilot with Blue Torso and Straight Arm",
+      "possessed":true
+   },
+   "sw095a":{
+      "name":"Battle Droid Pilot with Blue Torso",
+      "possessed":true
+   },
+   "sw096":{
+      "name":"Battle Droid Security with Straight Arm and Dark Red Torso",
+      "possessed":true
+   },
+   "sw097":{
+      "name":"Stormtrooper - Chrome Silver",
+      "possessed":true
+   },
+   "sw098":{
+      "name":"Luke Skywalker (Hoth)",
+      "possessed":false
+   },
+   "sw099":{
+      "name":"Anakin Skywalker (Grown Up) with Cape",
+      "possessed":true
+   },
+   "sw100":{
+      "name":"Anakin Skywalker (Grown Up) without Cape",
+      "possessed":true
+   },
+   "sw101":{
+      "name":"Snowtrooper, Light Gray Hips, White Hands",
+      "possessed":false
+   },
+   "sw102":{
+      "name":"AT-AT Driver",
+      "possessed":false
+   },
+   "sw103":{
+      "name":"Luke Skywalker (Cloud City)",
+      "possessed":false
+   },
+   "sw104":{
+      "name":"Princess Leia (Cloud City)",
+      "possessed":false
+   },
+   "sw105":{
+      "name":"Lando Calrissian",
+      "possessed":false
+   },
+   "sw106":{
+      "name":"Luke Skywalker (Dagobah) with Backpack",
+      "possessed":false
+   },
+   "sw107":{
+      "name":"Boba Fett (Cloud City - Printed Arms & Legs)",
+      "possessed":false
+   },
+   "sw108":{
+      "name":"Hoth Rebel 2",
+      "possessed":true
+   },
+   "sw109":{
+      "name":"Sandtrooper - Orange Pauldron (Solid), Survival Backpack, No Dirt Stains, Helmet with Solid Mouth Pattern and Solid Yellow Head",
+      "possessed":true
+   },
+   "sw109a":{
+      "name":"Sandtrooper - Orange Pauldron (Solid), No Survival Backpack, No Dirt Stains, Helmet with Solid Mouth Pattern and Solid Black Head",
+      "possessed":true
+   },
+   "sw110":{
+      "name":"Greedo",
+      "possessed":true
+   },
+   "sw111":{
+      "name":"Han Solo, Dark Blue Legs",
+      "possessed":true
+   },
+   "sw113":{
+      "name":" Princess Leia (Hoth Outfit, Bun Hair)",
+      "possessed":true
+   },
+   "sw113a":{
+      "name":" Princess Leia (Hoth Outfit, Smooth Bun Hair)",
+      "possessed":true
+   },
+   "sw114":{
+      "name":"Imperial Office",
+      "possessed":false
+   },
+   "sw115":{
+      "name":"Snowtrooper, Light Bluish Gray Hips, White Hands",
+      "possessed":true
+   },
+   "sw116":{
+      "name":"Luminara Unduli with Light-Up Lightsaber",
+      "possessed":true
+   },
+   "sw117":{
+      "name":"Darth Vader with Light-Up Lightsaber ",
+      "possessed":false
+   },
+   "sw118":{
+      "name":"Clone Pilot",
+      "possessed":true
+   },
+   "sw119":{
+      "name":"R7-D4",
+      "possessed":true
+   },
+   "sw120":{
+      "name":"Anakin Skywalker with Black Right Hand",
+      "possessed":true
+   },
+   "sw121":{
+      "name":"Anakin Skywalker with Light-up Lightsaber ",
+      "possessed":true
+   },
+   "sw122":{
+      "name":"Stormtrooper (Printed Legs)",
+      "possessed":false
+   },
+   "sw123":{
+      "name":"Darth Vader (Imperial Inspection)",
+      "possessed":true
+   },
+   "sw124":{
+      "name":"Emperor Palpatine - Light Bluish Gray Head, Light Bluish Gray Hands",
+      "possessed":false
+   },
+   "sw125":{
+      "name":"Dwarf Spider Droid",
+      "possessed":true
+   },
+   "sw126":{
+      "name":"Clone Trooper Ep.3",
+      "possessed":true
+   },
+   "sw127":{
+      "name":"Clone Trooper Ep.3 with Jet Pack on Back, 'Aerial Trooper'",
+      "possessed":false
+   },
+   "sw128":{
+      "name":"Clone Trooper Ep.3, Yellow Markings and Pauldron",
+      "possessed":false
+   },
+   "sw128a":{
+      "name":"Clone Trooper Ep.3, Yellow Markings, No Pauldron, 'Star Corps Trooper'",
+      "possessed":true
+   },
+   "sw129":{
+      "name":"Clone Trooper Ep.3, Green Markings",
+      "possessed":true
+   },
+   "sw130":{
+      "name":"Clone Trooper Ep.3, Dark Red Markings",
+      "possessed":true
+   },
+   "sw131":{
+      "name":"Scout Trooper Ep.3, 'Kashyyyk Trooper'",
+      "possessed":false
+   },
+   "sw132":{
+      "name":"Wookiee Warrior",
+      "possessed":true
+   },
+   "sw133":{
+      "name":"Wookiee Warrior",
+      "possessed":false
+   },
+   "sw134":{
+      "name":"General Grievous - Straight Legs, Cape",
+      "possessed":true
+   },
+   "sw134a":{
+      "name":"General Grievous - Straight Legs",
+      "possessed":true
+   },
+   "sw135":{
+      "name":"Obi-Wan Kenobi, Dark Orange Legs",
+      "possessed":true
+   },
+   "sw136":{
+      "name":"Buzz Droid",
+      "possessed":true
+   },
+   "sw137":{
+      "name":"Obi-Wan Kenobi with Light-Up Lightsaber Complete ",
+      "possessed":true
+   },
+   "sw138":{
+      "name":"Darth Vader Ep.3 without Cape",
+      "possessed":false
+   },
+   "sw139":{
+      "name":"Anakin Skywalker with Black Right Hand (without Hair)",
+      "possessed":false
+   },
+   "sw140":{
+      "name":"Owen Lars",
+      "possessed":false
+   },
+   "sw141":{
+      "name":"Jawa with Cape",
+      "possessed":false
+   },
+   "sw142":{
+      "name":"R5-D4 (10144)",
+      "possessed":false
+   },
+   "sw143":{
+      "name":"Droid Brain (from TIE Fighter)",
+      "possessed":false
+   },
+   "sw144":{
+      "name":"Medical Droid",
+      "possessed":false
+   },
+   "sw145":{
+      "name":"ASP Droid",
+      "possessed":false
+   },
+   "sw146":{
+      "name":"Treadwell Droid",
+      "possessed":false
+   },
+   "sw147":{
+      "name":"R1-G4",
+      "possessed":false
+   },
+   "sw148":{
+      "name":"Mace Windu, Non-Light-Up",
+      "possessed":false
+   },
+   "sw149":{
+      "name":"Dengar",
+      "possessed":true
+   },
+   "sw150":{
+      "name":"Bespin Guard",
+      "possessed":true
+   },
+   "sw151":{
+      "name":"IG-88",
+      "possessed":true
+   },
+   "sw152":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":false
+   },
+   "sw153":{
+      "name":"Ten Numb",
+      "possessed":true
+   },
+   "sw154":{
+      "name":"Imperial Officer",
+      "possessed":true
+   },
+   "sw155":{
+      "name":"R2-D5",
+      "possessed":true
+   },
+   "sw156":{
+      "name":"Mouse Droid - Black / Dark Bluish Gray",
+      "possessed":true
+   },
+   "sw156a":{
+      "name":"Mouse Droid - Black / Light Bluish Gray",
+      "possessed":true
+   },
+   "sw157":{
+      "name":"Grand Moff Tarkin",
+      "possessed":true
+   },
+   "sw158":{
+      "name":"C-3PO - Chrome Gold",
+      "possessed":false
+   },
+   "sw159":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw160":{
+      "name":"Naboo Fighter Pilot",
+      "possessed":true
+   },
+   "sw161":{
+      "name":"C-3PO - Pearl Gold with Pearl Light Gold Hands",
+      "possessed":true
+   },
+   "sw161a":{
+      "name":"C-3PO - Pearl Gold with Pearl Gold Hands",
+      "possessed":true
+   },
+   "sw162":{
+      "name":"Obi-Wan Kenob",
+      "possessed":true
+   },
+   "sw163":{
+      "name":"Kit Fisto",
+      "possessed":true
+   },
+   "sw164":{
+      "name":"Destroyer Droid",
+      "possessed":true
+   },
+   "sw165":{
+      "name":"K-3PO",
+      "possessed":false
+   },
+   "sw166":{
+      "name":"Shadow Trooper",
+      "possessed":true
+   },
+   "sw167":{
+      "name":"Hoth Rebel 3",
+      "possessed":false
+   },
+   "sw168":{
+      "name":"R2-R7",
+      "possessed":false
+   },
+   "sw169":{
+      "name":"Republic Captain",
+      "possessed":false
+   },
+   "sw170":{
+      "name":"Republic Pilot",
+      "possessed":false
+   },
+   "sw171":{
+      "name":"Imperial Probe Droid",
+      "possessed":false
+   },
+   "sw172":{
+      "name":" Qui-Gon Jinn (Light Flesh)",
+      "possessed":false
+   },
+   "sw172a":{
+      "name":"Qui-Gon Jinn (Light Flesh with Black Chin Dimple)",
+      "possessed":false
+   },
+   "sw173":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":false
+   },
+   "sw174":{
+      "name":"Obi-Wan Kenobi ",
+      "possessed":false
+   },
+   "sw175":{
+      "name":"Princess Leia (White Dress, Light Flesh, Small Eyes)",
+      "possessed":true
+   },
+   "sw175a":{
+      "name":" Princess Leia (White Dress, Light Flesh, Small Eyes, Smooth Hair)",
+      "possessed":false
+   },
+   "sw175b":{
+      "name":"Princess Leia (White Dress, Light Flesh, Big Eyes)",
+      "possessed":true
+   },
+   "sw176":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw177":{
+      "name":"AT-AT Driver",
+      "possessed":false
+   },
+   "sw178":{
+      "name":"General Veers",
+      "possessed":false
+   },
+   "sw179":{
+      "name":"Han Solo (Black Vest, Light Flesh)",
+      "possessed":true
+   },
+   "sw179a":{
+      "name":"Han Solo (Black Vest, Light Flesh 2010 Head Pattern)",
+      "possessed":true
+   },
+   "sw180":{
+      "name":"Darth Vader Battle Damaged",
+      "possessed":false
+   },
+   "sw181":{
+      "name":"Darth Vader's Apprentice",
+      "possessed":false
+   },
+   "sw182":{
+      "name":"Juno Eclipse",
+      "possessed":false
+   },
+   "sw183":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw184":{
+      "name":"Battle Droid Commander with Straight Arm and Yellow Torso",
+      "possessed":true
+   },
+   "sw187":{
+      "name":"Rebel Scout Trooper",
+      "possessed":true
+   },
+   "sw188":{
+      "name":" Stormtrooper (Black Head, Dotted Mouth Pattern)",
+      "possessed":true
+   },
+   "sw188a":{
+      "name":"Stormtrooper (Light Flesh Head, Dotted Mouth Pattern)",
+      "possessed":true
+   },
+   "sw189":{
+      "name":"Clone Trooper Ep.3, Red Markings, White Hips 'Shock Trooper' (7671)",
+      "possessed":true
+   },
+   "sw190":{
+      "name":"Magna Guard",
+      "possessed":true
+   },
+   "sw191":{
+      "name":"Clone Pilot (Clone Wars)",
+      "possessed":true
+   },
+   "sw192":{
+      "name":"Ahsoka",
+      "possessed":true
+   },
+   "sw193":{
+      "name":"Rotta",
+      "possessed":true
+   },
+   "sw194":{
+      "name":"Captain Rex",
+      "possessed":true
+   },
+   "sw195":{
+      "name":"Asajj Ventress - Dark Blue Torso",
+      "possessed":true
+   },
+   "sw196":{
+      "name":"Commander Cody with Pauldron and Kama",
+      "possessed":true
+   },
+   "sw197":{
+      "name":"Obi-Wan Kenobi (Clone Wars)",
+      "possessed":true
+   },
+   "sw198":{
+      "name":"Plo Koon",
+      "possessed":true
+   },
+   "sw200":{
+      "name":"Clone Trooper Clone Wars with Dark Bluish Gray Antenna",
+      "possessed":true
+   },
+   "sw200a":{
+      "name":"Clone Trooper Clone Wars with Black Helmet Antenna",
+      "possessed":true
+   },
+   "sw201":{
+      "name":"Clone Trooper Clone Wars",
+      "possessed":true
+   },
+   "sw202":{
+      "name":"Commander Fox",
+      "possessed":true
+   },
+   "sw203":{
+      "name":"Clone Trooper Clone Wars with Armor",
+      "possessed":false
+   },
+   "sw204":{
+      "name":"Luke Skywalker (Stormtrooper Outfit)",
+      "possessed":true
+   },
+   "sw205":{
+      "name":"Han Solo - Stormtrooper Outfit",
+      "possessed":true
+   },
+   "sw205a":{
+      "name":"Han Solo - Stormtrooper Outfit, Light Flesh 2010 Head Pattern (10188)",
+      "possessed":true
+   },
+   "sw206":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw207":{
+      "name":"Luke Skywalker (Jedi Knight)",
+      "possessed":true
+   },
+   "sw208":{
+      "name":"Imperial Trooper",
+      "possessed":true
+   },
+   "sw208a":{
+      "name":"Imperial Trooper (Death Star Alternate)",
+      "possessed":true
+   },
+   "sw209":{
+      "name":"Darth Vader (Death Star torso)",
+      "possessed":true
+   },
+   "sw210":{
+      "name":"Emperor Palpatine",
+      "possessed":true
+   },
+   "sw211":{
+      "name":"Interrogation Droid",
+      "possessed":true
+   },
+   "sw211a":{
+      "name":"Interrogation Droid (10188 alternate)",
+      "possessed":true
+   },
+   "sw212":{
+      "name":"Protocol Droid",
+      "possessed":true
+   },
+   "sw213":{
+      "name":"R2-Q5",
+      "possessed":true
+   },
+   "sw215":{
+      "name":"Assassin Droid (White)",
+      "possessed":true
+   },
+   "sw216s":{
+      "name":" EV-A4-D with Sticker",
+      "possessed":true
+   },
+   "sw217":{
+      "name":"R2-D2 (Light Bluish Gray Head)",
+      "possessed":true
+   },
+   "sw217a":{
+      "name":"R2-D2 with Serving Tray",
+      "possessed":true
+   },
+   "sw218":{
+      "name":"Darth Vader - Chrome Black",
+      "possessed":true
+   },
+   "sw219":{
+      "name":"Yoda (Clone Wars, Gray Hair)",
+      "possessed":true
+   },
+   "sw220":{
+      "name":"Mace Windu - Clone Wars",
+      "possessed":true
+   },
+   "sw221":{
+      "name":"Clone Gunner",
+      "possessed":true
+   },
+   "sw222":{
+      "name":"Assassin Droid Elite (Black)",
+      "possessed":true
+   },
+   "sw223":{
+      "name":"Clone Commander",
+      "possessed":true
+   },
+   "sw224":{
+      "name":"Count Dooku - Clone Wars",
+      "possessed":true
+   },
+   "sw225":{
+      "name":"Pilot Droid",
+      "possessed":true
+   },
+   "sw226":{
+      "name":"Nahdar Vebb",
+      "possessed":true
+   },
+   "sw227":{
+      "name":"Rocket Droid Commander (Battle)",
+      "possessed":true
+   },
+   "sw228":{
+      "name":"Rocket Battle Droid",
+      "possessed":true
+   },
+   "sw229":{
+      "name":"Assassin Droid (Silver)",
+      "possessed":true
+   },
+   "sw230":{
+      "name":"Super Battle Droid with Blaster Arm",
+      "possessed":true
+   },
+   "sw231":{
+      "name":"R7-A7",
+      "possessed":true
+   },
+   "sw233":{
+      "name":"R7-A7",
+      "possessed":true
+   },
+   "sw234":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw235":{
+      "name":"Princess Leia (Endor Outfit)",
+      "possessed":true
+   },
+   "sw236":{
+      "name":"Chief Chirpa (Ewok)",
+      "possessed":true
+   },
+   "sw237":{
+      "name":"Wicket (Ewok)",
+      "possessed":true
+   },
+   "sw238":{
+      "name":"Paploo (Ewok)",
+      "possessed":true
+   },
+   "sw239":{
+      "name":"Rebel Commando Frown",
+      "possessed":true
+   },
+   "sw240":{
+      "name":"Rebel Commando Beard",
+      "possessed":true
+   },
+   "sw241":{
+      "name":"Onaconda Farr",
+      "possessed":true
+   },
+   "sw242":{
+      "name":"Nute Gunray",
+      "possessed":true
+   },
+   "sw243":{
+      "name":"Chancellor Palpatine - Clone Wars Red Outfit",
+      "possessed":true
+   },
+   "sw244":{
+      "name":"Senate Commando",
+      "possessed":true
+   },
+   "sw244a":{
+      "name":"Senate Commando - Plain Light Flesh",
+      "possessed":true
+   },
+   "sw245":{
+      "name":"Turk Falso",
+      "possessed":true
+   },
+   "sw246":{
+      "name":"Hondo Ohnaka",
+      "possessed":true
+   },
+   "sw247":{
+      "name":"Admiral Ackbar",
+      "possessed":true
+   },
+   "sw248":{
+      "name":"Mon Calamari Officer",
+      "possessed":true
+   },
+   "sw249":{
+      "name":"Mon Mothma",
+      "possessed":true
+   },
+   "sw250":{
+      "name":"Crix Madine, Dark Tan Hips and Legs",
+      "possessed":true
+   },
+   "sw250a":{
+      "name":"Crix Madine, Tan Hips and Legs",
+      "possessed":true
+   },
+   "sw251":{
+      "name":"Lando Calrissian",
+      "possessed":true
+   },
+   "sw252":{
+      "name":"Hoth Rebel 4",
+      "possessed":true
+   },
+   "sw253":{
+      "name":"Han Solo, Tan Legs with Holster Pattern, Parka Hood (Light Flesh)",
+      "possessed":true
+   },
+   "sw253a":{
+      "name":"Han Solo, Tan Legs with Holster Pattern, Parka Hood (Light Flesh 2010 Head Pattern)",
+      "possessed":true
+   },
+   "sw254":{
+      "name":"General Grievous - Bent Legs, Tan Armor",
+      "possessed":true
+   },
+   "sw255":{
+      "name":"R2-D2 - Clone Wars",
+      "possessed":true
+   },
+   "sw256":{
+      "name":"Captain Antilles",
+      "possessed":false
+   },
+   "sw257":{
+      "name":"Luke Skywalker (Celebration)",
+      "possessed":true
+   },
+   "sw257a":{
+      "name":"Luke Skywalker (Celebration)- White Pupils",
+      "possessed":true
+   },
+   "sw258":{
+      "name":"Hoth Officer",
+      "possessed":true
+   },
+   "sw259":{
+      "name":"Hoth Rebel Trooper",
+      "possessed":true
+   },
+   "sw260":{
+      "name":"Zev Senesca",
+      "possessed":true
+   },
+   "sw261":{
+      "name":"Imperial Officer",
+      "possessed":true
+   },
+   "sw262":{
+      "name":"AT-AT Driver",
+      "possessed":true
+   },
+   "sw263":{
+      "name":"Anakin Skywalker (Parka)",
+      "possessed":true
+   },
+   "sw264":{
+      "name":"Thi-Sen",
+      "possessed":true
+   },
+   "sw265":{
+      "name":"Captain Jag",
+      "possessed":true
+   },
+   "sw266":{
+      "name":"Clone Pilot with Open Helmet",
+      "possessed":true
+   },
+   "sw267":{
+      "name":"R4-P44",
+      "possessed":true
+   },
+   "sw268":{
+      "name":"TIE Defender Pilot",
+      "possessed":true
+   },
+   "sw268a":{
+      "name":"TIE Fighter Pilot (Patterned Head)",
+      "possessed":true
+   },
+   "sw269":{
+      "name":"Barriss Offee - Black Cape and Hood",
+      "possessed":true
+   },
+   "sw270":{
+      "name":"Sentry Droid",
+      "possessed":true
+   },
+   "sw271":{
+      "name":"Sandtrooper - Black Pauldron (Solid), Survival Backpack, No Dirt Stains, Helmet with Dotted Mouth Pattern and Solid Black Head",
+      "possessed":true
+   },
+   "sw272":{
+      "name":"Clone Trooper Ep.3 (Dotted Mouth Pattern)",
+      "possessed":true
+   },
+   "sw273":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw274":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw275":{
+      "name":"Boba Fett - White",
+      "possessed":true
+   },
+   "sw277":{
+      "name":"Darth Vader (White Pupils)",
+      "possessed":true
+   },
+   "sw278":{
+      "name":"Han Solo, Reddish Brown Legs without Holster",
+      "possessed":true
+   },
+   "sw279":{
+      "name":"Boba Fett - Pauldron, Helmet, Jet Pack",
+      "possessed":true
+   },
+   "sw280":{
+      "name":"Bossk - Sand Green",
+      "possessed":true
+   },
+   "sw281":{
+      "name":"Clone Pilot, Ep.3 with Open Helmet and White Head",
+      "possessed":true
+   },
+   "sw282":{
+      "name":"2-1B Medical Droid",
+      "possessed":true
+   },
+   "sw283":{
+      "name":"Anakin Skywalker, Battle Damaged with Darth Vader Helmet",
+      "possessed":true
+   },
+   "sw284":{
+      "name":"Aayla Secura",
+      "possessed":true
+   },
+   "sw285":{
+      "name":"Cad Bane - Dark Bluish Gray Hands and Legs",
+      "possessed":true
+   },
+   "sw286":{
+      "name":"Clone Commander",
+      "possessed":true
+   },
+   "sw287":{
+      "name":"Shahan Alama",
+      "possessed":false
+   },
+   "sw288":{
+      "name":"Senate Commando Captain",
+      "possessed":false
+   },
+   "sw289":{
+      "name":"General Veers",
+      "possessed":false
+   },
+   "sw290":{
+      "name":"Han Solo, Reddish Brown Legs with Holster Pattern, Open Jacket",
+      "possessed":false
+   },
+   "sw291":{
+      "name":"Hoth Rebel Trooper",
+      "possessed":false
+   },
+   "sw292":{
+      "name":"Luke Skywalker (Jedi Knight, Pupils)",
+      "possessed":true
+   },
+   "sw293":{
+      "name":"Imperial Officer (Imperial Shuttle Commander)",
+      "possessed":true
+   },
+   "sw294":{
+      "name":"Imperial Pilot",
+      "possessed":true
+   },
+   "sw295":{
+      "name":"Luke Skywalker (Pilot, Light Flesh) - Detailed Torso and Helmet",
+      "possessed":true
+   },
+   "sw296":{
+      "name":"Mandalorian",
+      "possessed":true
+   },
+   "sw297":{
+      "name":"ARF Trooper",
+      "possessed":true
+   },
+   "sw298":{
+      "name":"Clone Trooper Clone Wars with Sand Green Markings",
+      "possessed":true
+   },
+   "sw299":{
+      "name":"Bomb Squad Trooper",
+      "possessed":true
+   },
+   "sw300":{
+      "name":"Battle Droid Pilot with Blue Torso with Tan Insignia",
+      "possessed":true
+   },
+   "sw301":{
+      "name":"Jar Jar Binks",
+      "possessed":true
+   },
+   "sw302":{
+      "name":"Gungan Soldier",
+      "possessed":true
+   },
+   "sw303":{
+      "name":"R2-Q2",
+      "possessed":true
+   },
+   "sw304":{
+      "name":"Imperial V-wing Pilot",
+      "possessed":true
+   },
+   "sw305":{
+      "name":"Sugi",
+      "possessed":true
+   },
+   "sw306":{
+      "name":"Aurra Sing",
+      "possessed":true
+   },
+   "sw307":{
+      "name":"Embo",
+      "possessed":true
+   },
+   "sw308":{
+      "name":"Saesee Tiin",
+      "possessed":true
+   },
+   "sw309":{
+      "name":"Shaak Ti",
+      "possessed":true
+   },
+   "sw310":{
+      "name":"Luminara Unduli",
+      "possessed":true
+   },
+   "sw311":{
+      "name":"Spy Droid",
+      "possessed":true
+   },
+   "sw312":{
+      "name":"TX-20 (Tactical Droid)",
+      "possessed":true
+   },
+   "sw313":{
+      "name":"R8-B7",
+      "possessed":true
+   },
+   "sw314":{
+      "name":"Captain Rex with Helmet Antenna",
+      "possessed":true
+   },
+   "sw315":{
+      "name":"Shadow ARF Trooper",
+      "possessed":true
+   },
+   "sw316":{
+      "name":"Savage Opress",
+      "possessed":true
+   },
+   "sw317":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw318":{
+      "name":"Asajj Ventress - Black Torso",
+      "possessed":true
+   },
+   "sw319":{
+      "name":"Ki-Adi-Mundi",
+      "possessed":true
+   },
+   "sw320":{
+      "name":"Geonosian",
+      "possessed":true
+   },
+   "sw321":{
+      "name":"Captain Panaka",
+      "possessed":true
+   },
+   "sw322":{
+      "name":"Qui-Gon Jinn ",
+      "possessed":true
+   },
+   "sw323":{
+      "name":"Darth Maul",
+      "possessed":true
+   },
+   "sw324":{
+      "name":"Padme Naberrie",
+      "possessed":true
+   },
+   "sw325":{
+      "name":"Watto",
+      "possessed":true
+   },
+   "sw326":{
+      "name":"Sebulba",
+      "possessed":true
+   },
+   "sw327":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw328":{
+      "name":"Wald",
+      "possessed":true
+   },
+   "sw329":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw330":{
+      "name":"Clone Commander Wolffe",
+      "possessed":true
+   },
+   "sw331":{
+      "name":"Wolfpack Clone Trooper",
+      "possessed":true
+   },
+   "sw332":{
+      "name":"Eeth Koth",
+      "possessed":true
+   },
+   "sw333":{
+      "name":"Quinlan Vos",
+      "possessed":true
+   },
+   "sw334":{
+      "name":"Han Solo",
+      "possessed":true
+   },
+   "sw335":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw336":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw337":{
+      "name":"Princess Leia",
+      "possessed":true
+   },
+   "sw338":{
+      "name":"Logray (Ewok)",
+      "possessed":true
+   },
+   "sw339":{
+      "name":"Tokkat (Ewok)",
+      "possessed":true
+   },
+   "sw340":{
+      "name":"Naboo Fighter Pilot",
+      "possessed":false
+   },
+   "sw341":{
+      "name":"Commander Cody",
+      "possessed":true
+   },
+   "sw342":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw343":{
+      "name":"Han Solo, Tan Legs with Holster Pattern, Parka Hood",
+      "possessed":true
+   },
+   "sw344":{
+      "name":"R-3PO",
+      "possessed":true
+   },
+   "sw345":{
+      "name":"2-1B Medical Droid",
+      "possessed":true
+   },
+   "sw346":{
+      "name":"Princess Leia",
+      "possessed":true
+   },
+   "sw347":{
+      "name":"Battle Droid Security with Straight Arm - Dot Pattern on Torso",
+      "possessed":false
+   },
+   "sw348":{
+      "name":"Destroyer Droid",
+      "possessed":false
+   },
+   "sw349":{
+      "name":"Anakin Skywalker",
+      "possessed":false
+   },
+   "sw350":{
+      "name":"Dengar",
+      "possessed":false
+   },
+   "sw351":{
+      "name":"IG-88",
+      "possessed":false
+   },
+   "sw352":{
+      "name":"Admiral Piett",
+      "possessed":false
+   },
+   "sw354":{
+      "name":"Zev Senesca - Plain Helmet",
+      "possessed":true
+   },
+   "sw355":{
+      "name":"Clone Pilot (Clone Wars) with Black Head",
+      "possessed":true
+   },
+   "sw356":{
+      "name":"Han Solo (Celebration)",
+      "possessed":true
+   },
+   "sw357":{
+      "name":"Han Solo, Young",
+      "possessed":true
+   },
+   "sw358":{
+      "name":"Santa Yoda with Backpack",
+      "possessed":true
+   },
+   "sw359":{
+      "name":"Commando Droid",
+      "possessed":true
+   },
+   "sw360":{
+      "name":"Battle Droid Pilot with Blue Torso with Tan Insignia and Straight Arm",
+      "possessed":true
+   },
+   "sw361":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw362":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw363":{
+      "name":"Nute Gunray",
+      "possessed":true
+   },
+   "sw364":{
+      "name":"Sandtrooper - Orange Pauldron, Survival Backpack, Dirt Stains, Balaclava Head Print and Helmet with Dotted Mouth Pattern",
+      "possessed":true
+   },
+   "sw365":{
+      "name":"C-3PO - Colorful Wires Pattern",
+      "possessed":true
+   },
+   "sw366":{
+      "name":"Stormtrooper (Detailed Armor, Patterned Head, Dotted Mouth Pattern)",
+      "possessed":true
+   },
+   "sw367":{
+      "name":"Rebel Commando - Dark Tan Vest",
+      "possessed":true
+   },
+   "sw368":{
+      "name":"Rebel Commando - Stubble",
+      "possessed":true
+   },
+   "sw369":{
+      "name":"Rebel Pilot Y-wing (Dutch Vander, Gold Leader)",
+      "possessed":true
+   },
+   "sw370":{
+      "name":"R5-F7",
+      "possessed":true
+   },
+   "sw371":{
+      "name":"Princess Leia ",
+      "possessed":true
+   },
+   "sw372":{
+      "name":"Jek Porkins",
+      "possessed":true
+   },
+   "sw373":{
+      "name":"R5-D8 / R5-D4",
+      "possessed":true
+   },
+   "sw374":{
+      "name":"Death Star Trooper",
+      "possessed":true
+   },
+   "sw375":{
+      "name":"R5-J2",
+      "possessed":true
+   },
+   "sw376":{
+      "name":"Imperial Officer - Commander",
+      "possessed":true
+   },
+   "sw377":{
+      "name":"ARC Trooper with Backpack - Elite Clone Trooper",
+      "possessed":true
+   },
+   "sw378":{
+      "name":"ARF Trooper - Elite Clone Trooper ",
+      "possessed":true
+   },
+   "sw379":{
+      "name":"Barriss Offee - Dark Blue Cape and Hood",
+      "possessed":true
+   },
+   "sw380":{
+      "name":"Clone Commander Gree",
+      "possessed":true
+   },
+   "sw381":{
+      "name":"Geonosian Warrior with Wing",
+      "possessed":true
+   },
+   "sw382":{
+      "name":"Geonosian Zombie with Wings",
+      "possessed":true
+   },
+   "sw383":{
+      "name":"Sandtrooper - White Pauldron, Survival Backpack, Dirt Stains, Balaclava Head Print and Helmet with Dotted Mouth Pattern",
+      "possessed":true
+   },
+   "sw384":{
+      "name":" Darth Maul - Printed Red Arms",
+      "possessed":true
+   },
+   "sw385":{
+      "name":"TC-14 Protocol Droid - Chrome Silver with Blue, Red and White Wires Pattern",
+      "possessed":false
+   },
+   "sw386":{
+      "name":"Darth Vader - Black Head",
+      "possessed":false
+   },
+   "sw387":{
+      "name":"Queen Amidala",
+      "possessed":true
+   },
+   "sw388":{
+      "name":"Obi-Wan Kenobi (Old) - Short Cape",
+      "possessed":true
+   },
+   "sw389":{
+      "name":"Satele Shan",
+      "possessed":true
+   },
+   "sw390":{
+      "name":"T7-O1",
+      "possessed":true
+   },
+   "sw391":{
+      "name":"Jace Malcom (Republic Trooper)",
+      "possessed":true
+   },
+   "sw392":{
+      "name":"Even Piell",
+      "possessed":true
+   },
+   "sw393":{
+      "name":"R3-D5",
+      "possessed":true
+   },
+   "sw395":{
+      "name":"Darth Maul",
+      "possessed":false
+   },
+   "sw395":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw396":{
+      "name":"Boba Fett",
+      "possessed":true
+   },
+   "sw397":{
+      "name":"Kithaba",
+      "possessed":true
+   },
+   "sw398":{
+      "name":"Lando Calrissian",
+      "possessed":true
+   },
+   "sw399":{
+      "name":"Rebel Pilot X-wing",
+      "possessed":true
+   },
+   "sw400":{
+      "name":"Lobot",
+      "possessed":false
+   },
+   "sw401":{
+      "name":"Imperial AT-ST Driver",
+      "possessed":false
+   },
+   "sw402":{
+      "name":"Jabba The Hutt",
+      "possessed":true
+   },
+   "sw403":{
+      "name":"Han Solo, Reddish Brown Legs without Holster ",
+      "possessed":true
+   },
+   "sw404":{
+      "name":"Bib Fortuna - Bared Teeth",
+      "possessed":true
+   },
+   "sw405":{
+      "name":"Gamorrean Guard (Olive Green, Detailed)",
+      "possessed":true
+   },
+   "sw406":{
+      "name":"Oola",
+      "possessed":true
+   },
+   "sw407":{
+      "name":"Boushh - Princess Leia",
+      "possessed":true
+   },
+   "sw408":{
+      "name":"Salacious B. Crumb",
+      "possessed":true
+   },
+   "sw409":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw410":{
+      "name":"Qui-Gon Jinn",
+      "possessed":true
+   },
+   "sw411":{
+      "name":"Padme Amidala - Senator, Clone Wars",
+      "possessed":true
+   },
+   "sw412":{
+      "name":"B'Omarr Monk",
+      "possessed":true
+   },
+   "sw413":{
+      "name":"Darth Malgus",
+      "possessed":true
+   },
+   "sw414":{
+      "name":"Sith Trooper - Black Outfit, Plain Legs",
+      "possessed":true
+   },
+   "sw415":{
+      "name":"Battle Droid Commander with Straight Arm",
+      "possessed":true
+   },
+   "sw416":{
+      "name":"Pre Vizsla",
+      "possessed":true
+   },
+   "sw417":{
+      "name":"Mace Windu",
+      "possessed":false
+   },
+   "sw418":{
+      "name":"Chancellor Palpatine - Ep.3 Dark Red Outfit",
+      "possessed":false
+   },
+   "sw419":{
+      "name":"Anakin Skywalker (Sith Face, Cape - 9526)",
+      "possessed":false
+   },
+   "sw420":{
+      "name":"Saesee Tiin with Cape",
+      "possessed":false
+   },
+   "sw421":{
+      "name":"Agen Kolar",
+      "possessed":false
+   },
+   "sw422":{
+      "name":"Kit Fisto with Cape",
+      "possessed":false
+   },
+   "sw423":{
+      "name":"Santa Darth Maul",
+      "possessed":true
+   },
+   "sw424":{
+      "name":"R2-D2 (Snowman)",
+      "possessed":true
+   },
+   "sw425":{
+      "name":"Hoth Rebel Trooper, Moustache",
+      "possessed":true
+   },
+   "sw426":{
+      "name":"Imperial Officer, Chin Strap",
+      "possessed":true
+   },
+   "sw427":{
+      "name":"Rebel Scout Trooper, Smiling",
+      "possessed":true
+   },
+   "sw428":{
+      "name":"Snowtrooper, Light Bluish Gray Hips, White Hands, Printed Head",
+      "possessed":true
+   },
+   "sw429":{
+      "name":"DRK-1 Dark Eye Probe Droid",
+      "possessed":true
+   },
+   "sw430":{
+      "name":"Gonk Droid (GNK Power Droid) ",
+      "possessed":true
+   },
+   "sw431":{
+      "name":"Boba Fett - Balaclava Head",
+      "possessed":true
+   },
+   "sw432":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw433":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw434":{
+      "name":"Malakili",
+      "possessed":true
+   },
+   "sw435":{
+      "name":"Pong Krell",
+      "possessed":true
+   },
+   "sw436":{
+      "name":"Sith Trooper - Dark Red Outfit",
+      "possessed":true
+   },
+   "sw437":{
+      "name":"Rebel Pilot A-wing",
+      "possessed":true
+   },
+   "sw438":{
+      "name":"Clone Trooper Sergeant",
+      "possessed":true
+   },
+   "sw439":{
+      "name":"501st Clone Pilot",
+      "possessed":true
+   },
+   "sw440":{
+      "name":"Republic Trooper 1",
+      "possessed":true
+   },
+   "sw441":{
+      "name":"Droideka, Pearl Dark Gray Arms Mechanical",
+      "possessed":true
+   },
+   "sw441a":{
+      "name":"Droideka, Flat Silver Arms Mechanical",
+      "possessed":true
+   },
+   "sw442":{
+      "name":"Clone Trooper",
+      "possessed":true
+   },
+   "sw443":{
+      "name":"Sith Trooper - Black Outfit, Printed Legs",
+      "possessed":true
+   },
+   "sw444":{
+      "name":"Republic Trooper 2",
+      "possessed":true
+   },
+   "sw445":{
+      "name":"501st Legion Clone Trooper",
+      "possessed":true
+   },
+   "sw446":{
+      "name":"Yoda (Clone Wars, White Hair)",
+      "possessed":true
+   },
+   "sw446a":{
+      "name":"Yoda (Clone Wars, Gray Hair)",
+      "possessed":true
+   },
+   "sw447":{
+      "name":"Droideka (Sniper Droid)",
+      "possessed":true
+   },
+   "sw448":{
+      "name":"Commando Droid Captain",
+      "possessed":true
+   },
+   "sw449":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw450":{
+      "name":"Captain Rex",
+      "possessed":true
+   },
+   "sw451":{
+      "name":"Han Solo, Reddish Brown Legs with Holster Pattern, Vest with Pockets",
+      "possessed":true
+   },
+   "sw452":{
+      "name":"Ahsoka Tano",
+      "possessed":true
+   },
+   "sw453":{
+      "name":"212th Clone Trooper",
+      "possessed":true
+   },
+   "sw454":{
+      "name":"Umbaran Soldier",
+      "possessed":true
+   },
+   "sw455":{
+      "name":"B-Wing Pilot",
+      "possessed":true
+   },
+   "sw456":{
+      "name":"R4-P17",
+      "possessed":true
+   },
+   "sw457":{
+      "name":"TIE Bomber Pilot",
+      "possessed":true
+   },
+   "sw458":{
+      "name":"Snowspeeder Pilot",
+      "possessed":true
+   },
+   "sw459":{
+      "name":"Imperial Probe Droid",
+      "possessed":false
+   },
+   "sw460":{
+      "name":"General Rieekan",
+      "possessed":true
+   },
+   "sw461":{
+      "name":"Luke Skywalker (Pilot, Printed Legs)",
+      "possessed":false
+   },
+   "sw462":{
+      "name":"Hoth Rebel Trooper, Stubble",
+      "possessed":false
+   },
+   "sw463":{
+      "name":"Snowtrooper, Light Bluish Gray Hips, Light Bluish Gray Hands, Printed Head, Torso Back Printing",
+      "possessed":true
+   },
+   "sw464":{
+      "name":"Darth Vader (Celebration)",
+      "possessed":true
+   },
+   "sw465":{
+      "name":"Yoda, NY I Heart Torso, Gray Hair (Toy Fair 2013 Exclusive)",
+      "possessed":false
+   },
+   "sw465":{
+      "name":"Yoda, NY I Heart Torso, White Hair (TRU Times Square 2013 Exclusive)",
+      "possessed":false
+   },
+   "sw466":{
+      "name":"Han Solo (Hoth)",
+      "possessed":true
+   },
+   "sw467":{
+      "name":"Battle Droid Dark Orange without Back Plate",
+      "possessed":true
+   },
+   "sw467b":{
+      "name":"Battle Droid Dark Orange with Back Plate",
+      "possessed":true
+   },
+   "sw468":{
+      "name":"Jango Fett",
+      "possessed":true
+   },
+   "sw469":{
+      "name":"Stass Allie",
+      "possessed":true
+   },
+   "sw471":{
+      "name":"Yoda (Olive Green, Neck Bracket - 75017)",
+      "possessed":false
+   },
+   "sw472":{
+      "name":"Count Dooku",
+      "possessed":false
+   },
+   "sw473":{
+      "name":"FA-4 Pilot Droid",
+      "possessed":true
+   },
+   "sw474":{
+      "name":"Poggle the Lesser",
+      "possessed":false
+   },
+   "sw475":{
+      "name":"Jek-14",
+      "possessed":true
+   },
+   "sw475a":{
+      "name":"Jek-14",
+      "possessed":true
+   },
+   "sw476":{
+      "name":"Bounty Hunter",
+      "possessed":true
+   },
+   "sw477":{
+      "name":"R4-G0",
+      "possessed":true
+   },
+   "sw478":{
+      "name":"Special Forces Clone Trooper",
+      "possessed":true
+   },
+   "sw479":{
+      "name":"Mace Windu",
+      "possessed":true
+   },
+   "sw480":{
+      "name":"Coleman Trebor",
+      "possessed":true
+   },
+   "sw481":{
+      "name":"Clone Trooper Commander",
+      "possessed":true
+   },
+   "sw482":{
+      "name":"Battle Droid Commander",
+      "possessed":true
+   },
+   "sw483":{
+      "name":"Ree-Yees",
+      "possessed":true
+   },
+   "sw485":{
+      "name":"Princess Leia - Slave Outfit",
+      "possessed":true
+   },
+   "sw486":{
+      "name":"Max Rebo",
+      "possessed":true
+   },
+   "sw487":{
+      "name":"Weequay Skiff Guard",
+      "possessed":true
+   },
+   "sw488":{
+      "name":"Anakin Skywalker (Padawan, Combed Hair)",
+      "possessed":true
+   },
+   "sw489":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw490":{
+      "name":"Padme Amidala",
+      "possessed":true
+   },
+   "sw491":{
+      "name":"Clone Pilot",
+      "possessed":true
+   },
+   "sw492":{
+      "name":"Clone Trooper Captain",
+      "possessed":true
+   },
+   "sw493":{
+      "name":"Darth Maul - Mechanical Legs",
+      "possessed":true
+   },
+   "sw494":{
+      "name":"Mandalorian Super Commando 1",
+      "possessed":true
+   },
+   "sw495":{
+      "name":"Mandalorian Super Commando 2",
+      "possessed":true
+   },
+   "sw496":{
+      "name":"Nikto Guard",
+      "possessed":true
+   },
+   "sw497":{
+      "name":"Cad Bane - Reddish Brown Hands and Legs",
+      "possessed":true
+   },
+   "sw498":{
+      "name":" Obi-Wan Kenobi (Rako Hardeen Bounty Hunter Disguise)",
+      "possessed":true
+   },
+   "sw499":{
+      "name":"Sith Warrior",
+      "possessed":true
+   },
+   "sw500":{
+      "name":"Jedi Knight",
+      "possessed":true
+   },
+   "sw501":{
+      "name":"Jedi Consular",
+      "possessed":true
+   },
+   "sw502":{
+      "name":"Clone Trooper Lieutenant",
+      "possessed":true
+   },
+   "sw503":{
+      "name":"Special Forces Commander",
+      "possessed":true
+   },
+   "sw504":{
+      "name":"Princess Leia",
+      "possessed":true
+   },
+   "sw505":{
+      "name":"Scout Trooper",
+      "possessed":true
+   },
+   "sw506":{
+      "name":"Santa Jango Fett",
+      "possessed":true
+   },
+   "sw507":{
+      "name":"Endor Rebel Trooper (Sand Green)",
+      "possessed":true
+   },
+   "sw508":{
+      "name":"Endor Rebel Trooper (Sand Green)",
+      "possessed":true
+   },
+   "sw509":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw510":{
+      "name":"Teebo (Ewok)",
+      "possessed":true
+   },
+   "sw511":{
+      "name":" Rebel Commando with Beard and Angry Dual Sided Head",
+      "possessed":true
+   },
+   "sw512":{
+      "name":"R2-D2 (Flat Silver Head)",
+      "possessed":true
+   },
+   "sw513":{
+      "name":"Wicket (Ewok) with Tan Face Paint Pattern",
+      "possessed":true
+   },
+   "sw514":{
+      "name":"Boba Fett, Young",
+      "possessed":true
+   },
+   "sw515":{
+      "name":"General Grievous - Bent Legs, White Armor",
+      "possessed":true
+   },
+   "sw516":{
+      "name":"Holocron Droid (Yodachron)",
+      "possessed":true
+   },
+   "sw517":{
+      "name":"Female Padawan (Yodachron) - Small Eyes",
+      "possessed":true
+   },
+   "sw517a":{
+      "name":"Female Padawan (Yodachron) - Large Eyes",
+      "possessed":true
+   },
+   "sw518":{
+      "name":"41st Elite Corps Trooper",
+      "possessed":true
+   },
+   "sw519":{
+      "name":"41st Kashyyyk Clone Trooper",
+      "possessed":true
+   },
+   "sw520":{
+      "name":"Imperial Gunner (Open mouth)",
+      "possessed":true
+   },
+   "sw521":{
+      "name":"Royal Guard with Dark Red Arms and Hands",
+      "possessed":true
+   },
+   "sw521b":{
+      "name":"Royal Guard with Dark Red Arms and Hands (Spongy Cape - 75159)",
+      "possessed":true
+   },
+   "sw522":{
+      "name":"212th Battalion Trooper",
+      "possessed":true
+   },
+   "sw523":{
+      "name":"Airborne Clone Trooper",
+      "possessed":true
+   },
+   "sw524":{
+      "name":"BARC Trooper",
+      "possessed":true
+   },
+   "sw525":{
+      "name":"V-wing Pilot",
+      "possessed":true
+   },
+   "sw526":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw527":{
+      "name":"R2-D2 (Flat Silver Head, Dark Blue Printing, Red Dots)",
+      "possessed":true
+   },
+   "sw527a":{
+      "name":"R2-D2 (Flat Silver Head, Dark Blue Printing, Lavender Dots)",
+      "possessed":true
+   },
+   "sw528":{
+      "name":"Commander Gree",
+      "possessed":true
+   },
+   "sw529":{
+      "name":"Imperial Gunner (Closed mouth)",
+      "possessed":true
+   },
+   "sw530":{
+      "name":"Chief Tarfful",
+      "possessed":true
+   },
+   "sw531":{
+      "name":"Shock Trooper",
+      "possessed":true
+   },
+   "sw532":{
+      "name":"Chewbacca (Dark Tan fur)",
+      "possessed":true
+   },
+   "sw533":{
+      "name":"Buzz Droid",
+      "possessed":true
+   },
+   "sw534":{
+      "name":"Astromech Droid",
+      "possessed":true
+   },
+   "sw535":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw536":{
+      "name":"Neimoidian Warrior",
+      "possessed":true
+   },
+   "sw537":{
+      "name":"Wolf Pack Clone Trooper",
+      "possessed":true
+   },
+   "sw538":{
+      "name":"Plo Koon",
+      "possessed":true
+   },
+   "sw539":{
+      "name":" Han Solo, Dark Blue Legs, Vest with Pockets",
+      "possessed":true
+   },
+   "sw540":{
+      "name":"Chancellor Palpatine - Ep.3 Dark Bluish Gray Outfit",
+      "possessed":true
+   },
+   "sw541":{
+      "name":"Clone Trooper",
+      "possessed":true
+   },
+   "sw542":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw543":{
+      "name":"Tie Fighter Pilot (Light Flesh, Patterned Head)",
+      "possessed":true
+   },
+   "sw544":{
+      "name":"X-Wing Pilot (Theron Nett) ",
+      "possessed":true
+   },
+   "sw545":{
+      "name":"Imperial Crew ",
+      "possessed":true
+   },
+   "sw546":{
+      "name":"TC-4 Protocol Droid",
+      "possessed":true
+   },
+   "sw547":{
+      "name":"Darth Revan",
+      "possessed":true
+   },
+   "sw548a":{
+      "name":"LegoSandtrooper - Black Pauldron, Ammo Pouch, Dirt Stains, Survival Backpack",
+      "possessed":true
+   },
+   "sw550":{
+      "name":"Treadwell Droid",
+      "possessed":true
+   },
+   "sw551":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw552":{
+      "name":"Obi Wan Kenobi",
+      "possessed":true
+   },
+   "sw553":{
+      "name":"Greedo (with Belt)",
+      "possessed":true
+   },
+   "sw554":{
+      "name":"Bith Musician",
+      "possessed":true
+   },
+   "sw555":{
+      "name":"R2 Unit",
+      "possessed":true
+   },
+   "sw556":{
+      "name":"Ten Numb",
+      "possessed":true
+   },
+   "sw557":{
+      "name":"General Airen Cracken",
+      "possessed":true
+   },
+   "sw558":{
+      "name":"Gray Squadron Pilot",
+      "possessed":true
+   },
+   "sw559":{
+      "name":"Owen Lars",
+      "possessed":true
+   },
+   "sw560":{
+      "name":"Jawa",
+      "possessed":true
+   },
+   "sw561":{
+      "name":"C-3PO - Decorated Legs, Robot Limiter",
+      "possessed":true
+   },
+   "sw562":{
+      "name":"Gonk Droid (GNK Power Droid)",
+      "possessed":true
+   },
+   "sw565":{
+      "name":"C1-10P (Chopper)",
+      "possessed":true
+   },
+   "sw566":{
+      "name":"Luke Skywalker (Tatooine) - 2014 version",
+      "possessed":true
+   },
+   "sw567":{
+      "name":"Dak Ralter (with Pockets on Legs)",
+      "possessed":true
+   },
+   "sw568":{
+      "name":"Snowtrooper, Light Bluish Gray Hips, Light Bluish Gray Hands, White Kama",
+      "possessed":true
+   },
+   "sw569":{
+      "name":"Luke Skywalker (Pilot, Printed Legs, Cheek Lines) ",
+      "possessed":true
+   },
+   "sw570":{
+      "name":"Ithorian Jedi Master",
+      "possessed":true
+   },
+   "sw571":{
+      "name":"Jek-14",
+      "possessed":true
+   },
+   "sw572":{
+      "name":" sw572: Astromech Droid Dark Blue",
+      "possessed":true
+   },
+   "sw573":{
+      "name":"RA-7 Protocol Droid",
+      "possessed":true
+   },
+   "sw574":{
+      "name":"Ezra Bridger",
+      "possessed":true
+   },
+   "sw574a":{
+      "name":"Ezra Bridger with Helmet",
+      "possessed":true
+   },
+   "sw575":{
+      "name":"Zeb Orrelios",
+      "possessed":true
+   },
+   "sw576":{
+      "name":"Hera Syndulla",
+      "possessed":true
+   },
+   "sw577":{
+      "name":"Kanan Jarrus (Black Hair and Eyebrows)",
+      "possessed":true
+   },
+   "sw578":{
+      "name":"Stormtrooper (Printed Legs, Dark Azure Helmet Vents)",
+      "possessed":true
+   },
+   "sw579":{
+      "name":"General Veers",
+      "possessed":true
+   },
+   "sw580":{
+      "name":"Snowtrooper Commander",
+      "possessed":true
+   },
+   "sw581":{
+      "name":"AT-AT Driver",
+      "possessed":true
+   },
+   "sw582":{
+      "name":"Imperial Officer (Captain)",
+      "possessed":true
+   },
+   "sw583":{
+      "name":"Imperial Navy Trooper",
+      "possessed":true
+   },
+   "sw584":{
+      "name":"Imperial Crew (Gray Cap)",
+      "possessed":true
+   },
+   "sw585":{
+      "name":" Stormtrooper (Printed Legs, Dark Blue Helmet Vents)",
+      "possessed":true
+   },
+   "sw586":{
+      "name":"Darth Vader (Tan Head)",
+      "possessed":true
+   },
+   "sw587":{
+      "name":"Mini Treadwell Droid",
+      "possessed":true
+   },
+   "sw588":{
+      "name":"Spy Droid",
+      "possessed":true
+   },
+   "sw589":{
+      "name":"R1-Series Droid",
+      "possessed":true
+   },
+   "sw590":{
+      "name":"Jawa with Gold Badge",
+      "possessed":true
+   },
+   "sw591":{
+      "name":"PK-4 Droid",
+      "possessed":true
+   },
+   "sw592":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw593":{
+      "name":"Qui-Gon Jinn ",
+      "possessed":true
+   },
+   "sw594":{
+      "name":"Naboo Security Guard",
+      "possessed":true
+   },
+   "sw595":{
+      "name":"Emperor Palpatine - Tan Head, Tan Hands",
+      "possessed":true
+   },
+   "sw596":{
+      "name":"Clone Trooper with Santa Hat",
+      "possessed":true
+   },
+   "sw597":{
+      "name":"Snowspeeder Pilot",
+      "possessed":true
+   },
+   "sw598":{
+      "name":"Festive Astromech",
+      "possessed":true
+   },
+   "sw599":{
+      "name":"Santa Darth Vader",
+      "possessed":true
+   },
+   "sw600":{
+      "name":" Battle Droid Security with Straight Arm - Solid Pattern on Torso",
+      "possessed":true
+   },
+   "sw601":{
+      "name":"Han Solo",
+      "possessed":true
+   },
+   "sw602":{
+      "name":"Kanan Jarrus (Dark Brown Hair and Eyebrows)",
+      "possessed":true
+   },
+   "sw603":{
+      "name":"Shadow Stormtrooper",
+      "possessed":true
+   },
+   "sw604":{
+      "name":"Shadow Guard",
+      "possessed":true
+   },
+   "sw605":{
+      "name":"Geonosis Clone Trooper 1",
+      "possessed":true
+   },
+   "sw606":{
+      "name":"Geonosis Clone Trooper 2",
+      "possessed":true
+   },
+   "sw607":{
+      "name":" Snowspeeder Pilot",
+      "possessed":true
+   },
+   "sw608":{
+      "name":"Clone Pilot, Ep.3 with Open Helmet Yellow and Red Markings",
+      "possessed":true
+   },
+   "sw609":{
+      "name":"Clone Pilot, Printed Legs",
+      "possessed":true
+   },
+   "sw610":{
+      "name":"Boba Fett - Pauldron, Helmet, Jet Pack, Printed Arms and Legs",
+      "possessed":true
+   },
+   "sw611":{
+      "name":"Bespin Guard - Light Flesh Head, Detailed Gold Trim",
+      "possessed":true
+   },
+   "sw612":{
+      "name":"Han Solo, Reddish Brown Legs without Holster Pattern",
+      "possessed":true
+   },
+   "sw613":{
+      "name":"Senate Commando Captain - Printed Legs",
+      "possessed":true
+   },
+   "sw614":{
+      "name":" sw614: Senate Commando - Printed Legs",
+      "possessed":true
+   },
+   "sw615":{
+      "name":"Asajj Ventress - White Torso",
+      "possessed":true
+   },
+   "sw616":{
+      "name":"Sabine Wren - Dark Blue with Orange Highlights Hair",
+      "possessed":true
+   },
+   "sw617":{
+      "name":"Stormtrooper (Printed Legs, Dark Azure Helmet Vents, Frown)",
+      "possessed":true
+   },
+   "sw618":{
+      "name":"Anakin Skywalker (Clone Trooper Head - 880032)",
+      "possessed":true
+   },
+   "sw619":{
+      "name":"T-16 Skyhopper Pilot",
+      "possessed":true
+   },
+   "sw620":{
+      "name":"Tusken Raider - Head Spikes",
+      "possessed":true
+   },
+   "sw621":{
+      "name":"Tie Fighter Pilot",
+      "possessed":true
+   },
+   "sw622":{
+      "name":"The Inquisitor",
+      "possessed":true
+   },
+   "sw623":{
+      "name":"Imperial Officer (Captain) - Dark Tan Uniform",
+      "possessed":true
+   },
+   "sw624":{
+      "name":"AT-DP Pilot",
+      "possessed":true
+   },
+   "sw625":{
+      "name":"Agent Kallus",
+      "possessed":true
+   },
+   "sw626":{
+      "name":"Wullffwarro",
+      "possessed":true
+   },
+   "sw627":{
+      "name":"Wookiee, Printed Arm",
+      "possessed":true
+   },
+   "sw628":{
+      "name":"Gungan Warrior",
+      "possessed":true
+   },
+   "sw629":{
+      "name":"Clone Trooper Lieutenant, Printed Legs",
+      "possessed":true
+   },
+   "sw630":{
+      "name":"Stormtrooper Sergeant",
+      "possessed":true
+   },
+   "sw631":{
+      "name":"Boba Fett - White, Detailed Pattern",
+      "possessed":true
+   },
+   "sw632":{
+      "name":"TIE Fighter Pilot",
+      "possessed":true
+   },
+   "sw633":{
+      "name":"Admiral Yularen",
+      "possessed":true
+   },
+   "sw634":{
+      "name":"Emperor Palpatine",
+      "possessed":true
+   },
+   "sw634a":{
+      "name":"Emperor Palpatine (Spongy Cape)",
+      "possessed":true
+   },
+   "sw635":{
+      "name":"Luke Skywalker (Jedi Master)",
+      "possessed":true
+   },
+   "sw636":{
+      "name":"Darth Vader (Type 2 Helmet)",
+      "possessed":true
+   },
+   "sw636b":{
+      "name":"Darth Vader - Type 2 Helmet, Spongy Cape",
+      "possessed":true
+   },
+   "sw637":{
+      "name":"Obi-Wan Kenobi (Old, Standard Cape)",
+      "possessed":true
+   },
+   "sw637a":{
+      "name":"Obi-Wan Kenobi (Old, Standard Cape, with Pupils)",
+      "possessed":true
+   },
+   "sw638":{
+      "name":"Naboo Security Officer",
+      "possessed":true
+   },
+   "sw639":{
+      "name":"Captain Tarpals",
+      "possessed":true
+   },
+   "sw640":{
+      "name":"Anakin Skywalker",
+      "possessed":true
+   },
+   "sw641":{
+      "name":"Naboo Fighter Pilot - Medium Dark Flesh Jacket",
+      "possessed":true
+   },
+   "sw642s":{
+      "name":"Droideka with Stickers",
+      "possessed":true
+   },
+   "sw643":{
+      "name":"Princess Leia (Camouflage Cape)",
+      "possessed":true
+   },
+   "sw644":{
+      "name":"Han Solo (Endor Outfit)",
+      "possessed":true
+   },
+   "sw645":{
+      "name":"Endor Rebel Trooper 1",
+      "possessed":true
+   },
+   "sw646":{
+      "name":"Endor Rebel Trooper 2",
+      "possessed":true
+   },
+   "sw647":{
+      "name":"Agent Kallus",
+      "possessed":true
+   },
+   "sw648":{
+      "name":"Imperial Astromech Droid",
+      "possessed":true
+   },
+   "sw649":{
+      "name":"Watto",
+      "possessed":true
+   },
+   "sw650":{
+      "name":"Darth Maul - Printed Legs",
+      "possessed":true
+   },
+   "sw651":{
+      "name":"Qui-Gon Jinn (Poncho, Printed Legs)",
+      "possessed":true
+   },
+   "sw652":{
+      "name":"Droid Probe (DRK-1 Dark Eye)",
+      "possessed":true
+   },
+   "sw653":{
+      "name":" sw653: C-3PO - Dark Red Arm",
+      "possessed":true
+   },
+   "sw654":{
+      "name":"First Order Crew Member (Reddish Brown Head)",
+      "possessed":true
+   },
+   "sw655":{
+      "name":"Unkar's Thug",
+      "possessed":true
+   },
+   "sw656":{
+      "name":"First Order Snowtrooper Officer",
+      "possessed":true
+   },
+   "sw657":{
+      "name":"First Order Snowtrooper with Kama",
+      "possessed":true
+   },
+   "sw658":{
+      "name":"Poe Dameron",
+      "possessed":true
+   },
+   "sw659":{
+      "name":"Resistance X-Wing Pilot",
+      "possessed":true
+   },
+   "sw660":{
+      "name":"Resistance Ground Crew",
+      "possessed":true
+   },
+   "sw661":{
+      "name":"BB-8",
+      "possessed":true
+   },
+   "sw662":{
+      "name":"General Hux",
+      "possessed":true
+   },
+   "sw663":{
+      "name":"Kylo Ren",
+      "possessed":true
+   },
+   "sw664":{
+      "name":"First Order Stormtrooper Officer (Rounded Mouth Pattern)",
+      "possessed":true
+   },
+   "sw665":{
+      "name":"First Order Officer Female",
+      "possessed":true
+   },
+   "sw666":{
+      "name":"First Order Flametroope",
+      "possessed":true
+   },
+   "sw667":{
+      "name":"First Order Stormtrooper (Rounded Mouth Pattern)",
+      "possessed":true
+   },
+   "sw668":{
+      "name":"Resistance Soldier, Female",
+      "possessed":true
+   },
+   "sw669":{
+      "name":"Resistance Soldier, Male",
+      "possessed":true
+   },
+   "sw670":{
+      "name":"First Order Officer",
+      "possessed":true
+   },
+   "sw671":{
+      "name":"First Order Crew Member / Gunner (Light Flesh Head)",
+      "possessed":true
+   },
+   "sw672":{
+      "name":"First Order TIE Fighter Pilot, Two White Lines on Helmet",
+      "possessed":true
+   },
+   "sw673":{
+      "name":"Kanjiklub Gang Member",
+      "possessed":true
+   },
+   "sw674":{
+      "name":"Tasu Leech",
+      "possessed":true
+   },
+   "sw675":{
+      "name":"Han Solo",
+      "possessed":true
+   },
+   "sw676":{
+      "name":"Finn",
+      "possessed":true
+   },
+   "sw677":{
+      "name":"Rey",
+      "possessed":true
+   },
+   "sw678":{
+      "name":"Hoth Rebel Trooper White Uniform 1",
+      "possessed":true
+   },
+   "sw679":{
+      "name":"Reindeer R2-D2",
+      "possessed":true
+   },
+   "sw680":{
+      "name":"Santa C-3PO",
+      "possessed":true
+   },
+   "sw681":{
+      "name":"LIN Demolitionmech Droid",
+      "possessed":true
+   },
+   "sw682":{
+      "name":"Imperial Probe Droid - Mini",
+      "possessed":true
+   },
+   "sw683":{
+      "name":"Assassin Droid (Dark Bluish Gray)",
+      "possessed":true
+   },
+   "sw684":{
+      "name":"Captain Phasma (Rounded Mouth Pattern)",
+      "possessed":true
+   },
+   "sw685":{
+      "name":"Yoda (Clone Wars, White Hair)",
+      "possessed":true
+   },
+   "sw686":{
+      "name":"Darth Maul",
+      "possessed":true
+   },
+   "sw687":{
+      "name":"Rodian Alliance Fighter",
+      "possessed":true
+   },
+   "sw688":{
+      "name":"Rebel Trooper, Goggles, Dark Tan Helmet",
+      "possessed":true
+   },
+   "sw689":{
+      "name":"Duros Alliance Fighter, Jetpack",
+      "possessed":true
+   },
+   "sw690":{
+      "name":"Rebel Trooper, Rebel Helmet, Jetpack",
+      "possessed":true
+   },
+   "sw691":{
+      "name":"Imperial Jetpack Trooper",
+      "possessed":true
+   },
+   "sw692":{
+      "name":"Imperial Shock Trooper",
+      "possessed":true
+   },
+   "sw693":{
+      "name":"Imperial Crew (Black Cap)",
+      "possessed":true
+   },
+   "sw694":{
+      "name":"First Order Crew Member, Helmet with Insignia",
+      "possessed":true
+   },
+   "sw695":{
+      "name":"First Order Heavy Assault Stormtrooper (Rounded Mouth Pattern)",
+      "possessed":true
+   },
+   "sw696":{
+      "name":"Resistance Trooper - Tan Jacket, Moustache",
+      "possessed":true
+   },
+   "sw697":{
+      "name":"Resistance Trooper - Dark Tan Jacket, Frown, Furrowed Eyebrows",
+      "possessed":true
+   },
+   "sw698":{
+      "name":"Resistance Trooper - Tan Jacket, Frown, Cheek Lines",
+      "possessed":true
+   },
+   "sw699":{
+      "name":"Resistance Officer - Headset",
+      "possessed":true
+   },
+   "sw700":{
+      "name":"C-3PO - Colorful Wires, Decorated Legs",
+      "possessed":true
+   },
+   "sw701":{
+      "name":"First Order Snowtrooper",
+      "possessed":true
+   },
+   "sw702":{
+      "name":"Imperial Combat Driver",
+      "possessed":true
+   },
+   "sw703":{
+      "name":"Maz Kanata",
+      "possessed":true
+   },
+   "sw704":{
+      "name":"Obi-Wan Kenobi - with Headset",
+      "possessed":true
+   },
+   "sw705":{
+      "name":"Resistance X-wing Pilot (Temmin 'Snap' Wexley)",
+      "possessed":true
+   },
+   "sw706":{
+      "name":"R4-P17 - Silver Band around Dome",
+      "possessed":true
+   },
+   "sw707":{
+      "name":"Yoda (Olive Green)",
+      "possessed":true
+   },
+   "sw708":{
+      "name":"Hoth Rebel Trooper White Uniform 2",
+      "possessed":true
+   },
+   "sw709":{
+      "name":"Han Solo - Parka (Hoth)",
+      "possessed":true
+   },
+   "sw710":{
+      "name":"Ugnaught",
+      "possessed":true
+   },
+   "sw711":{
+      "name":"Boba Fett",
+      "possessed":true
+   },
+   "sw712":{
+      "name":"Imperial Probe Droid",
+      "possessed":true
+   },
+   "sw712b":{
+      "name":"Imperial Probe Droid",
+      "possessed":true
+   },
+   "sw713":{
+      "name":"Wookiee",
+      "possessed":true
+   },
+   "sw714":{
+      "name":"Han Solo, Dark Brown Legs",
+      "possessed":true
+   },
+   "sw715":{
+      "name":"First Order General",
+      "possessed":true
+   },
+   "sw716":{
+      "name":"Finn (FN-2187)",
+      "possessed":true
+   },
+   "sw717":{
+      "name":"Kylo Ren",
+      "possessed":true
+   },
+   "sw718":{
+      "name":"General Leia",
+      "possessed":true
+   },
+   "sw719":{
+      "name":"Admiral Ackbar",
+      "possessed":true
+   },
+   "sw720":{
+      "name":"Resistance Trooper - Dark Tan Jacket, Frown, Cheek Lines",
+      "possessed":true
+   },
+   "sw721":{
+      "name":"Resistance Trooper - Resistance Logo",
+      "possessed":true
+   },
+   "sw722":{
+      "name":"First Order Heavy Assault Stormtrooper (Rounded Mouth Pattern) - Backpack, Ammo Pouch Print",
+      "possessed":true
+   },
+   "sw723":{
+      "name":"Unkar's Brute",
+      "possessed":true
+   },
+   "sw724":{
+      "name":"R3-A2",
+      "possessed":true
+   },
+   "sw725":{
+      "name":"K-3PO",
+      "possessed":true
+   },
+   "sw726":{
+      "name":"Toryn Farr",
+      "possessed":true
+   },
+   "sw727":{
+      "name":"Han Solo",
+      "possessed":true
+   },
+   "sw728":{
+      "name":"Rebel Officer",
+      "possessed":true
+   },
+   "sw729":{
+      "name":"Wes Janson",
+      "possessed":true
+   },
+   "sw730":{
+      "name":"Wedge Antilles",
+      "possessed":true
+   },
+   "sw731":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw734":{
+      "name":"Hoth Rebel Trooper White Uniform 3",
+      "possessed":true
+   },
+   "sw735":{
+      "name":"Hoth Rebel Trooper Dark Tan Uniform 1",
+      "possessed":true
+   },
+   "sw736":{
+      "name":"Hoth Rebel Trooper Dark Tan Uniform 2",
+      "possessed":true
+   },
+   "sw737":{
+      "name":"Poe Dameron",
+      "possessed":true
+   },
+   "sw738":{
+      "name":"Lor San Tekka",
+      "possessed":true
+   },
+   "sw739":{
+      "name":"Unkar Plutt",
+      "possessed":true
+   },
+   "sw740":{
+      "name":"Teedo",
+      "possessed":true
+   },
+   "sw741":{
+      "name":"Grand Moff Tarkin",
+      "possessed":true
+   },
+   "sw742":{
+      "name":"Sabine Wren - Bright Green and Dark Blue Hair",
+      "possessed":true
+   },
+   "sw743":{
+      "name":"A-Wing Pilot",
+      "possessed":true
+   },
+   "sw744":{
+      "name":"Darth Vader",
+      "possessed":true
+   },
+   "sw745":{
+      "name":"Luminara Unduli",
+      "possessed":true
+   },
+   "sw746":{
+      "name":"Quinlan Vos",
+      "possessed":true
+   },
+   "sw747":{
+      "name":"Imperial Inquisitor Fifth Brother",
+      "possessed":true
+   },
+   "sw748":{
+      "name":"Commander Gregor",
+      "possessed":true
+   },
+   "sw749":{
+      "name":"Captain Rex",
+      "possessed":true
+   },
+   "sw750":{
+      "name":"Commander Wolffe",
+      "possessed":true
+   },
+   "sw751":{
+      "name":"Dengar (White Torso)",
+      "possessed":true
+   },
+   "sw752":{
+      "name":"Naare",
+      "possessed":true
+   },
+   "sw753":{
+      "name":"Rowan - Aviator Cap and Goggles",
+      "possessed":true
+   },
+   "sw754":{
+      "name":"Zander",
+      "possessed":true
+   },
+   "sw755":{
+      "name":"Kordi - Sand Blue Legs",
+      "possessed":true
+   },
+   "sw756":{
+      "name":"RO-GR (Roger)",
+      "possessed":true
+   },
+   "sw757":{
+      "name":"Rebel A-wing Pilot",
+      "possessed":true
+   },
+   "sw758":{
+      "name":"Commander Sato",
+      "possessed":true
+   },
+   "sw759":{
+      "name":"Ahsoka Tano",
+      "possessed":true
+   },
+   "sw760":{
+      "name":"Hoth Rebel Trooper White Uniform 4",
+      "possessed":true
+   },
+   "sw761":{
+      "name":"Rebel Pilot - Zin Evalon",
+      "possessed":true
+   },
+   "sw762":{
+      "name":"Bespin Guard - Light Flesh Head, Detailed Gold Trim, Furrowed Eyebrows",
+      "possessed":true
+   },
+   "sw763":{
+      "name":"Snow Chewbacca",
+      "possessed":true
+   },
+   "sw764":{
+      "name":"Snowtrooper, Light Bluish Gray Hips, Light Bluish Gray Hands - Backpack attached to Neck Bracket with Plate, Modified w/ Clip Ring",
+      "possessed":true
+   },
+   "sw764b":{
+      "name":"Snowtrooper, Light Bluish Gray Hips, Light Bluish Gray Hands - Backpack Directly Attached to Neck Bracket",
+      "possessed":true
+   },
+   "sw765":{
+      "name":"Hoth Rebel Trooper White Uniform 3, No Backpack",
+      "possessed":true
+   },
+   "sw766":{
+      "name":"Silver Protocol Droid (U-3PO)",
+      "possessed":true
+   },
+   "sw767":{
+      "name":"Gonk Droid - Reddish Brown",
+      "possessed":true
+   },
+   "sw768":{
+      "name":"Death Star Droid",
+      "possessed":true
+   },
+   "sw769":{
+      "name":"Death Star Trooper",
+      "possessed":true
+   },
+   "sw770":{
+      "name":"Grand Moff Tarkin",
+      "possessed":true
+   },
+   "sw771":{
+      "name":"Han Solo",
+      "possessed":true
+   },
+   "sw772":{
+      "name":"Han Solo - Stormtrooper Outfit, Printed Leg",
+      "possessed":true
+   },
+   "sw773":{
+      "name":"Imperial Astromech",
+      "possessed":true
+   },
+   "sw774":{
+      "name":" Imperial Navy Officer (Security / Stormtrooper Captain)",
+      "possessed":true
+   },
+   "sw775":{
+      "name":"Imperial Officer - Light Gray Uniform",
+      "possessed":true
+   },
+   "sw776":{
+      "name":"Interrogation Droid",
+      "possessed":true
+   },
+   "sw777":{
+      "name":"Luke Skywalker - Stormtrooper Outfit, Printed Legs",
+      "possessed":true
+   },
+   "sw778":{
+      "name":"Luke Skywalker (Tatooine, White Legs, Stern / Smile Face Print)",
+      "possessed":true
+   },
+   "sw779":{
+      "name":"Princess Leia",
+      "possessed":true
+   },
+   "sw780":{
+      "name":"Bistan",
+      "possessed":true
+   },
+   "sw781":{
+      "name":"Director Krennic",
+      "possessed":true
+   },
+   "sw782":{
+      "name":"K-2SO Droid",
+      "possessed":true
+   },
+   "sw783":{
+      "name":"Baze Malbus",
+      "possessed":true
+   },
+   "sw784":{
+      "name":"Rebel Trooper (Lieutenant Sefla)",
+      "possessed":true
+   },
+   "sw785":{
+      "name":"Imperial Ground Crew (Technician Kent Deezling)",
+      "possessed":true
+   },
+   "sw786":{
+      "name":"Rebel Trooper (Private Basteren)",
+      "possessed":true
+   },
+   "sw787":{
+      "name":"Scarif Stormtrooper (Shoretrooper) - Captain",
+      "possessed":true
+   },
+   "sw788":{
+      "name":"TIE Striker Pilot",
+      "possessed":true
+   },
+   "sw789":{
+      "name":"Chirrut Îmwe (Imwe)",
+      "possessed":true
+   },
+   "sw790":{
+      "name":"Cassian Andor",
+      "possessed":true
+   },
+   "sw791":{
+      "name":"Jyn Erso",
+      "possessed":true
+   },
+   "sw792":{
+      "name":"Rebel Trooper (Corporal Eskro Casrich)",
+      "possessed":true
+   },
+   "sw793":{
+      "name":"U-Wing Pilot / Y-Wing Pilot",
+      "possessed":true
+   },
+   "sw794":{
+      "name":"Bodhi Rook",
+      "possessed":true
+   },
+   "sw795":{
+      "name":"Imperial Hovertank Pilot",
+      "possessed":true
+   },
+   "sw796":{
+      "name":"Imperial Death Trooper Specialist",
+      "possessed":true
+   },
+   "sw797":{
+      "name":"Imperial AT-ST Driver",
+      "possessed":true
+   },
+   "sw798s":{
+      "name":"Pao (75156) - with Sticker on Backpack",
+      "possessed":true
+   },
+   "sw799":{
+      "name":"Worker Droid",
+      "possessed":true
+   },
+   "sw800":{
+      "name":"U-Wing Pilot",
+      "possessed":true
+   },
+   "sw801":{
+      "name":"Y-Wing Pilot",
+      "possessed":true
+   },
+   "sw802":{
+      "name":"Imperial Shuttle Pilot",
+      "possessed":true
+   },
+   "sw803":{
+      "name":"Rebel Trooper, Goggles, Gray Helmet, Black Beard (Private Kappehl)",
+      "possessed":true
+   },
+   "sw804":{
+      "name":"Rebel Trooper, Goggles, Dark Tan Helmet, Brown Beard (Corporal Rostok)",
+      "possessed":true
+   },
+   "sw805":{
+      "name":"Rebel Trooper, Light Flesh Head, Helmet with Pearl Dark Gray Band (Private Calfor)",
+      "possessed":true
+   },
+   "sw806":{
+      "name":"Rebel Trooper, Reddish Brown Head, Helmet with Pearl Dark Gray Band (Corporal Tonc)",
+      "possessed":true
+   },
+   "sw807":{
+      "name":"Imperial Death Trooper",
+      "possessed":true
+   },
+   "sw808":{
+      "name":"Darth Maul, without Cape ",
+      "possessed":true
+   },
+   "sw809":{
+      "name":"Rebel Astromech Droid (R3-S1)",
+      "possessed":true
+   },
+   "sw810":{
+      "name":"Qui-Gon Jinn, without Cape",
+      "possessed":true
+   },
+   "sw811":{
+      "name":"Admiral Thrawn",
+      "possessed":true
+   },
+   "sw812":{
+      "name":"Obi-Wan Kenobi - Young, Printed Legs, without Cape",
+      "possessed":true
+   },
+   "sw813":{
+      "name":"Cassian Andor",
+      "possessed":true
+   },
+   "sw814":{
+      "name":"Jyn Erso, Imperial Ground Crew Outfit",
+      "possessed":true
+   },
+   "sw815":{
+      "name":"Scarif Stormtrooper (Shoretrooper)",
+      "possessed":true
+   },
+   "sw816":{
+      "name":"Admiral Raddus",
+      "possessed":true
+   },
+   "sw817":{
+      "name":"Kanan Jarrus",
+      "possessed":true
+   },
+   "sw818":{
+      "name":"Lando Calrissian - General Insignia",
+      "possessed":true
+   },
+   "sw819":{
+      "name":"A-Wing Pilot",
+      "possessed":true
+   },
+   "sw820":{
+      "name":"Rebel Ground Crew",
+      "possessed":true
+   },
+   "sw821":{
+      "name":"Skiff Guard",
+      "possessed":true
+   },
+   "sw822":{
+      "name":"Boba Fett",
+      "possessed":true
+   },
+   "sw823":{
+      "name":"Han Solo, Dark Brown Legs, Wavy Hair",
+      "possessed":true
+   },
+   "sw824":{
+      "name":"Moroff",
+      "possessed":true
+   },
+   "sw825":{
+      "name":"R3-M2",
+      "possessed":true
+   },
+   "sw826":{
+      "name":"Snowspeeder Pilot Zev Senesca - Pearl Dark Gray Helmet",
+      "possessed":true
+   },
+   "sw827":{
+      "name":"Snowspeeder Gunner Will Scotian",
+      "possessed":true
+   },
+   "sw828":{
+      "name":"Bossk - Olive Green",
+      "possessed":true
+   },
+   "sw829":{
+      "name":"Anakin Skywalker - Transformation Process",
+      "possessed":true
+   },
+   "sw830":{
+      "name":"4-LOM",
+      "possessed":true
+   },
+   "sw831a":{
+      "name":"IG-88",
+      "possessed":true
+   },
+   "sw832":{
+      "name":"First Order Officer",
+      "possessed":true
+   },
+   "sw833":{
+      "name":"Aayla Secura",
+      "possessed":true
+   },
+   "sw834":{
+      "name":"Darth Vader - Light Flesh Head",
+      "possessed":true
+   },
+   "sw835":{
+      "name":"Medical Droid",
+      "possessed":true
+   },
+   "sw836":{
+      "name":"FX-Series Medical Assistant Droid",
+      "possessed":true
+   },
+   "sw837":{
+      "name":"Clone Trooper Gunner",
+      "possessed":true
+   },
+   "sw838":{
+      "name":"Prowler 1000 Exploration Droid",
+      "possessed":true
+   },
+   "sw839":{
+      "name":"Guavian Security Soldier",
+      "possessed":true
+   },
+   "sw840":{
+      "name":"Bala-Tik",
+      "possessed":true
+   },
+   "sw841":{
+      "name":"Han Solo, Old",
+      "possessed":true
+   },
+   "sw842":{
+      "name":" First Order Heavy Assault Stormtrooper (Rounded Mouth Pattern) - Backpack",
+      "possessed":true
+   },
+   "sw843":{
+      "name":"Quarrie",
+      "possessed":true
+   },
+   "sw844":{
+      "name":"Boba Fett, Young - Crooked Malicious Smile",
+      "possessed":true
+   },
+   "sw845":{
+      "name":"Jango Fett",
+      "possessed":true
+   },
+   "sw846":{
+      "name":"Obi-Wan Kenobi",
+      "possessed":true
+   },
+   "sw847":{
+      "name":"Probe Droid",
+      "possessed":true
+   },
+   "sw848":{
+      "name":"Kordi - Dark Green Legs",
+      "possessed":true
+   },
+   "sw849":{
+      "name":"Zander",
+      "possessed":true
+   },
+   "sw850":{
+      "name":"Scarif Stormtrooper (Shoretrooper) - Squad Leader",
+      "possessed":true
+   },
+   "sw851":{
+      "name":"Rowan",
+      "possessed":true
+   },
+   "sw852":{
+      "name":"M-OC Hunter Droid",
+      "possessed":true
+   },
+   "sw853":{
+      "name":"Resistance Trooper - Female",
+      "possessed":true
+   },
+   "sw854":{
+      "name":"General Hux",
+      "possessed":true
+   },
+   "sw855":{
+      "name":"BB-9E",
+      "possessed":true
+   },
+   "sw856":{
+      "name":"Supreme Leader Snoke",
+      "possessed":true
+   },
+   "sw857":{
+      "name":"Rose",
+      "possessed":true
+   },
+   "sw858":{
+      "name":"Finn",
+      "possessed":true
+   },
+   "sw859":{
+      "name":"Kylo Ren",
+      "possessed":true
+   },
+   "sw860":{
+      "name":"First Order TIE Pilot, Two Red Stripes on Helmet",
+      "possessed":true
+   },
+   "sw861":{
+      "name":"Resistance Bomber Pilot (Finch Dallow)",
+      "possessed":true
+   },
+   "sw862":{
+      "name":"Resistance Bombardier (Nix Jerd)",
+      "possessed":true
+   },
+   "sw863":{
+      "name":"Vice Admiral Holdo",
+      "possessed":true
+   },
+   "sw864":{
+      "name":"Resistance Gunner Paige",
+      "possessed":true
+   },
+   "sw865":{
+      "name":"Poe Dameron",
+      "possessed":true
+   },
+   "sw866":{
+      "name":"Rey",
+      "possessed":true
+   },
+   "sw867":{
+      "name":"Resistance Trooper - Dark Tan Hoodie Jacket, Beard",
+      "possessed":true
+   },
+   "sw868":{
+      "name":"Captain Poe Dameron",
+      "possessed":true
+   },
+   "sw869":{
+      "name":"First Order Walker Driver",
+      "possessed":true
+   },
+   "sw870":{
+      "name":"First Order Officer",
+      "possessed":true
+   },
+   "sw871":{
+      "name":"First Order Shuttle Pilot",
+      "possessed":true
+   },
+   "sw872":{
+      "name":"First Order Stormtrooper Squad Leader (Rounded Mouth Pattern)",
+      "possessed":true
+   },
+   "sw873":{
+      "name":"First Order Medical Droid",
+      "possessed":true
+   },
+   "sw874":{
+      "name":"BB-8 with Santa Hat",
+      "possessed":true
+   },
+   "sw875":{
+      "name":"First Order Snowtrooper - without Backpack",
+      "possessed":true
+   },
+   "sw876":{
+      "name":"Resistance Officer (Major Brance) ",
+      "possessed":true
+   },
+   "sw877":{
+      "name":"Imperial Officer (Colonel)",
+      "possessed":true
+   },
+   "sw878":{
+      "name":"Princess Leia",
+      "possessed":true
+   },
+   "sw879":{
+      "name":"Han Solo, Young",
+      "possessed":true
+   },
+   "sw880":{
+      "name":"Luke Skywalker",
+      "possessed":false
+   },
+   "sw881":{
+      "name":"Sandspeeder Gunner",
+      "possessed":true
+   },
+   "sw882":{
+      "name":"Sandspeeder Pilot",
+      "possessed":true
+   },
+   "sw883":{
+      "name":"Resistance Speeder Pilot (Nodin Chavdri)",
+      "possessed":true
+   },
+   "sw884":{
+      "name":"A-Wing Pilot (Tallissan Lintra)",
+      "possessed":true
+   },
+   "sw885":{
+      "name":"Kylo Ren without Cape",
+      "possessed":true
+   },
+   "sw886":{
+      "name":"First Order Stormtrooper Executioner ",
+      "possessed":true
+   },
+   "sw887":{
+      "name":"Luke Skywalker, Old",
+      "possessed":true
+   },
+   "sw888":{
+      "name":"Rey",
+      "possessed":true
+   },
+   "sw889":{
+      "name":"Mace Windu",
+      "possessed":true
+   },
+   "sw890":{
+      "name":"Captain Poe Dameron",
+      "possessed":true
+   },
+   "sw891":{
+      "name":"Admiral Ematt",
+      "possessed":true
+   },
+   "sw892":{
+      "name":"Resistance Trooper - Dark Tan Hoodie Jacket, Pockets, Facial Hair",
+      "possessed":true
+   },
+   "sw893":{
+      "name":"Wuher",
+      "possessed":true
+   },
+   "sw894":{
+      "name":"Sandtrooper - White Pauldron, Ammo Pouch, Dirt Stains, Survival Backpack",
+      "possessed":true
+   },
+   "sw895":{
+      "name":"Astromech Droid (R3-T2)",
+      "possessed":true
+   },
+   "sw896":{
+      "name":"Jawa",
+      "possessed":true
+   },
+   "sw897":{
+      "name":"Jawa - Tattered Shirt",
+      "possessed":true
+   },
+   "sw898":{
+      "name":"Greedo (with Belt on Torso)",
+      "possessed":true
+   },
+   "sw900":{
+      "name":"Finn",
+      "possessed":true
+   },
+   "sw901":{
+      "name":"Rose",
+      "possessed":true
+   },
+   "sw902":{
+      "name":"First Order TIE Pilot, Three White Lines on Helmet",
+      "possessed":true
+   },
+   "sw903":{
+      "name":"DJ Code Breaker",
+      "possessed":true
+   },
+   "sw904":{
+      "name":"Captain Phasma (Pointed Mouth Pattern)",
+      "possessed":true
+   },
+   "sw905":{
+      "name":"First Order Stormtrooper (Pointed Mouth Pattern) (75166 alternate)",
+      "possessed":false
+   },
+   "sw906":{
+      "name":"Yoda",
+      "possessed":true
+   },
+   "sw907":{
+      "name":"Luke Skywalker",
+      "possessed":true
+   },
+   "sw908":{
+      "name":"R2-D2 with Dirt Stains",
+      "possessed":true
+   },
+   "sw909":{
+      "name":"Barriss Offee",
+      "possessed":true
+   },
+   "sw910":{
+      "name":"Clone Trooper, Printed Legs",
+      "possessed":true
+   },
+   "sw911":{
+      "name":"Ki-Adi-Mundi",
+      "possessed":true
+   },
+   "sw912":{
+      "name":"Imperial Emigration Officer",
+      "possessed":true
+   },
+   "sw913":{
+      "name":"Imperial Recruitment Officer (Captain)",
+      "possessed":true
+   },
+   "sw914":{
+      "name":"Imperial Patrol Trooper",
+      "possessed":true
+   },
+   "sw915":{
+      "name":"Han Solo",
+      "possessed":true
+   },
+   "sw916":{
+      "name":"Qi'ra",
+      "possessed":true
+   },
+   "sw917":{
+      "name":"Moloch",
+      "possessed":true
+   },
+   "sw918":{
+      "name":"Rebolt",
+      "possessed":true
+   },
+   "sw919":{
+      "name":"Tobias Beckett - Imperial Disguise",
+      "possessed":true
+   },
+   "sw920":{
+      "name":"Qi'ra",
+      "possessed":false
+   },
+   "sw921":{
+      "name":"Han Solo",
+      "possessed":false
+   },
+   "sw922":{
+      "name":"Chewbacca",
+      "possessed":false
+   },
+   "sw923":{
+      "name":"Lando Calrissian",
+      "possessed":false
+   },
+   "sw924":{
+      "name":"Quay Tolsite",
+      "possessed":false
+   },
+   "sw925":{
+      "name":"Han Solo - Imperial Mudtrooper",
+      "possessed":true
+   },
+   "sw926":{
+      "name":"Imperial Pilot",
+      "possessed":true
+   },
+   "sw927":{
+      "name":"Mimban Stormtrooper",
+      "possessed":true
+   },
+   "sw928":{
+      "name":"DD-BD",
+      "possessed":false
+   },
+   "sw929":{
+      "name":"Kessel Operations Droid (S1D6-SA-5)",
+      "possessed":false
+   },
+   "sw930":{
+      "name":" Dwarf Spider Droid",
+      "possessed":false
+   },
+   "sw931":{
+      "name":"Poe Dameron (Pilot Jumpsuit, Hair)",
+      "possessed":false
+   },
+   "sw932":{
+      "name":"Dutch Vander",
+      "possessed":true
+   },
+   "sw933":{
+      "name":"Astromech Droid R2-BHD",
+      "possessed":true
+   },
+   "sw934":{
+      "name":"Han Solo - Mudtrooper",
+      "possessed":false
+   },
+   "sw935":{
+      "name":"Kessel Mine Worker",
+      "possessed":false
+   },
+   "x162":{
+      "name":" Sebulba",
+      "possessed":false
+   }
+}
