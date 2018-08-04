@@ -8,6 +8,9 @@
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
+	background-color: white;
+	box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.75);
+	border-radius: 6px;
 }
 
 .MinifigPicture {
@@ -37,7 +40,7 @@
 	margin: 5px 0;
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 		.Minifig{
 		width: calc(33% - 10px);
 	}

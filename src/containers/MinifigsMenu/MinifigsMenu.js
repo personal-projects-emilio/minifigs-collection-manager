@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import classes from './MinifigsMenu.css';
-import * as actions from '../../store/actions/index';
+import * as actions from '../../store/actions/minifigs';
 import LinearProgress from 'material-ui/LinearProgress';
 import CircularProgress from 'material-ui/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class MinifigsMenu extends Component {
 	// The number per page is set at 100 by default in the redux reducer, if you remove 100 from the state change the reducer accordingly
-	state= {
+	state = {
 		numberPerPageChoices : [25,50,100,200]
 	}
 

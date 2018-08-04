@@ -2,16 +2,24 @@
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	width: 90%;
+	width: calc(90% - 10px);
 	margin: auto;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 6px;
 }
 
+
 .MinifigsMenuHalf {
-	width: calc(50% - 5px);
+	width: 50%;
 	padding: 1rem;
-	border: 1px solid #ccc;
 	box-sizing: border-box;
 	text-align: center;
+}
+
+.MinifigsMenuHalf:first-of-type {
+	border-right: 1px solid #ccc;
 }
 
 .MinifigMenuText {
@@ -56,8 +64,12 @@
     visibility: visible;
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 	.MinifigsMenuHalf{
-		width: calc(100% - 5px);
+		width: 100%;
 	}
+	.MinifigsMenuHalf:first-of-type {
+	border-right: none;
+	border-bottom: 1px solid #ccc;
+}
 }

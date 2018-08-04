@@ -12,6 +12,11 @@ class Minifig extends Component {
 		showModal: false
 	}
 
+	// The component only update if his possessed props change or to open the modals
+	shouldComponentUpdate (nextProps, nextState) {
+		return nextProps.possessed !== this.props.possessed || nextState !== this.state;
+	}
+
 	showModalHandler = () => {
 		this.setState({showModal: true});
 	}

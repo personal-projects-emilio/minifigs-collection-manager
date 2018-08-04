@@ -84,8 +84,8 @@ export const setPossessionToAll = (possessed) => {
 	}
 }
 
-//If we want to update the database we could use something like that, but since i'm using my data
-//the changes are only made to the redux state to show it works without changing my data
+//If we want to update the database we could use something like that, but since I am using my data
+//the changes are only made to the redux state for the exemple
 export const setPossessedOnServer = (minifig, minifigRef) => {
 	const updatedMinifig = updateObject(minifig, {possessed: !minifig.possessed} )
 	return dispatch => {

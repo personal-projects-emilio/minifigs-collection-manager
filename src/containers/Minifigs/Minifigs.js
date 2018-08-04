@@ -6,7 +6,7 @@ import Aux from '../../hoc/Auxilliary/Auxilliary'
 import classes from './Minifigs.css';
 import Minifig from '../../components/Minifig/Minifig';
 import CircularProgress from 'material-ui/CircularProgress';
-import * as actions from '../../store/actions/index';
+import * as actions from '../../store/actions/minifigs';
 
 
 class Minifigs extends Component {
@@ -15,7 +15,6 @@ class Minifigs extends Component {
 		this.props.onInitMinifigs();
 	}
 	
-
 	handlePageChange = (pageNumber) => {
 		this.props.setActivePage(pageNumber);
 	}
@@ -42,6 +41,11 @@ class Minifigs extends Component {
 			})
 			// The number of minifigs we are showing for the pagination
 			const totalItemsCount = Object.keys(minifigListObject).length;
+			// We manage the active page if it does change
+			const numberOfPage = Math.ceil(totalItemsCount/this.props.numberPerPage);
+			if ( numberOfPage < this.props.activePage && numberOfPage > 0) {
+				this.handlePageChange(numberOfPage);
+			}
 			// The minifigs that we are showing on our active page 
 			const minifigsList = Object.keys(minifigListObject).slice(begin, end);
 

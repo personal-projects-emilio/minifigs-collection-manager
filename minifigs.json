@@ -101,7 +101,7 @@
    },
    "sw014":{
       "name":"Han Solo, Blue Legs (Falcon)",
-      "possessed":false
+      "possessed":true
    },
    "sw015":{
       "name":"Han Solo, Brown Legs without Holster Pattern ",
@@ -157,7 +157,7 @@
    },
    "sw026":{
       "name":"Princess Leia",
-      "possessed":false
+      "possessed":true
    },
    "sw027":{
       "name":"Qui-Gon Jinn",
@@ -177,7 +177,7 @@
    },
    "sw029a":{
       "name":"R5-D4",
-      "possessed":false
+      "possessed":true
    },
    "sw030":{
       "name":"Rebel Engineer",
@@ -265,7 +265,7 @@
    },
    "sw042":{
       "name":"Imperial Shuttle Pilot",
-      "possessed":false
+      "possessed":true
    },
    "sw043":{
       "name":"Gasgano",
@@ -401,7 +401,7 @@
    },
    "sw075":{
       "name":"Gamorrean Guard",
-      "possessed":false
+      "possessed":true
    },
    "sw076":{
       "name":"Bib Fortuna",
@@ -737,7 +737,7 @@
    },
    "sw152":{
       "name":"Obi-Wan Kenobi",
-      "possessed":false
+      "possessed":true
    },
    "sw153":{
       "name":"Ten Numb",
@@ -1709,7 +1709,7 @@
    },
    "sw385":{
       "name":"TC-14 Protocol Droid - Chrome Silver with Blue, Red and White Wires Pattern",
-      "possessed":false
+      "possessed":true
    },
    "sw386":{
       "name":"Darth Vader - Black Head",
@@ -1743,9 +1743,9 @@
       "name":"R3-D5",
       "possessed":true
    },
-   "sw395":{
+   "sw394":{
       "name":"Darth Maul",
-      "possessed":false
+      "possessed":true
    },
    "sw395":{
       "name":"Luke Skywalker",
@@ -1769,11 +1769,11 @@
    },
    "sw400":{
       "name":"Lobot",
-      "possessed":false
+      "possessed":true
    },
    "sw401":{
       "name":"Imperial AT-ST Driver",
-      "possessed":false
+      "possessed":true
    },
    "sw402":{
       "name":"Jabba The Hutt",
@@ -3584,8 +3584,12 @@
       "possessed":true
    },
    "sw847":{
-      "name":"Probe Droid",
+      "name":"Imperial Probe Droid, Black Sensors, with Stand",
       "possessed":true
+   },
+   "sw847a":{
+      "name":"Imperial Probe Droid, Black Sensors, without Stand",
+      "possessed":false
    },
    "sw848":{
       "name":"Kordi - Dark Green Legs",
@@ -3717,7 +3721,7 @@
    },
    "sw880":{
       "name":"Luke Skywalker",
-      "possessed":false
+      "possessed":true
    },
    "sw881":{
       "name":"Sandspeeder Gunner",
@@ -3813,7 +3817,7 @@
    },
    "sw905":{
       "name":"First Order Stormtrooper (Pointed Mouth Pattern) (75166 alternate)",
-      "possessed":false
+      "possessed":true
    },
    "sw906":{
       "name":"Yoda",
@@ -3913,11 +3917,11 @@
    },
    "sw930":{
       "name":" Dwarf Spider Droid",
-      "possessed":false
+      "possessed":true
    },
    "sw931":{
       "name":"Poe Dameron (Pilot Jumpsuit, Hair)",
-      "possessed":false
+      "possessed":true
    },
    "sw932":{
       "name":"Dutch Vander",
@@ -3933,6 +3937,102 @@
    },
    "sw935":{
       "name":"Kessel Mine Worker",
+      "possessed":false
+   },
+   "sw936":{
+      "name":"2-1B Medical Droid",
+      "possessed":false
+   },
+   "sw937":{
+      "name":"R5-A2",
+      "possessed":false
+   },
+   "sw938":{
+      "name":"RA-7 Protocol Droid",
+      "possessed":false
+   },
+   "sw939":{
+      "name":"Anakin Skywalker",
+      "possessed":false
+   },
+   "sw940":{
+      "name":"Enfys Nest",
+      "possessed":false
+   },
+   "sw941":{
+      "name":"Tobias Beckett",
+      "possessed":false
+   },
+   "sw942":{
+      "name":"Weazel",
+      "possessed":false
+   },
+   "sw943":{
+      "name":"R2-Q2",
+      "possessed":false
+   },
+   "sw944":{
+      "name":"Biggs Darklighter",
+      "possessed":false
+   },
+   "sw945":{
+      "name":"Dryden's Guard - Open Mouth",
+      "possessed":false
+   },
+   "sw946":{
+      "name":"Qi’Ra",
+      "possessed":false
+   },
+   "sw947":{
+      "name":"Elite Praetorian Guard",
+      "possessed":false
+   },
+   "sw948":{
+      "name":"Chewbacca with Goggles",
+      "possessed":false
+   },
+   "sw949":{
+      "name":"Han Solo",
+      "possessed":false
+   },
+   "sw950":{
+      "name":"Range Trooper",
+      "possessed":false
+   },
+   "sw951":{
+      "name":"Imperial Gunner",
+      "possessed":false
+   },
+   "sw952":{
+      "name":"Luke Skywalker",
+      "possessed":false
+   },
+   "sw953":{
+      "name":"Val",
+      "possessed":false
+   },
+   "sw954":{
+      "name":"Dryden's Guard - Closed Mouth",
+      "possessed":false
+   },
+   "sw955":{
+      "name":"Rio Durant",
+      "possessed":false
+   },
+   "sw956":{
+      "name":"2-1B Medical Droid",
+      "possessed":false
+   },
+   "sw957":{
+      "name":"Luke Skywalker (Bacta Tank Outfit)",
+      "possessed":false
+   },
+   "sw958":{
+      "name":"Princess Leia (Hoth Outfit White, Crooked Smile)",
+      "possessed":false
+   },
+   "sw959":{
+      "name":"FX-7 Medical Assistant Droid",
       "possessed":false
    },
    "x162":{
