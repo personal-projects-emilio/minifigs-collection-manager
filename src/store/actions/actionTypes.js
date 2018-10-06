@@ -7,3 +7,5 @@ export const SET_ACTIVE_PAGE = 'SET_ACTIVE_PAGE';
 export const SET_POSSESSED = 'SET_POSSESSED';
 export const SET_POSSESSION_TO_ALL = 'SET_POSSESSION_TO_ALL';
 export const SET_SHOW = "SET_SHOW";
+export const SET_TAG = "SET_TAG";
+export const SET_TAGS = "SET_TAGS";

@@ -21,19 +21,31 @@ export const initMinifigs = () => {
 		axios.get('/minifigs.json')
 			.then(response => {
 				// Init the minifigs
-				dispatch(setMinifigs(response.data));
-
-				// Set the total number of minifigs
-				const totalNumber =Object.keys(response.data).length;
+                dispatch(setMinifigs(response.data));
+                
+                // Set the total number of minifigs
+				const totalNumber = Object.keys(response.data).length;
 				dispatch(setTotalNumber(totalNumber));
 
-				// Set the number of minifigs owned
-				let numberOwned = 0;
-				const minifigsArray = Object.keys(response.data);
-				minifigsArray.forEach((val) => {
-					const owned = response.data[val].possessed;
-					if(owned){numberOwned++}
-				});
+				// Set the number of minifigs owned and the tags
+                let numberOwned = 0;
+                let tags = [];
+
+                for (const i in response.data) {
+                    const owned = response.data[i].possessed;
+                    if(owned){numberOwned++}
+
+                    const minifigTags = response.data[i].tags;
+                    if (minifigTags) {
+                        for(let i in minifigTags){
+                            if(tags.indexOf(minifigTags[i]) === -1){
+                                tags.push(minifigTags[i]);
+                            }
+                        }
+                    }
+                    tags.sort();      
+                }
+                dispatch(setTags(tags));
 				dispatch(setTotalOwned(numberOwned));
 			})
 			.catch(error =>{
@@ -85,7 +97,7 @@ export const setPossessionToAll = (possessed) => {
 }
 
 //If we want to update the database we could use something like that, but since I am using my data
-//the changes are only made to the redux state for the exemple
+//the changes are only made locally for the example
 export const setPossessedOnServer = (minifig, minifigRef) => {
 	const updatedMinifig = updateObject(minifig, {possessed: !minifig.possessed} )
 	return dispatch => {
@@ -114,4 +126,18 @@ export const setShow = (show) => {
 		type: actionTypes.SET_SHOW,
 		show: show
 	}
+}
+
+export const setTag = (tag) => {
+    return {
+        type: actionTypes.SET_TAG,
+        tag: tag
+    }
+}
+
+export const setTags = (tags) => {
+    return {
+        type: actionTypes.SET_TAGS,
+        tags: tags
+    }
 }

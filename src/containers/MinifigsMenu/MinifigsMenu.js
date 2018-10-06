@@ -6,23 +6,31 @@ import * as actions from '../../store/actions/minifigs';
 import LinearProgress from 'material-ui/LinearProgress';
 import CircularProgress from 'material-ui/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
+//import { DropDownMenu } from 'material-ui';
 
 class MinifigsMenu extends Component {
 	// The number per page is set at 100 by default in the redux reducer, if you remove 100 from the state change the reducer accordingly
 	state = {
-		numberPerPageChoices : [25,50,100,200]
+        numberPerPageChoices : [25,50,100,200],
+        showOptions: ["All", "Owned", "Missing"]
 	}
 
 	handlerNumberPerPage = (numberPerPage) => {
 		this.props.setNumberPerPage(numberPerPage);
-	}
+    }
+    
+    handlerTagChange = (_event, _index, value) => {
+        this.props.setTag(value);
+    }
 
 	render () {
 		// We calculate and round to 2 decimal the percentage of minifigs owned
 		let percentageOwned = null;
-		if (this.props.numberOwned & this.props.totalNumber){
+		if (this.props.numberOwned && this.props.totalNumber){
 			percentageOwned = Math.round((this.props.numberOwned/this.props.totalNumber)*10000)/100;
-		}
+        } else { percentageOwned = 0 }
 
 		// List of button for the choise of numberPerPage
 		const buttonNumberPerPage = this.state.numberPerPageChoices.map(number => {
@@ -34,7 +42,34 @@ class MinifigsMenu extends Component {
 				primary={(number === this.props.numberPerPage) ? true : false}
 				labelColor={(number === this.props.numberPerPage) ? "white" : "rgb(0,0,0)"}
 				onClick={() => this.props.setNumberPerPage(number)} />
-		})
+        })
+        
+        // List of Button for the show options
+        const showOptions = this.state.showOptions.map(option => {
+            return(
+                <RaisedButton label={option}
+                              key={option}
+                              style={{margin:6}}
+                              primary={(this.props.show === option.toLowerCase()) ? true : false}
+                              labelColor={(this.props.show === option.toLowerCase()) ? "white": "rgb(0,0,0)"}
+                              onClick={() => this.props.setShow(option.toLowerCase())} />
+            )
+        })
+
+        // List of tags
+        let tags = [<MenuItem value={null} key="null" primaryText={""}/>];
+        if (this.props.tags) {
+            this.props.tags.forEach(tag => {
+                tags.push(<MenuItem value={tag} key={tag} primaryText={tag}/>)
+            })
+        }
+        const tagsDropDow = (
+            <SelectField value={this.props.tag} 
+                         floatingLabelText="Tags"
+                         onChange={this.handlerTagChange}>
+                {tags}
+            </SelectField>
+        )
 
 		const spinner = <CircularProgress className={classes.Spinner} size={10} />;
 
@@ -60,31 +95,18 @@ class MinifigsMenu extends Component {
 							onClick={() => this.props.setPossessionToAll(false)} />
 					</div>
 					<div>
-						<span>Show:</span>
-						<RaisedButton
-							label="All"
-							style={{margin:6}}
-							primary={(this.props.show === "all") ? true: false}
-							labelColor={(this.props.show === "all") ? "white": "rgb(0,0,0)"}
-							onClick={() => this.props.setShow("all")} />
-						<RaisedButton
-							label="Owned"
-							style={{margin:6}}
-							primary={(this.props.show === "owned") ? true: false}
-							labelColor={(this.props.show === "owned") ? "white": "rgb(0,0,0)"}
-							onClick={() => this.props.setShow("owned")} />
-						<RaisedButton
-							label="Missing"
-							style={{margin:6}}
-							primary={(this.props.show === "missing") ? true: false}
-							labelColor={(this.props.show === "missing") ? "white": "rgb(0,0,0)"}
-							onClick={() => this.props.setShow("missing")} />
+						<span>Show:</span> {showOptions}
 					</div>
 				</div>
 				{/*The second part is the button to choose how many minifigs we show*/}
 				<div className={classes.MinifigsMenuHalf}>
-						<p>Number of minifigs per page</p>
+					<div>
+                    	<p>Number of minifigs per page</p>
 						{buttonNumberPerPage}
+                    </div>
+                    <div>
+                        {tagsDropDow}
+                    </div>
 				</div>
 			</div>
 		);
@@ -98,7 +120,11 @@ const mapStateToProps = state => {
 		totalNumber: state.totalNumber,
 		numberPerPage: state.numberPerPage,
 		error: state.error,
-		show: state.show
+        show: state.show,
+        tagSelected: state.tagSelected,
+        showByTag: state.showByTag,
+        tags: state.tags,
+        tag: state.tagSelected
 	}
 }
 
@@ -106,7 +132,8 @@ const mapDispatchToProps = dispatch => {
 	return {
 		setNumberPerPage: (numberPerPage) => dispatch(actions.setNumberPerPage(numberPerPage)),
 		setPossessionToAll: (possessed) => dispatch(actions.setPossessionToAll(possessed)),
-		setShow: (show) => dispatch(actions.setShow(show))
+        setShow: (show) => dispatch(actions.setShow(show)),
+        setTag: (tag) => dispatch(actions.setTag(tag))
 	}
 }
 

@@ -5,91 +5,135 @@
    },
    "sw001a":{
       "name":"Battle Droid Tan with Back Plate",
-      "possessed":false
+      "possessed":true,
+      "characterName":"Battle Droid",
+      "tags": ["CIS", "Droid"]
    },
    "sw001b":{
       "name":"Battle Droid Tan without Back Plate",
-      "possessed":true
+      "possessed":true,
+      "characterName":"Battle Droid",
+      "tags": ["CIS", "Droid"]
    },
    "sw001c":{
       "name":"Battle Droid with 1 Straight Arm",
-      "possessed":true
+      "possessed":true,
+      "characterName":"Battle Droid",
+      "tags": ["CIS", "Droid"]
    },
    "sw001d":{
       "name":"Battle Droid with 2 Straight Arms ",
-      "possessed":true
+      "possessed":true,
+      "characterName":"Battle Droid",
+      "tags": ["CIS", "Droid"]
    },
    "sw002":{
       "name":"Boba Fett - Classic Grays",
-      "possessed":true
+      "possessed":true,
+      "characterName":"Boba Fett",
+      "tags": ["Bounty Hunter", "Mandalorian"]
    },
    "sw002a":{
       "name":"Boba Fett - Bluish Grays",
-      "possessed":true
+      "possessed":true,
+      "characterName":"Boba Fett",
+      "tags": ["Bounty Hunter", "Mandalorian"]
    },
    "sw002b":{
       "name":"Boba Fett - Bluish Grays - Dark Red Helmet Highlights",
-      "possessed":true
+      "possessed":true,
+      "characterName":"Boba Fett",
+      "tags": ["Bounty Hunter", "Mandalorian"]
    },
    "sw003":{
       "name":"Darth Maul",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Darth Maul",
+      "tags": ["CIS", "Sith", "Zabrak"]
    },
    "sw004":{
       "name":"Darth Vader",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Darth Vader",
+      "tags": ["Sith", "Empire"]
    },
    "sw004a":{
       "name":"Darth Vader (Light Bluish Gray Head)",
-      "possessed":false
+      "possessed":false,
+      "characterName": "Darth Vader",
+      "tags": ["Sith", "Empire"]
    },
    "sw005":{
       "name":"Scout Trooper",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Scout Trooper",
+      "tags": ["Empire", "Endor"]
    },
    "sw005a":{
       "name":"Scout Trooper (Black Head, Dark Bluish Gray Torso Pattern)",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Scout Trooper",
+      "tags": ["Empire", "Endor"]
    },
    "sw005b":{
       "name":"Scout Trooper (Patterned Head, Dark Bluish Gray Torso Pattern) (9489)",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Scout Trooper",
+      "tags": ["Empire", "Endor"]
    },
    "sw006":{
       "name":"Aldar Beedo",
-      "possessed":false
+      "possessed":false,
+      "characterName": "Aldar Beedo",
+      "tags": ["Podracer", "Tatooine"]
    },
    "sw007":{
       "name":"Anakin Skywalker",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Anakin Skywalker",
+      "tags": ["Bravo Squadron", "Child", "Naboo"]
    },
    "sw008":{
       "name":"Anakin Skywalker",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Anakin Skywalker",
+      "tags": ["Child", "Podracer", "Tatooine"]
    },
    "sw009":{
       "name":"Biggs Darklighter",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Biggs Darklighter",
+      "tags": ["Pilot", "Rebel Alliance", "Rebel Pilot", "Red Squadron"]
    },
    "sw010":{
       "name":"C-3PO - Pearl Light Gold",
-      "possessed":true
+      "possessed":true,
+      "characterName": "C-3PO",
+      "tags": ["Droid", "Protocol Droid", "Rebel Alliance"]
    },
    "sw011":{
       "name":"Chewbacca (Brown)",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Chewbacca",
+      "tags": ["Rebel Alliance", "Tatooine"]
    },
    "sw011a":{
       "name":"Chewbacca (Reddish Brown)",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Chewbacca",
+      "tags": ["Rebel Alliance", "Tatooine"]
    },
    "sw012":{
       "name":"Dak Ralter",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Dak Ralter",
+      "tags": ["Pilot", "Rebel Alliance", "Rebel Pilot", "Rogue Squadron"]
    },
    "sw012a":{
       "name":"Dak Ralter (with Dark Bluish Gray Hips)",
-      "possessed":true
+      "possessed":true,
+      "characterName": "Dak Ralter",
+      "tags": ["Pilot", "Rebel Alliance", "Rebel Pilot", "Rogue Squadron"]
    },
    "sw012b":{
       "name":"Dak Ralter (with Dark Bluish Gray Hips and Light Flesh Head)",
@@ -573,7 +617,7 @@
    },
    "sw113a":{
       "name":" Princess Leia (Hoth Outfit, Smooth Bun Hair)",
-      "possessed":true
+      "possessed":false
    },
    "sw114":{
       "name":"Imperial Office",
@@ -681,11 +725,11 @@
    },
    "sw138":{
       "name":"Darth Vader Ep.3 without Cape",
-      "possessed":false
+      "possessed":true
    },
    "sw139":{
       "name":"Anakin Skywalker with Black Right Hand (without Hair)",
-      "possessed":false
+      "possessed":true
    },
    "sw140":{
       "name":"Owen Lars",
@@ -705,7 +749,7 @@
    },
    "sw144":{
       "name":"Medical Droid",
-      "possessed":false
+      "possessed":true
    },
    "sw145":{
       "name":"ASP Droid",
@@ -809,15 +853,15 @@
    },
    "sw168":{
       "name":"R2-R7",
-      "possessed":false
+      "possessed":true
    },
    "sw169":{
       "name":"Republic Captain",
-      "possessed":false
+      "possessed":true
    },
    "sw170":{
       "name":"Republic Pilot",
-      "possessed":false
+      "possessed":true
    },
    "sw171":{
       "name":"Imperial Probe Droid",
@@ -825,7 +869,7 @@
    },
    "sw172":{
       "name":" Qui-Gon Jinn (Light Flesh)",
-      "possessed":false
+      "possessed":true
    },
    "sw172a":{
       "name":"Qui-Gon Jinn (Light Flesh with Black Chin Dimple)",
@@ -833,7 +877,7 @@
    },
    "sw173":{
       "name":"Obi-Wan Kenobi",
-      "possessed":false
+      "possessed":true
    },
    "sw174":{
       "name":"Obi-Wan Kenobi ",
@@ -873,15 +917,15 @@
    },
    "sw180":{
       "name":"Darth Vader Battle Damaged",
-      "possessed":false
+      "possessed":true
    },
    "sw181":{
       "name":"Darth Vader's Apprentice",
-      "possessed":false
+      "possessed":true
    },
    "sw182":{
       "name":"Juno Eclipse",
-      "possessed":false
+      "possessed":true
    },
    "sw183":{
       "name":"Anakin Skywalker",
@@ -1533,7 +1577,7 @@
    },
    "sw340":{
       "name":"Naboo Fighter Pilot",
-      "possessed":false
+      "possessed":true
    },
    "sw341":{
       "name":"Commander Cody",
@@ -1713,7 +1757,7 @@
    },
    "sw386":{
       "name":"Darth Vader - Black Head",
-      "possessed":false
+      "possessed":true
    },
    "sw387":{
       "name":"Queen Amidala",
@@ -1837,27 +1881,27 @@
    },
    "sw417":{
       "name":"Mace Windu",
-      "possessed":false
+      "possessed":true
    },
    "sw418":{
       "name":"Chancellor Palpatine - Ep.3 Dark Red Outfit",
-      "possessed":false
+      "possessed":true
    },
    "sw419":{
       "name":"Anakin Skywalker (Sith Face, Cape - 9526)",
-      "possessed":false
+      "possessed":true
    },
    "sw420":{
       "name":"Saesee Tiin with Cape",
-      "possessed":false
+      "possessed":true
    },
    "sw421":{
       "name":"Agen Kolar",
-      "possessed":false
+      "possessed":true
    },
    "sw422":{
       "name":"Kit Fisto with Cape",
-      "possessed":false
+      "possessed":true
    },
    "sw423":{
       "name":"Santa Darth Maul",
@@ -2039,7 +2083,7 @@
       "name":"Yoda, NY I Heart Torso, Gray Hair (Toy Fair 2013 Exclusive)",
       "possessed":false
    },
-   "sw465":{
+   "sw465a":{
       "name":"Yoda, NY I Heart Torso, White Hair (TRU Times Square 2013 Exclusive)",
       "possessed":false
    },
@@ -3720,9 +3764,13 @@
       "possessed":true
    },
    "sw880":{
-      "name":"Luke Skywalker",
+      "name":"Luke Skywalker (8020356b)",
       "possessed":true
    },
+   "sw880a":{
+    "name":"Luke Skywalker, Tan Hair (8020356b alternate)",
+    "possessed":false
+ },
    "sw881":{
       "name":"Sandspeeder Gunner",
       "possessed":true
@@ -3877,23 +3925,23 @@
    },
    "sw920":{
       "name":"Qi'ra",
-      "possessed":false
+      "possessed":true
    },
    "sw921":{
       "name":"Han Solo",
-      "possessed":false
+      "possessed":true
    },
    "sw922":{
       "name":"Chewbacca",
-      "possessed":false
+      "possessed":true
    },
    "sw923":{
       "name":"Lando Calrissian",
-      "possessed":false
+      "possessed":true
    },
    "sw924":{
       "name":"Quay Tolsite",
-      "possessed":false
+      "possessed":true
    },
    "sw925":{
       "name":"Han Solo - Imperial Mudtrooper",
@@ -3909,11 +3957,11 @@
    },
    "sw928":{
       "name":"DD-BD",
-      "possessed":false
+      "possessed":true
    },
    "sw929":{
       "name":"Kessel Operations Droid (S1D6-SA-5)",
-      "possessed":false
+      "possessed":true
    },
    "sw930":{
       "name":" Dwarf Spider Droid",
@@ -3933,23 +3981,23 @@
    },
    "sw934":{
       "name":"Han Solo - Mudtrooper",
-      "possessed":false
+      "possessed":true
    },
    "sw935":{
       "name":"Kessel Mine Worker",
-      "possessed":false
+      "possessed":true
    },
    "sw936":{
       "name":"2-1B Medical Droid",
-      "possessed":false
+      "possessed":true
    },
    "sw937":{
       "name":"R5-A2",
-      "possessed":false
+      "possessed":true
    },
    "sw938":{
       "name":"RA-7 Protocol Droid",
-      "possessed":false
+      "possessed":true
    },
    "sw939":{
       "name":"Anakin Skywalker",
@@ -3977,11 +4025,11 @@
    },
    "sw945":{
       "name":"Dryden's Guard - Open Mouth",
-      "possessed":false
+      "possessed":true
    },
    "sw946":{
       "name":"Qi’Ra",
-      "possessed":false
+      "possessed":true
    },
    "sw947":{
       "name":"Elite Praetorian Guard",
@@ -3989,35 +4037,35 @@
    },
    "sw948":{
       "name":"Chewbacca with Goggles",
-      "possessed":false
+      "possessed":true
    },
    "sw949":{
       "name":"Han Solo",
-      "possessed":false
+      "possessed":true
    },
    "sw950":{
       "name":"Range Trooper",
-      "possessed":false
+      "possessed":true
    },
    "sw951":{
       "name":"Imperial Gunner",
-      "possessed":false
+      "possessed":true
    },
    "sw952":{
       "name":"Luke Skywalker",
       "possessed":false
    },
    "sw953":{
-      "name":"Val",
-      "possessed":false
+      "name":"Val (75219)",
+      "possessed":true
    },
    "sw954":{
       "name":"Dryden's Guard - Closed Mouth",
-      "possessed":false
+      "possessed":true
    },
    "sw955":{
       "name":"Rio Durant",
-      "possessed":false
+      "possessed":true
    },
    "sw956":{
       "name":"2-1B Medical Droid",
@@ -4035,8 +4083,80 @@
       "name":"FX-7 Medical Assistant Droid",
       "possessed":false
    },
-   "x162":{
-      "name":" Sebulba",
+   "sw960":{
+      "name":"Sandtrooper (Enlisted) - Black Pauldron, Ammo Pouch, Dirt Stains, Survival Backpack",
       "possessed":false
-   }
+   },
+   "sw961":{
+      "name":"Sandtrooper Squad Leader (Captain) - Orange Pauldron, Ammo Pouch, Dirt Stains, Survival Backpack (75221)",
+      "possessed":false
+   },
+   "sw962":{
+      "name":"First Order Stormtrooper Squad Leader (Pointed Mouth Pattern) (75190 alternate)",
+      "possessed":false
+   },
+   "sw963":{
+        "name":"Antoc Merrick (75213)",
+        "possessed":false
+    },
+    "sw964":{
+        "name":"Dwarf Spider Droid (7670)",
+        "possessed":true
+    },
+    "sw965":{
+        "name":"Dwarf Spider Droid (75016)",
+        "possessed":true
+    },
+    "sw966":{
+        "name":"Dwarf Spider Droid (75142)",
+        "possessed":true
+    },
+    "sw967":{
+        "name":"Droideka (911840)",
+        "possessed":false
+    },
+    "sw968":{
+        "name":"IG-88 (75213)",
+        "possessed":false
+    },
+    "sw969":{
+        "name":"Cloud Car Pilot (75222)",
+        "possessed":false
+    },
+    "sw970":{
+        "name":"Ugnaught (75222)",
+        "possessed":false
+    },
+    "sw971":{
+        "name":"Luke Skywalker (75222)",
+        "possessed":false
+    },
+    "sw972":{
+        "name":"Princess Leia - Bespin Outfit (75222)",
+        "possessed":false
+    },
+    "sw973":{
+        "name":"Lando Calrissian (75222)",
+        "possessed":false
+    },
+    "sw974":{
+        "name":"Lobot (75222)",
+        "possessed":false
+    },
+    "sw975":{
+        "name":"Bespin Guard - Light Flesh Head, Detailed Gold Trim, Moustache (75222)",
+        "possessed":false
+    },
+    "sw976":{
+        "name":"Han Solo - Dual Molded Legs (75222)",
+        "possessed":false
+    },
+    "sw977":{
+        "name":"Boba Fett - Pauldron, Helmet, Jet Pack, Printed Arms and Legs (75222)",
+        "possessed":false
+    },
+    "x162":{
+        "name":" Sebulba",
+        "possessed":false
+    }
 }

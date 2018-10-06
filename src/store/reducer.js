@@ -8,7 +8,10 @@ const initialState = {
 	numberOwned: null,
 	numberPerPage: 100,
 	activePage: 1,
-	show: "all"
+    show: "all",
+    showByTag: false,
+    tags: null,
+    tagSelected: null
 }
 
 const setMinifigs = (state, action) => {
@@ -67,6 +70,14 @@ const setShow = (state, action) => {
 	return updateObject(state, {show: action.show})
 }
 
+const setTag = (state, action) => {
+    return updateObject(state, {tagSelected: action.tag, showByTag: true} )
+}
+
+const setTags = (state, action) => {
+    return updateObject(state, {tags: action.tags});
+}
+
 const reducer = (state = initialState, action) => {
 	switch( action.type ) {
 		case actionTypes.SET_MINIFIGS: return setMinifigs(state, action);
@@ -77,7 +88,9 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.SET_ACTIVE_PAGE: return setActivePage(state, action);
 		case actionTypes.SET_POSSESSED: return setPossessed(state, action);
 		case actionTypes.SET_POSSESSION_TO_ALL: return setPossessionToAll(state, action);
-		case actionTypes.SET_SHOW: return setShow(state, action);
+        case actionTypes.SET_SHOW: return setShow(state, action);
+        case actionTypes.SET_TAG: return setTag(state, action);
+        case actionTypes.SET_TAGS: return setTags(state, action);
 		default: return state;
 	}
 };

@@ -29,14 +29,24 @@ class Minifigs extends Component {
 			const begin = ((this.props.activePage-1) * this.props.numberPerPage);
 			const end = begin + this.props.numberPerPage;
 			
-			// The complete list of minifigs we are showing (all, owned or missing)
-			let minifigListObject = {};
+			// The complete list of minifigs we are showing
+			let minifigListObject = {}; // Our new empty object
 			Object.keys(this.props.minifigs).forEach(minifig => {
-				const possession = this.props.minifigs[minifig].possessed;
-				if ((this.props.show === "all") 
+                const possession = this.props.minifigs[minifig].possessed;
+                // First we check the possession
+                if ((this.props.show === "all") 
 					|| (this.props.show === "owned" && possession)
 					|| (this.props.show === "missing" && !possession)){
-					minifigListObject[minifig] = minifig;
+                        // Then we check if we have a tag selected
+                        if (this.props.showByTag && this.props.tagSelected){
+                            const tags = this.props.minifigs[minifig].tags;
+                            for (const i in tags){
+                                if (tags[i] === this.props.tagSelected ){
+                                    minifigListObject[minifig] = minifig;
+                                }
+                            }
+                        } else {minifigListObject[minifig] = minifig;}
+					
 				} 
 			})
 			// The number of minifigs we are showing for the pagination
@@ -51,14 +61,13 @@ class Minifigs extends Component {
 
 			// We map our list to show each minifig on the page
 			minifigs = minifigsList.map(minifig => {
-				const minifigInfo = {...this.props.minifigs[minifig]};
+				const minifigDetail = {...this.props.minifigs[minifig]};
 				return (
 					<Minifig
 						key={minifig}
 						reference={minifig}
-						name={minifigInfo.name}
-						possessed={minifigInfo.possessed}
-						onChange={()=> this.props.setPossessed(minifig)}
+                        minifigDetail={minifigDetail}
+						//onChange={()=> this.props.setPossessed(minifig)}
 					/>
 				)
 			})
@@ -97,7 +106,7 @@ class Minifigs extends Component {
 	}
 }
 
-// We get store state and action from redux with connect
+// We get redux state and action
 const mapStateToProps = state => {
 	return {
 		minifigs: state.minifigs,
@@ -106,15 +115,16 @@ const mapStateToProps = state => {
 		error: state.error,
 		show: state.show,
 		totalNumber: state.totalNumber,
-		numberOwned: state.numberOwned
+        numberOwned: state.numberOwned,
+        tagSelected: state.tagSelected,
+        showByTag: state.showByTag
 	}
 }
 
 const mapDispatchToProps = dispatch => {
 	return {
 		onInitMinifigs: () => dispatch(actions.initMinifigs()),
-		setActivePage: (activePage) => dispatch(actions.setActivePage(activePage)),
-		setPossessed: (minifigRef) => dispatch(actions.setPossessed(minifigRef))
+		setActivePage: (activePage) => dispatch(actions.setActivePage(activePage))
 	}
 }
 
