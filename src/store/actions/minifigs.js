@@ -27,26 +27,46 @@ export const initMinifigs = () => {
 				const totalNumber = Object.keys(response.data).length;
 				dispatch(setTotalNumber(totalNumber));
 
-				// Set the number of minifigs owned and the tags
+				// Set the number of minifigs, tags and character names
                 let numberOwned = 0;
-                let tags = [];
-
+                let tags = []; // {name: string, amount: number}
+                let characNames = []; // {name: string, amount: number}
+                
+                // First we set the number owned
                 for (const i in response.data) {
                     const owned = response.data[i].possessed;
                     if(owned){numberOwned++}
 
+                    // Then we check the tags and add them to our array
                     const minifigTags = response.data[i].tags;
                     if (minifigTags) {
                         for(let i in minifigTags){
-                            if(tags.indexOf(minifigTags[i]) === -1){
-                                tags.push(minifigTags[i]);
+                            // If the tag is unique we had it to the array
+                            if(tags.map(tag => tag.name).indexOf(minifigTags[i]) === -1){
+                                tags.push({name: minifigTags[i], amount: 1});
+                            } else { // Or else we increment the amount of the existing tag
+                                const tagI = tags.map(tag => tag.name).indexOf(minifigTags[i])
+                                tags[tagI].amount++;
                             }
                         }
                     }
-                    tags.sort();      
+                    // We sort the tags alphabetically
+                    tags.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 
+
+                    const characName = response.data[i].characterName;
+                    if(characName){
+                        let index = characNames.map(charac => charac.name).indexOf(characName);
+                        if(index === -1){
+                            characNames.push({name: characName, amount: 1});
+                        } else {
+                            characNames[index].amount++;
+                        }
+                    }  
+                    characNames.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
                 }
+                dispatch(setTotalOwned(numberOwned));
                 dispatch(setTags(tags));
-				dispatch(setTotalOwned(numberOwned));
+                dispatch(setCharacs(characNames));
 			})
 			.catch(error =>{
 				dispatch(setMinifigsFailed());
@@ -139,5 +159,19 @@ export const setTags = (tags) => {
     return {
         type: actionTypes.SET_TAGS,
         tags: tags
+    }
+}
+
+export const setCharac = (charac) => {
+    return {
+        type: actionTypes.SET_CHARACNAME,
+        characName: charac
+    }
+}
+
+export const setCharacs = (characs) => {
+    return {
+        type: actionTypes.SET_CHARACNAMES,
+        characNames: characs
     }
 }

@@ -6,9 +6,7 @@ import * as actions from '../../store/actions/minifigs';
 import LinearProgress from 'material-ui/LinearProgress';
 import CircularProgress from 'material-ui/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
-//import { DropDownMenu } from 'material-ui';
+import Dropdown from '../../components/Dropdown/Dropdown';
 
 class MinifigsMenu extends Component {
 	// The number per page is set at 100 by default in the redux reducer, if you remove 100 from the state change the reducer accordingly
@@ -25,13 +23,11 @@ class MinifigsMenu extends Component {
         this.props.setTag(value);
     }
 
-	render () {
-		// We calculate and round to 2 decimal the percentage of minifigs owned
-		let percentageOwned = null;
-		if (this.props.numberOwned && this.props.totalNumber){
-			percentageOwned = Math.round((this.props.numberOwned/this.props.totalNumber)*10000)/100;
-        } else { percentageOwned = 0 }
+    handlerCharacChange = (_event, _index, value) => {
+        this.props.setCharac(value);
+    }
 
+	render () {
 		// List of button for the choise of numberPerPage
 		const buttonNumberPerPage = this.state.numberPerPageChoices.map(number => {
 			return <RaisedButton
@@ -56,21 +52,6 @@ class MinifigsMenu extends Component {
             )
         })
 
-        // List of tags
-        let tags = [<MenuItem value={null} key="null" primaryText={""}/>];
-        if (this.props.tags) {
-            this.props.tags.forEach(tag => {
-                tags.push(<MenuItem value={tag} key={tag} primaryText={tag}/>)
-            })
-        }
-        const tagsDropDow = (
-            <SelectField value={this.props.tag} 
-                         floatingLabelText="Tags"
-                         onChange={this.handlerTagChange}>
-                {tags}
-            </SelectField>
-        )
-
 		const spinner = <CircularProgress className={classes.Spinner} size={10} />;
 
 		return (
@@ -80,8 +61,8 @@ class MinifigsMenu extends Component {
 					<div className={classes.MinifigMenuText}>Number of minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : spinner}</div>
 					<div className={classes.MinifigMenuText}>Number of minifigs you own: {this.props.numberOwned !== null ? this.props.numberOwned : spinner}</div>
 					<div className={classes.Tooltip}>
-						<span className={classes.TooltipText}>{percentageOwned}%</span>
-						<LinearProgress mode="determinate" value={percentageOwned}/>
+						<span className={classes.TooltipText}>{this.props.percentageOwned}%</span>
+						<LinearProgress mode="determinate" value={this.props.percentageOwned}/>
 					</div>
 					<div>
 						<span>Set all to:</span>
@@ -105,7 +86,8 @@ class MinifigsMenu extends Component {
 						{buttonNumberPerPage}
                     </div>
                     <div>
-                        {tagsDropDow}
+                        <Dropdown type="Tags" array={this.props.tags} handler={this.handlerTagChange} itemSelected={this.props.tagSelected} />
+                        <Dropdown type="Characters Name" array={this.props.characNames} handler={this.handlerCharacChange} itemSelected={this.props.characSelected}/>
                     </div>
 				</div>
 			</div>
@@ -117,14 +99,15 @@ class MinifigsMenu extends Component {
 const mapStateToProps = state => {
 	return {
 		numberOwned: state.numberOwned,
-		totalNumber: state.totalNumber,
+        totalNumber: state.totalNumber,
+        percentageOwned: state.percentageOwned,
 		numberPerPage: state.numberPerPage,
 		error: state.error,
         show: state.show,
         tagSelected: state.tagSelected,
-        showByTag: state.showByTag,
         tags: state.tags,
-        tag: state.tagSelected
+        characNames: state.characNames,
+        characSelected: state.characSelected
 	}
 }
 
@@ -133,7 +116,8 @@ const mapDispatchToProps = dispatch => {
 		setNumberPerPage: (numberPerPage) => dispatch(actions.setNumberPerPage(numberPerPage)),
 		setPossessionToAll: (possessed) => dispatch(actions.setPossessionToAll(possessed)),
         setShow: (show) => dispatch(actions.setShow(show)),
-        setTag: (tag) => dispatch(actions.setTag(tag))
+        setTag: (tag) => dispatch(actions.setTag(tag)),
+        setCharac: (charac) => dispatch(actions.setCharac(charac))
 	}
 }
 

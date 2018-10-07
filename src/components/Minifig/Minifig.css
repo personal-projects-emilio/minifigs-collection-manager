@@ -40,6 +40,23 @@
 	margin: 5px 0;
 }
 
+.TagsDiv {
+    padding: 5px 0;
+}
+
+.TagsButton {
+    margin: auto 2px;
+}
+
+.EditDiv {
+    display: flex;
+}
+
+.EditButton {
+    padding: 0;
+    height: auto;
+}
+
 @media (max-width: 800px){
 		.Minifig{
 		width: calc(33% - 10px);

@@ -9,3 +9,5 @@ export const SET_POSSESSION_TO_ALL = 'SET_POSSESSION_TO_ALL';
 export const SET_SHOW = "SET_SHOW";
 export const SET_TAG = "SET_TAG";
 export const SET_TAGS = "SET_TAGS";
+export const SET_CHARACNAME = "SET_CHARACNAME";
+export const SET_CHARACNAMES = "SET_CHARACNAMES";

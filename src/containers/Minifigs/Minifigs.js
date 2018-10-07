@@ -29,7 +29,7 @@ class Minifigs extends Component {
 			const begin = ((this.props.activePage-1) * this.props.numberPerPage);
 			const end = begin + this.props.numberPerPage;
 			
-			// The complete list of minifigs we are showing
+			// The list of minifigs we are showing
 			let minifigListObject = {}; // Our new empty object
 			Object.keys(this.props.minifigs).forEach(minifig => {
                 const possession = this.props.minifigs[minifig].possessed;
@@ -38,12 +38,18 @@ class Minifigs extends Component {
 					|| (this.props.show === "owned" && possession)
 					|| (this.props.show === "missing" && !possession)){
                         // Then we check if we have a tag selected
-                        if (this.props.showByTag && this.props.tagSelected){
+                        if (this.props.tagSelected){
                             const tags = this.props.minifigs[minifig].tags;
                             for (const i in tags){
                                 if (tags[i] === this.props.tagSelected ){
                                     minifigListObject[minifig] = minifig;
                                 }
+                            }
+                        // And if we have a character name selected
+                        } else if(this.props.characSelected) {
+                            const name = this.props.minifigs[minifig].characterName;
+                            if (name === this.props.characSelected ){
+                                minifigListObject[minifig] = minifig;
                             }
                         } else {minifigListObject[minifig] = minifig;}
 					
@@ -67,7 +73,6 @@ class Minifigs extends Component {
 						key={minifig}
 						reference={minifig}
                         minifigDetail={minifigDetail}
-						//onChange={()=> this.props.setPossessed(minifig)}
 					/>
 				)
 			})
@@ -117,7 +122,9 @@ const mapStateToProps = state => {
 		totalNumber: state.totalNumber,
         numberOwned: state.numberOwned,
         tagSelected: state.tagSelected,
-        showByTag: state.showByTag
+        showByTag: state.showByTag,
+        characNames: state.characNames,
+        characSelected: state.characSelected
 	}
 }
 

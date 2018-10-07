@@ -6,6 +6,8 @@ import classes from './Minifig.css';
 
 import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
+import IconButton from 'material-ui/IconButton'
+import Edit from 'material-ui/svg-icons/image/edit'
 import LogoLink from '../LogoLink/LogoLink';
 import Modal from '../UI/Modal/Modal';
 import Aux from '../../hoc/Auxilliary/Auxilliary';
@@ -48,15 +50,18 @@ class Minifig extends Component {
         if (this.props.minifigDetail.characterName && this.props.minifigDetail.tags) {
             let tags = this.props.minifigDetail.tags.map(tag => {
                 return(
-                    <button key={tag} type="button" onClick={() => this.showByTagHandler(tag)} >{tag}</button>
+                    <button key={tag} 
+                            type="button" 
+                            onClick={() => this.showByTagHandler(tag)} 
+                            className={classes.TagsButton}>{tag}</button>
                 )
             })
             nameAndTags = (
                 <Aux>
                     <Divider/>
-                    <p>{ this.props.minifigDetail.characterName }</p>
+                    <div className={classes.TagsDiv}><span>{ this.props.minifigDetail.characterName }</span></div>
                     <Divider/>
-                    <div>{ tags }</div>
+                    <div className={classes.TagsDiv}>{ tags }</div>
                     <Divider/>
                 </Aux>
             )
@@ -78,11 +83,14 @@ class Minifig extends Component {
 						<LogoLink minifigRef={this.props.reference} type={'brickset'} />
 					</div>
                     { nameAndTags }
-					<Checkbox
-						checked={this.props.minifigDetail.possessed}
-						label="Owned"
-						onCheck={() => this.props.setPossessed(this.props.reference)}
-					/>
+                    <div className={classes.EditDiv}>
+                        <Checkbox
+                            checked={this.props.minifigDetail.possessed}
+                            // label="Owned"
+                            onCheck={() => this.props.setPossessed(this.props.reference)}
+                        />
+                        <IconButton><Edit/></IconButton>
+                    </div>
 				</div>
 			</Aux>
 		);
@@ -92,22 +100,14 @@ class Minifig extends Component {
 // We get redux state and action
 // const mapStateToProps = state => {
 // 	return {
-// 		minifigs: state.minifigs,
-// 		numberPerPage: state.numberPerPage,
-// 		activePage: state.activePage,
-// 		error: state.error,
-// 		show: state.show,
-// 		totalNumber: state.totalNumber,
-//         numberOwned: state.numberOwned,
-//         tagSelected: state.tagSelected,
-//         showByTag: state.showByTag
 // 	}
 // }
 
 const mapDispatchToProps = dispatch => {
 	return {
 		setTag: (tag) => dispatch(actions.setTag(tag)),
-		setPossessed: (minifigRef) => dispatch(actions.setPossessed(minifigRef))
+        setPossessed: (minifigRef) => dispatch(actions.setPossessed(minifigRef)),
+        setCharac: (characSelected) => dispatch(actions.setCharac(characSelected))
 	}
 }
 

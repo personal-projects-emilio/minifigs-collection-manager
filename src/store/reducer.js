@@ -5,13 +5,16 @@ const initialState = {
 	minifigs: null,
 	error: false,
 	totalNumber: null,
-	numberOwned: null,
+    numberOwned: null,
+    percentageOwned: 0,
 	numberPerPage: 100,
 	activePage: 1,
     show: "all",
-    showByTag: false,
     tags: null,
-    tagSelected: null
+    tagSelected: null,
+    characNames: null,
+    characSelected: null
+
 }
 
 const setMinifigs = (state, action) => {
@@ -26,7 +29,8 @@ const setMinifigsFailed = (state, action) => {
 }
 
 const setTotalOwned = (state, action) => {
-	return updateObject( state, {numberOwned: action.numberOwned} );
+    const percentageOwned = (action.numberOwned && state.totalNumber) ? Math.round((action.numberOwned/state.totalNumber)*10000)/100 : 0;
+	return updateObject( state, {numberOwned: action.numberOwned, percentageOwned: percentageOwned} );
 }
 
 const setTotalNumber = (state, action) => {
@@ -71,11 +75,24 @@ const setShow = (state, action) => {
 }
 
 const setTag = (state, action) => {
-    return updateObject(state, {tagSelected: action.tag, showByTag: true} )
+    const showByTag = action.tag ? true : false;
+    console.log(action.tag ? null : state.characName);
+    const characSelected = action.tag ? null : state.characSelected;
+    return updateObject(state, {tagSelected: action.tag, showByTag: showByTag, characSelected: characSelected} )
 }
 
 const setTags = (state, action) => {
     return updateObject(state, {tags: action.tags});
+}
+
+const setCharacName = (state, action) => {
+    const showByCharacName = action.characName ? true : false;
+    const tagSelected = action.characName ? null : state.tagSelected;
+    return updateObject(state, {characSelected: action.characName, showByCharacName: showByCharacName, tagSelected: tagSelected})
+}
+
+const setCharacNames = (state, action) => {
+    return updateObject(state, {characNames: action.characNames})
 }
 
 const reducer = (state = initialState, action) => {
@@ -91,6 +108,8 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SET_SHOW: return setShow(state, action);
         case actionTypes.SET_TAG: return setTag(state, action);
         case actionTypes.SET_TAGS: return setTags(state, action);
+        case actionTypes.SET_CHARACNAME: return setCharacName(state, action);
+        case actionTypes.SET_CHARACNAMES: return setCharacNames(state, action);
 		default: return state;
 	}
 };
