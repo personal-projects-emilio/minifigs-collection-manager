@@ -2,6 +2,11 @@ import React from 'react';
 import Aux from '../../hoc/Auxilliary/Auxilliary';
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
+// import Input from '@material-ui/core/Input';
+// import InputLabel from '@material-ui/core/InputLabel';
+// import MenuItem from '@material-ui/core/MenuItem';
+// import FormControl from '@material-ui/core/FormControl';
+// import Select from '@material-ui/core/Select';
 
 const dropdown = (props) => {
     // array: []<Tags or CharacNames>
@@ -25,6 +30,21 @@ const dropdown = (props) => {
             </SelectField>
         </Aux>
     );
+
+    // return (
+    //     <FormControl classes={{width: '100%'}}>
+    //         <InputLabel shrink htmlFor={props.type}>
+    //             {props.type}
+    //         </InputLabel>
+    //         <Select value={props.itemSelected}
+    //                 onChange={props.handler}
+    //                 input={<Input name={props.type} id={props.type} />}
+    //                 displayEmpty
+    //                 name={props.type}>
+    //             {list}
+    //         </Select>
+    //     </FormControl>
+    // )
 }
 	
 

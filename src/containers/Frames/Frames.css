@@ -1,0 +1,47 @@
+.Frames {
+    width: 90%;
+    background-color: white;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    padding: 0.5rem 0;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid #ccc;
+}
+
+.Frame {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    background-size: 100% auto;
+}
+
+.SelectP {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.CIS {
+    background-image: url(../../assets/images/frames/Separatist.jpg);
+}
+
+.GalacticRepublic {
+    background-image: url(../../assets/images/frames/GalacticRepublic.jpg);
+}
+
+.GalacticEmpire {
+    background-image: url(../../assets/images/frames/GalacticEmpire.jpg);
+}
+
+.RebelAlliance {
+    background-image: url(../../assets/images/frames/RebelAlliance.jpg);
+}
+
+.JediOrder {
+    background-image: url(../../assets/images/frames/JediOrder.jpg
+    )
+}

@@ -4,6 +4,8 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { BrowserRouter } from 'react-router-dom';
+
 
 import './index.css';
 import App from './App';
@@ -16,11 +18,13 @@ const store = createStore(reducer, composeEnhancers(
  ));
 
 const app = (
-	<Provider store={store}>
-		<MuiThemeProvider>
-			<App />
-		</MuiThemeProvider>
-	</Provider>
+    <BrowserRouter>
+        <Provider store={store}>
+            <MuiThemeProvider>
+                <App />
+            </MuiThemeProvider>
+        </Provider>
+    </BrowserRouter>
 )
 
 

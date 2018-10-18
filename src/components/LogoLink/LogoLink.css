@@ -1,9 +1,9 @@
 .LogoLink img {
-	height: 2.5rem;
+	height: 2rem;
 }
 
 @media (max-width: 500px){
 	.LogoLink img{
-		height: 2rem;
+		height: 1.5rem;
 	}
 }

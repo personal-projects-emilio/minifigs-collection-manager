@@ -3,9 +3,9 @@ import axios from '../../axios';
 import {updateObject} from '../../shared/utility';
 
 
-export const setMinifigsFailed = () => {
+export const fetchFailed = () => {
 	return {
-		type: actionTypes.SET_MINIFIGS_FAILED
+		type: actionTypes.FETCH_FAILED
 	}
 }
 
@@ -69,11 +69,36 @@ export const initMinifigs = () => {
                 dispatch(setCharacs(characNames));
 			})
 			.catch(error =>{
-				dispatch(setMinifigsFailed());
+				dispatch(fetchFailed());
 			})
 	}
 };
 
+export const initFrames = () => {
+    return dispatch => {
+        axios.get('/frames.json')
+            .then(response => {
+                dispatch(setFrames(response.data));
+            })
+            .catch(error =>{
+                dispatch(fetchFailed());
+            })
+    }
+}
+
+export const setFrames = (frames) => {
+    return {
+        type: actionTypes.SET_FRAMES,
+        frames: frames
+    }
+}
+
+export const setFrame = (frame) => {
+    return {
+        type: actionTypes.SET_FRAME,
+        frame: frame
+    }
+}
 export const setTotalNumber = (totalNumber) => {
 	return {
 		type: actionTypes.SET_TOTAL_NUMBER,

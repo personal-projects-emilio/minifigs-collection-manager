@@ -1,0 +1,50 @@
+.FrameMinifig {
+    width: calc(100% / 15);
+    min-height: 100px;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    color: lightsteelblue;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.FrameMinifig a {
+    margin: 0.2rem auto;
+    padding: 0.13rem;
+    background-color: rgba(100,100,100,0.5);
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    max-width: 85%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+}
+
+.Name {
+    cursor: default;
+}
+
+.Empty {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(100,100,100,0.5);
+}
+
+.Picture {
+    max-width: 80%;
+    max-height: 150px;
+    margin: 0.2rem auto;
+}
+
+@media (max-width: 1000px){
+    .FrameMinifig {
+        width: 20%;
+    }
+}
+
+@media (max-width: 370px){
+    .FrameMinifig {
+        width: calc(100%/3);
+    }
+}

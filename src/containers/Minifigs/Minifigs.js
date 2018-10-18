@@ -2,18 +2,32 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Pagination from "react-js-pagination";
-import Aux from '../../hoc/Auxilliary/Auxilliary'
 import classes from './Minifigs.css';
-import Minifig from '../../components/Minifig/Minifig';
-import CircularProgress from 'material-ui/CircularProgress';
+import Minifig from '../Minifig/Minifig';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import * as actions from '../../store/actions/minifigs';
-
+import MinifigsMenu from '../MinifigsMenu/MinifigsMenu';
 
 class Minifigs extends Component {
-	//Initiate the minifigs
-	componentDidMount () {
-		this.props.onInitMinifigs();
-	}
+    componentDidMount () {
+        if(!this.props.minifigs){     //Initiate the minifigs and the frames
+            this.props.onInitMinifigs();
+            this.props.onInitFrames();
+        }
+        const search = this.props.history.location.search;
+        if (!search) {
+            this.props.setTag(null);
+            this.props.setCharac(null);
+        }
+        const param = search.split("=")[0].replace("?", "");
+        const value = decodeURIComponent(search.split("=")[1]) ;
+        if (param === "tag") { //if we have a tag in our location.search we set it in redux
+            this.props.setTag(value);
+        } 
+        if (param === "characterName") { // if we have a charac in our location.search we set it in redux
+            this.props.setCharac(value); 
+        }
+    }
 	
 	handlePageChange = (pageNumber) => {
 		this.props.setActivePage(pageNumber);
@@ -21,7 +35,7 @@ class Minifigs extends Component {
 
 	render () {
 		// While the minifigs aren't loaded we show a spinner, if we have an error we show a message
-		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <CircularProgress className={classes.Spinner} size={200}  />;
+		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <CircularProgress className={classes.Spinner} size={200} thickness={1.5} />;
 		let pagination = null;
 		// If we have minifigs and the numberPerPage we display them and manage the pagination
 		if(this.props.minifigs && this.props.numberPerPage){
@@ -96,17 +110,18 @@ class Minifigs extends Component {
 
 		// We render the minifigs with Pagination top and bottom
 		return (
-			<Aux>
+			<div className={classes.Minifig}>
+                <MinifigsMenu />
 				<div className={classes.Pagination}>
 					{pagination}
 				</div>
-				<div className={classes.Minifigs}>
+				<div className={classes.MinifigsList}>
 					{minifigs}
 				</div>
 				<div className={classes.Pagination}>
 					{pagination}
 				</div>
-			</Aux>
+			</div>
 		);
 	}
 }
@@ -130,8 +145,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onInitMinifigs: () => dispatch(actions.initMinifigs()),
-		setActivePage: (activePage) => dispatch(actions.setActivePage(activePage))
+        onInitMinifigs: () => dispatch(actions.initMinifigs()),
+        onInitFrames: () => dispatch(actions.initFrames()),
+        setActivePage: (activePage) => dispatch(actions.setActivePage(activePage)),
+        setTag: (tag) => dispatch(actions.setTag(tag)),
+        setCharac: (characSelected) => dispatch(actions.setCharac(characSelected))
 	}
 }
 

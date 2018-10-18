@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
 
 import classes from './MinifigsMenu.css';
 import * as actions from '../../store/actions/minifigs';
@@ -21,10 +23,20 @@ class MinifigsMenu extends Component {
     
     handlerTagChange = (_event, _index, value) => {
         this.props.setTag(value);
+        const search = value ? "?tag="+encodeURIComponent(value) : null;
+        this.props.history.push({
+            pathname: "/",
+            search: search
+        });  
     }
 
     handlerCharacChange = (_event, _index, value) => {
         this.props.setCharac(value);
+        const search =  value? "?characterName="+encodeURIComponent(value) : null;
+        this.props.history.push({
+            pathname: "/",
+            search: search
+        }); 
     }
 
 	render () {
@@ -46,7 +58,7 @@ class MinifigsMenu extends Component {
                 <RaisedButton label={option}
                               key={option}
                               style={{margin:6}}
-                              primary={(this.props.show === option.toLowerCase()) ? true : false}
+                              primary={this.props.show === option.toLowerCase()}
                               labelColor={(this.props.show === option.toLowerCase()) ? "white": "rgb(0,0,0)"}
                               onClick={() => this.props.setShow(option.toLowerCase())} />
             )
@@ -121,5 +133,5 @@ const mapDispatchToProps = dispatch => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MinifigsMenu);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MinifigsMenu));
 	

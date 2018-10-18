@@ -1,4 +1,9 @@
-.Minifigs {
+.Minifig {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.MinifigsList {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -63,5 +68,5 @@
 }
 
 .Spinner {
-	margin: 200px 0;
+    margin: 50px 0;
 }

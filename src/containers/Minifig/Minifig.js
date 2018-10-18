@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import * as actions from '../../store/actions/minifigs';
 
 import classes from './Minifig.css';
@@ -8,8 +9,8 @@ import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
 import IconButton from 'material-ui/IconButton'
 import Edit from 'material-ui/svg-icons/image/edit'
-import LogoLink from '../LogoLink/LogoLink';
-import Modal from '../UI/Modal/Modal';
+import LogoLink from '../../components/LogoLink/LogoLink';
+import Modal from '../../components/UI/Modal/Modal';
 import Aux from '../../hoc/Auxilliary/Auxilliary';
 
 
@@ -33,6 +34,21 @@ class Minifig extends Component {
     
     showByTagHandler = (tag) => {
         this.props.setTag(tag);
+        const search = "?tag="+encodeURIComponent(tag);
+        this.props.history.push({
+            pathname: "/",
+            search: search
+        });
+             
+    }
+
+    shoByCharacHandler = (charac) => {
+        this.props.setCharac(charac);
+        const search = "?characterName="+encodeURIComponent(charac);
+        this.props.history.push({
+            pathname: "/",
+            search: search
+        });    
     }
 
 	render () {
@@ -59,7 +75,12 @@ class Minifig extends Component {
             nameAndTags = (
                 <Aux>
                     <Divider/>
-                    <div className={classes.TagsDiv}><span>{ this.props.minifigDetail.characterName }</span></div>
+                    <div className={classes.TagsDiv}>
+                        <button type="button" 
+                                onClick={() => this.shoByCharacHandler(this.props.minifigDetail.characterName)}
+                        >{ this.props.minifigDetail.characterName }
+                        </button>
+                    </div>
                     <Divider/>
                     <div className={classes.TagsDiv}>{ tags }</div>
                     <Divider/>
@@ -75,7 +96,7 @@ class Minifig extends Component {
 					{/*Picture and reference of the minifig*/}
 					<div onClick={this.showModalHandler}>
 						<img className={classes.MinifigPicture} src={'http://img.bricklink.com/ItemImage/MN/0/'+this.props.reference+'.png'} alt={this.props.reference + ' pictures'} />
-						<span>{this.props.reference}</span>		
+						<p>{this.props.reference}</p>		
 					</div>
 					<div className={classes.LogoLinks}>
 						{/*Bricklink and Brickset logo with links*/}
@@ -111,6 +132,7 @@ const mapDispatchToProps = dispatch => {
 	}
 }
 
-export default connect(null, mapDispatchToProps)(Minifig);
+//export default connect(null, mapDispatchToProps)(Minifig);
+export default withRouter(connect(null, mapDispatchToProps)(Minifig));
 	
 
