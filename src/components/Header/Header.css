@@ -29,15 +29,23 @@
 .Link {
     margin-right: 1rem;
     cursor: pointer;
+    text-decoration: none;
+    display: table;
+    height: 100%;
 }
 
 .Link a {
-    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
     color: black;
 }
 
-.Link a:hover, .Link a:active, .Link a.active {
+.Link a:hover, .Link a:active, .Link a.Active  {
     color: slategray;
+}
+
+.Active {
+    border-bottom: 5px solid slategray;
 }
 
 @font-face {

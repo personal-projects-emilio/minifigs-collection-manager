@@ -11,10 +11,10 @@ const header = (props) => (
         <nav>
             <ul className={classes.Nav}>
                 <li className={classes.Link}>
-                    <NavLink to="/">Minifigs</NavLink>
+                    <NavLink exact to="/" activeClassName={classes.Active}>Minifigs</NavLink>
                 </li>
                 <li className={classes.Link}>
-                    <NavLink to="/frames">Frames</NavLink>
+                    <NavLink to="/frames" activeClassName={classes.Active}>Frames</NavLink>
                 </li>
             </ul>
         </nav>

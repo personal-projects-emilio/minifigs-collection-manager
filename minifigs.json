@@ -1373,10 +1373,10 @@
         "possessed": true,
         "characterName": "Sandtrooper",
         "tags": [
+            "Alternate Version",
             "Galactic Empire",
-            "Tatooine",
             "Imperial Trooper",
-            "Alternate Version"
+            "Tatooine"
         ]
     },
     "sw109a": {
@@ -1384,10 +1384,10 @@
         "possessed": true,
         "characterName": "Sandtrooper",
         "tags": [
+            "Alternate Version",
             "Galactic Empire",
-            "Tatooine",
             "Imperial Trooper",
-            "Alternate Version"
+            "Tatooine"
         ]
     },
     "sw110": {
@@ -2322,6 +2322,17 @@
         "tags": [
             "Galactic Republic",
             "Jedi"
+        ]
+    },
+    "sw199": {
+        "name": "Sandtrooper - Orange Pauldron (Solid), No Survival Backpack, No Dirt Stains, Helmet with Dotted Mouth Pattern and Solid Black Head",
+        "possessed": true,
+        "characterName": "Sandtrooper",
+        "tags": [
+            "Alternate Version",
+            "Galactic Empire",
+            "Imperial Trooper",
+            "Tatooine"
         ]
     },
     "sw200": {
@@ -5050,14 +5061,20 @@
             "Battle Droid",
             "CIS",
             "Droid",
+            "Geonosis",
             "Microfighter's"
         ]
     },
     "sw467b": {
         "name": "Battle Droid Dark Orange with Back Plate",
         "possessed": true,
-        "characterName": "",
-        "tags": []
+        "characterName": "Battle Droid",
+        "tags": [
+            "Battle Droid",
+            "CIS",
+            "Droid",
+            "Geonosis"
+        ]
     },
     "sw468": {
         "name": "Jango Fett",
@@ -5855,7 +5872,7 @@
         "characterName": "Imperial Crew",
         "tags": [
             "Galactic Empire",
-            "Imperial Officer",
+            "Imperial Trooper",
             "Microfighter's"
         ]
     },
@@ -6191,7 +6208,8 @@
         "tags": [
             "Hoth",
             "Galactic Empire",
-            "Imperial Officer"
+            "Imperial Officer",
+            "Imperial Trooper"
         ]
     },
     "sw581": {
@@ -6938,7 +6956,7 @@
         ]
     },
     "sw653": {
-        "name": " sw653: C-3PO - Dark Red Arm",
+        "name": "C-3PO - Dark Red Arm",
         "possessed": true,
         "characterName": "C-3PO",
         "tags": [
@@ -9743,7 +9761,7 @@
     },
     "sw943": {
         "name": "R2-Q2",
-        "possessed": false,
+        "possessed": true,
         "characterName": "R2-Q2",
         "tags": [
             "Astromech Droid",
@@ -9753,7 +9771,7 @@
     },
     "sw944": {
         "name": "Biggs Darklighter",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Biggs Darklighter",
         "tags": [
             "Rebel Alliance",
@@ -9829,7 +9847,7 @@
     },
     "sw952": {
         "name": "Luke Skywalker",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Luke Skywalker",
         "tags": [
             "Jedi",
@@ -9981,7 +9999,7 @@
     },
     "sw967": {
         "name": "Droideka (911840)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Droideka",
         "tags": [
             "CIS",

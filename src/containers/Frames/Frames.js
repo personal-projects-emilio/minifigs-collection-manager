@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
+import { Route, Link } from 'react-router-dom';
 
 import classes from './Frames.css';
 import * as actions from '../../store/actions/minifigs';
 
 import Aux from '../../hoc/Auxilliary/Auxilliary';
-import Frame from '../../components/Frame/Frame';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
+import OneFrame from '../OneFrame/OneFrame';
 
 
 
@@ -18,32 +20,17 @@ export class Frames extends Component {
         }
     }
 
-
     render() {
-        let frames = null;
+        let frames = <CircularProgress className={classes.Spinner} size={100} thickness={1.5} />;
         if (this.props.frames) {
             frames = Object.keys(this.props.frames).map(frame => {
-                return <RaisedButton label={frame}
+                const selectFrame = this.props.location.pathname.replace('/frames/', '')
+                return <Link to={"/frames/"+ frame} key={frame+"|link"}><RaisedButton label={frame}
                                      key={frame}
                                      style={{margin:6}}
-                                     primary={this.props.frame === frame}
-                                     labelColor={(this.props.frame === frame) ? "white": "rgb(0,0,0)"}
-                                     onClick={() => this.props.setFrame(frame)} />;
+                                     primary={selectFrame === frame}
+                                     labelColor={selectFrame === frame ? "white": "rgb(0,0,0)"}/></Link>;
             });
-        }
-        
-        let frame = <p className={classes.SelectP}>Select a frame</p>;
-        let frameClasses = [classes.Frame];
-        if (this.props.frames && this.props.minifigs && this.props.frame) {
-            frame = this.props.frames[this.props.frame].map((minifig, i) => {
-                const name = minifig.ref ? this.props.minifigs[minifig.ref].characterName : null;
-                return <Frame key={this.props.frame + i}    
-                              minifig={minifig.ref || null} 
-                              set={minifig.set || null}   
-                              name={name} />     
-            });
-            const backgroundClass = classes[this.props.frame.replace(/\d+|\s+/g, '')];
-            frameClasses.push(backgroundClass);
         }
 
         return (
@@ -51,9 +38,8 @@ export class Frames extends Component {
                 <div className={classes.Frames}>
                     {frames}
                 </div>
-                <div className={frameClasses.join(' ')}>
-                    {frame}
-                </div>
+                <Route path="/frames/:frame" component={OneFrame} />
+                <Route path="/frames" exact render={() => <div className={classes.SelectFrame}><p>Select a frame</p></div>}/>
             </Aux>
             
         )

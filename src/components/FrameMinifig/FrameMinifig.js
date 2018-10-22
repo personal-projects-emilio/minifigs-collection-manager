@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Frame.css';
+import classes from './FrameMinifig.css';
 
 import Aux from '../../hoc/Auxilliary/Auxilliary';
 

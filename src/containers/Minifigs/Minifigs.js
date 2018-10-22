@@ -10,7 +10,8 @@ import MinifigsMenu from '../MinifigsMenu/MinifigsMenu';
 
 class Minifigs extends Component {
     componentDidMount () {
-        if(!this.props.minifigs){     //Initiate the minifigs and the frames
+        //Initiate the minifigs and the frames
+        if(!this.props.minifigs){
             this.props.onInitMinifigs();
             this.props.onInitFrames();
         }
@@ -74,7 +75,7 @@ class Minifigs extends Component {
 			// We manage the active page if it does change
 			const numberOfPage = Math.ceil(totalItemsCount/this.props.numberPerPage);
 			if ( numberOfPage < this.props.activePage && numberOfPage > 0) {
-				this.handlePageChange(numberOfPage);
+				this.props.setActivePage(numberOfPage);
 			}
 			// The minifigs that we are showing on our active page 
 			const minifigsList = Object.keys(minifigListObject).slice(begin, end);
