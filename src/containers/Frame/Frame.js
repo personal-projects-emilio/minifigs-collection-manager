@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
-import classes from './OneFrame.css';
+import classes from './Frame.css';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import FrameMinifig from '../../components/FrameMinifig/FrameMinifig';
 
-export class OneFrame extends Component {
+export class Frame extends Component {
 
     componentDidUpdate () {
             // If the parameter isn't a frame we redirect to /frames
@@ -27,7 +27,7 @@ export class OneFrame extends Component {
         const SelectedFrame = this.props.match.params.frame;
         
         // If we have a frame in the params, frames and minifigs we render the frame
-        if (this.props.frames && this.props.minifigs && this.props.frames[SelectedFrame]){
+        if (this.props.minifigs && this.props.frames[SelectedFrame]){
             frame = this.props.frames[SelectedFrame].map((minifig,i) => {
                 const name = minifig.ref !== "" ? this.props.minifigs[minifig.ref].characterName : null        
                 return <FrameMinifig key={SelectedFrame + i}    
@@ -50,4 +50,4 @@ const mapStateToProps = state => {
 	}
 }
 
-export default connect(mapStateToProps, null)(OneFrame);
+export default connect(mapStateToProps, null)(Frame);

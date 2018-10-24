@@ -11,5 +11,4 @@ export const SET_TAG = "SET_TAG";
 export const SET_TAGS = "SET_TAGS";
 export const SET_CHARACNAME = "SET_CHARACNAME";
 export const SET_CHARACNAMES = "SET_CHARACNAMES";
-export const SET_FRAME = "SET_FRAME";
 export const SET_FRAMES = "SET_FRAMES";

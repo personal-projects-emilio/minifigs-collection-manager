@@ -8,7 +8,7 @@ import * as actions from '../../store/actions/minifigs';
 import Aux from '../../hoc/Auxilliary/Auxilliary';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
-import OneFrame from '../OneFrame/OneFrame';
+import Frame from '../Frame/Frame';
 
 
 
@@ -38,7 +38,7 @@ export class Frames extends Component {
                 <div className={classes.Frames}>
                     {frames}
                 </div>
-                <Route path="/frames/:frame" component={OneFrame} />
+                <Route path="/frames/:frame" component={Frame} />
                 <Route path="/frames" exact render={() => <div className={classes.SelectFrame}><p>Select a frame</p></div>}/>
             </Aux>
             
@@ -50,7 +50,6 @@ const mapStateToProps = state => {
 	return {
 		minifigs: state.minifigs,
         error: state.error,
-        frame: state.frameSelected,
         frames: state.frames
 	}
 }
@@ -58,8 +57,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
 	return {
         onInitMinifigs: () => dispatch(actions.initMinifigs()),
-        onInitFrames: () => dispatch(actions.initFrames()),
-        setFrame: (frame) => dispatch(actions.setFrame(frame))
+        onInitFrames: () => dispatch(actions.initFrames())
 	}
 }
 

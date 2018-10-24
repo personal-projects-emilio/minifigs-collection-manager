@@ -93,12 +93,6 @@ export const setFrames = (frames) => {
     }
 }
 
-export const setFrame = (frame) => {
-    return {
-        type: actionTypes.SET_FRAME,
-        frame: frame
-    }
-}
 export const setTotalNumber = (totalNumber) => {
 	return {
 		type: actionTypes.SET_TOTAL_NUMBER,

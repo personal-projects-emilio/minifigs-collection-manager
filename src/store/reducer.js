@@ -1,4 +1,3 @@
-import { LOCATION_CHANGE } from 'react-router-redux';
 import * as actionTypes from './actions/actionTypes';
 import {updateObject} from '../shared/utility';
 
@@ -27,7 +26,7 @@ const setMinifigs = (state, action) => {
 	});
 }
 
-const fetchFailed = (state, action) => {
+const fetchFailed = (state, _action) => {
 	return updateObject( state, {error: true} );
 }
 
@@ -57,8 +56,9 @@ const setActivePage = (state, action) => {
 const setPossessed = (state, action) => {
 	const updatedMinifig = updateObject(state.minifigs[action.minifig], {possessed: !state.minifigs[action.minifig].possessed});
 	const updatedMinifigs = updateObject(state.minifigs, {[action.minifig]: updatedMinifig});
-	const updatedTotalOwned = !state.minifigs[action.minifig].possessed ? state.numberOwned+1 : state.numberOwned-1;
-	return updateObject( state, {minifigs: updatedMinifigs, numberOwned: updatedTotalOwned} );
+    const updatedTotalOwned = !state.minifigs[action.minifig].possessed ? state.numberOwned+1 : state.numberOwned-1;
+    const percentageOwned = Math.round(updatedTotalOwned/state.totalNumber*10000)/100;
+	return updateObject( state, {minifigs: updatedMinifigs, numberOwned: updatedTotalOwned, percentageOwned: percentageOwned} );
 }
 
 const setPossessionToAll = (state, action) => {
@@ -66,11 +66,13 @@ const setPossessionToAll = (state, action) => {
 	Object.keys(state.minifigs).forEach(minifig => {
 		updatedMinifigs[minifig] = updateObject(state.minifigs[minifig], {possessed: action.possessed});
 	})
-	let numberOwned = 0;
+    let numberOwned = 0;
+    let percentageOwned = 0;
 	if (action.possessed === true){
-		numberOwned = state.totalNumber;
+        numberOwned = state.totalNumber;
+        percentageOwned = 100;
 	}
-	return updateObject( state, {minifigs: updatedMinifigs, numberOwned: numberOwned} );
+	return updateObject( state, {minifigs: updatedMinifigs, numberOwned: numberOwned, percentageOwned: percentageOwned} );
 }
 
 const setShow = (state, action) => {
@@ -99,13 +101,6 @@ const setFrames = (state, action) => {
     return updateObject(state, {frames: action.frames});
 }
 
-const setFrame = (state, action) => {
-    return updateObject(state, {frameSelected: action.frame});
-}
-
-const locationChange = (state, action) => {
-    console.log(action);
-}
 
 const reducer = (state = initialState, action) => {
 	switch( action.type ) {
@@ -122,9 +117,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SET_TAGS: return setTags(state, action);
         case actionTypes.SET_CHARACNAME: return setCharacName(state, action);
         case actionTypes.SET_CHARACNAMES: return setCharacNames(state, action);
-        case actionTypes.SET_FRAME: return setFrame(state, action);
         case actionTypes.SET_FRAMES: return setFrames(state, action);
-        case LOCATION_CHANGE: return locationChange(state,action);
 		default: return state;
 	}
 };
