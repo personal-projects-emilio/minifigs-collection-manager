@@ -1,0 +1,16 @@
+.Div {
+    padding: 5px 0;
+}
+
+.TagsButton {
+    margin: auto 2px;
+}
+
+.Button {
+    text-transform: none !important;
+    max-height: 40px !important;
+    min-height: 20px !important;
+    min-width: 20px !important;
+    padding: 5px !important;
+    margin: 3px !important;
+}

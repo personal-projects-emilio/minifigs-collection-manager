@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import { Route, Link } from 'react-router-dom';
-
-import classes from './Frames.css';
 import * as actions from '../../store/actions/minifigs';
+import classes from './Frames.css';
 
 import Aux from '../../hoc/Auxilliary/Auxilliary';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import RaisedButton from 'material-ui/RaisedButton';
-import Frame from '../Frame/Frame';
+import Button from '@material-ui/core/Button';
+import Frame from './Frame/Frame';
 
 
 
@@ -25,11 +24,12 @@ export class Frames extends Component {
         if (this.props.frames) {
             frames = Object.keys(this.props.frames).map(frame => {
                 const selectFrame = this.props.location.pathname.replace('/frames/', '')
-                return <Link to={"/frames/"+ frame} key={frame+"|link"}><RaisedButton label={frame}
-                                     key={frame}
-                                     style={{margin:6}}
-                                     primary={selectFrame === frame}
-                                     labelColor={selectFrame === frame ? "white": "rgb(0,0,0)"}/></Link>;
+                return  <Link to={"/frames/"+ frame} key={frame+"|link"}>
+                            <Button key={frame}
+                                    style={{margin:6}}
+                                    color={selectFrame === frame ? "primary": "default"}
+                                    variant="contained">{frame}</Button>
+                        </Link>;
             });
         }
 

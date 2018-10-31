@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import * as actions from '../../store/actions/minifigs';
+import classes from './Minifigs.css';
 
 import Pagination from "react-js-pagination";
-import classes from './Minifigs.css';
-import Minifig from '../Minifig/Minifig';
+import Minifig from './Minifig/Minifig';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import * as actions from '../../store/actions/minifigs';
 import MinifigsMenu from '../MinifigsMenu/MinifigsMenu';
 
 class Minifigs extends Component {
@@ -20,7 +20,7 @@ class Minifigs extends Component {
             this.props.onInitFrames();
         }
         
-        this.manageSearch(this.props.history.location.search)
+        this.manageSearch(this.props.history.location.search);
         
         if(this.state.minifigsList === null && this.props.minifigs && this.props.numberPerPage) {
             this.setMinifigsList(this.state);
@@ -32,20 +32,24 @@ class Minifigs extends Component {
         (this.props !== prevProps)){
 			this.setMinifigsList(prevState);
         }
+        this.manageSearch(this.props.history.location.search);
     }
 
     manageSearch (search) {
         // If there is no search and the tag and characName are not already null we set them to null
         if (!search) {
-            if(this.props.tagSelected !== null){this.props.setTag(null);}
-            if(!this.props.characSelected !== null){this.props.setCharac(null);}
+            if(this.props.tagSelected !== null){this.props.setTag(null)}
+            if(this.props.characSelected !== null){this.props.setCharac(null)}
         }
         const param = search.split("=")[0].replace("?", "");
         const value = decodeURIComponent(search.split("=")[1]) ;
-        if (param === "tag") { //if we have a tag in our location.search we set it in redux
+
+        //If we have a tag that is not already selected we set it
+        if (param === "tag" && value !== this.props.tagSelected) { 
             this.props.setTag(value);
-        } 
-        if (param === "characterName") { // if we have a charac in our location.search we set it in redux
+        }
+        //If we have a characName that is not already selected we set it 
+        if (param === "characterName" && value !== this.props.characSelected) { 
             this.props.setCharac(value); 
         }
     }

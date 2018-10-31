@@ -15,22 +15,22 @@
 }
 
 .CIS {
-    background-image: url(../../assets/images/frames/Separatist.jpg);
+    background-image: url(../../../assets/images/frames/Separatist.jpg);
 }
 
 .GalacticRepublic {
-    background-image: url(../../assets/images/frames/GalacticRepublic.jpg);
+    background-image: url(../../../assets/images/frames/GalacticRepublic.jpg);
 }
 
 .GalacticEmpire {
-    background-image: url(../../assets/images/frames/GalacticEmpire.jpg);
+    background-image: url(../../../assets/images/frames/GalacticEmpire.jpg);
 }
 
 .RebelAlliance {
-    background-image: url(../../assets/images/frames/RebelAlliance.jpg);
+    background-image: url(../../../assets/images/frames/RebelAlliance.jpg);
 }
 
 .JediOrder {
-    background-image: url(../../assets/images/frames/JediOrder.jpg
+    background-image: url(../../../assets/images/frames/JediOrder.jpg
     )
 }

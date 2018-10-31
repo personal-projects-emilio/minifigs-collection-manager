@@ -529,7 +529,7 @@
     "sw033a": {
         "name": "Rebel Pilot Y-wing, Dark Bluish Gray Hips (Dutch Vander)",
         "possessed": false,
-        "caracterName": "Dutch Vander",
+        "characterName": "Dutch Vander",
         "tags": [
             "Rebel Alliance",
             "Rebel Pilot",
@@ -1258,7 +1258,7 @@
     },
     "sw098": {
         "name": "Luke Skywalker (Hoth)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Luke Skywalker",
         "tags": [
             "Jedi",
@@ -2844,7 +2844,7 @@
     "sw247": {
         "name": "Admiral Ackbar",
         "possessed": true,
-        "characterName": "admiral Ackbar",
+        "characterName": "Admiral Ackbar",
         "tags": [
             "Mon Calamari",
             "Rebel Alliance",

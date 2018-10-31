@@ -1,20 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
-
-
-import classes from './MinifigsMenu.css';
 import * as actions from '../../store/actions/minifigs';
-import LinearProgress from 'material-ui/LinearProgress';
-import CircularProgress from 'material-ui/CircularProgress';
-import RaisedButton from 'material-ui/RaisedButton';
+import classes from './MinifigsMenu.css';
+
+import LinearProgress from '@material-ui/core/LinearProgress';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
 import Dropdown from '../../components/Dropdown/Dropdown';
+import Modal from '../../components/UI/Modal/Modal';
+import MinifigForm from '../Minifigs/MinifigForm/MinifigForm';
 
 class MinifigsMenu extends Component {
 	// The number per page is set at 100 by default in the redux reducer, if you remove 100 from the state change the reducer accordingly
 	state = {
         numberPerPageChoices : [25,50,100,200],
-        showOptions: ["All", "Owned", "Missing"]
+        showOptions: ["All", "Owned", "Missing"],
+        showModal: false
 	}
 
 	handlerNumberPerPage = (numberPerPage) => {
@@ -39,53 +42,67 @@ class MinifigsMenu extends Component {
         }); 
     }
 
+    toggleModalHandler = () => {
+        this.setState({showModal: !this.state.showModal})
+    }
+
+
 	render () {
 		// List of button for the choise of numberPerPage
 		const buttonNumberPerPage = this.state.numberPerPageChoices.map(number => {
-			return <RaisedButton
+			return <Button
 				key={number}
-				label={number}
+                variant="contained"
 				style={{margin:6}}
-				// If this is the active number it shows a primay button (blue background) with white text
-				primary={(number === this.props.numberPerPage) ? true : false}
-				labelColor={(number === this.props.numberPerPage) ? "white" : "rgb(0,0,0)"}
-				onClick={() => this.props.setNumberPerPage(number)} />
+				color={(number === this.props.numberPerPage) ? "primary" : "default"}
+				onClick={() => this.props.setNumberPerPage(number)} >{number}</Button>
         })
         
         // List of Button for the show options
         const showOptions = this.state.showOptions.map(option => {
             return(
-                <RaisedButton label={option}
-                              key={option}
-                              style={{margin:6}}
-                              primary={this.props.show === option.toLowerCase()}
-                              labelColor={(this.props.show === option.toLowerCase()) ? "white": "rgb(0,0,0)"}
-                              onClick={() => this.props.setShow(option.toLowerCase())} />
+                <Button key={option}
+                        variant="contained"
+                        onClick={() => this.props.setShow(option.toLowerCase())} 
+                        color={this.props.show === option.toLowerCase() ? "primary" : "default"}
+                        style={{margin:6}}>{option} </Button>
             )
         })
 
 		const spinner = <CircularProgress className={classes.Spinner} size={10} />;
+        
+        // Modal for adding a minifig
+        const modal = (
+            <MinifigForm minifig={null} edit={false} onSubmit={this.toggleModalHandler}/>
+        )
 
 		return (
+            
 			<div className={classes.MinifigsMenu}>
+                <Modal show={this.state.showModal} modalClosed={this.toggleModalHandler}>
+                        {modal}
+                </Modal>
 				{/*The first part consist of the number of minifig in the database, the one we owned and a LinearProgress with that percetage*/}
 				<div className={classes.MinifigsMenuHalf}>
-					<div className={classes.MinifigMenuText}>Number of minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : spinner}</div>
-					<div className={classes.MinifigMenuText}>Number of minifigs you own: {this.props.numberOwned !== null ? this.props.numberOwned : spinner}</div>
+					<div className={classes.MinifigMenuText}>Minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : spinner}</div>
+					<div className={classes.MinifigMenuText}>Mnifigs you own: {this.props.numberOwned !== null ? this.props.numberOwned : spinner}</div>
 					<div className={classes.Tooltip}>
 						<span className={classes.TooltipText}>{this.props.percentageOwned}%</span>
-						<LinearProgress mode="determinate" value={this.props.percentageOwned}/>
+						<LinearProgress variant="determinate" value={this.props.percentageOwned}/>
 					</div>
 					<div>
 						<span>Set all to:</span>
-						<RaisedButton 
-							label="Possessed" 
+						<Button 
 							style={{margin:6}} 
-							onClick={() => this.props.setPossessionToAll(true)} />
-						<RaisedButton 
+							onClick={() => this.props.setPossessionToAll(true)} 
+                            color={this.props.percentageOwned === 100 ? "primary": "default"}
+                            variant="contained">Possessed</Button>
+						<Button 
 							label="Not possessed" 
-							style={{margin:6}} 
-							onClick={() => this.props.setPossessionToAll(false)} />
+							style={{margin:6}}
+                            color={this.props.percentageOwned === 0 ? "primary": "default"}
+							onClick={() => this.props.setPossessionToAll(false)} 
+                            variant="contained">Not possessed</Button>
 					</div>
 					<div>
 						<span>Show:</span> {showOptions}
@@ -94,13 +111,17 @@ class MinifigsMenu extends Component {
 				{/*The second part is the button to choose how many minifigs we show*/}
 				<div className={classes.MinifigsMenuHalf}>
 					<div>
-                    	<p>Number of minifigs per page</p>
+                    	<p>Minifigs per page</p>
 						{buttonNumberPerPage}
                     </div>
                     <div>
                         <Dropdown type="Tags" array={this.props.tags} handler={this.handlerTagChange} itemSelected={this.props.tagSelected} />
                         <Dropdown type="Characters Name" array={this.props.characNames} handler={this.handlerCharacChange} itemSelected={this.props.characSelected}/>
                     </div>
+                    <Button color="primary"
+							style={{margin:6}} 
+							onClick={() => this.toggleModalHandler()}
+                            variant="contained">Add a minifig<Icon className={classes.Icon}>add_circle</Icon></Button>
 				</div>
 			</div>
 		);

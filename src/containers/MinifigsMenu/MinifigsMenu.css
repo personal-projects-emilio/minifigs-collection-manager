@@ -10,7 +10,6 @@
 	border-radius: 6px;
 }
 
-
 .MinifigsMenuHalf {
 	width: 50%;
 	padding: 1rem;
@@ -18,7 +17,7 @@
 	text-align: center;
 }
 
-.MinifigsMenuHalf:first-of-type {
+.MinifigsMenuHalf:first-of-type{
 	border-right: 1px solid #ccc;
 }
 
@@ -28,6 +27,10 @@
 
 .Spinner {
 	margin-left: 10px;
+}
+
+.Icon {
+    margin-left: 5px;
 }
 
 .Tooltip {

@@ -10,7 +10,7 @@ const frame = (props) => {
         content = (
             <Aux>
             <img className={classes.Picture} 
-                 src={'http://img.bricklink.com/ItemImage/MN/0/'+props.minifig+'.png'} 
+                 src={'https://img.bricklink.com/ItemImage/MN/0/'+props.minifig+'.png'} 
                  alt={props.minifig + ' pictures'} />
             {props.name ?<a className={classes.Name}>{props.name}</a> : null}
             <a>{props.minifig}</a>

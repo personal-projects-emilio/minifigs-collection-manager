@@ -46,17 +46,9 @@
 	margin: 5px 0;
 }
 
-.TagsDiv {
-    padding: 5px 0;
-}
-
-
-.TagsButton {
-    margin: auto 2px;
-}
-
 .EditDiv {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .EditButton {

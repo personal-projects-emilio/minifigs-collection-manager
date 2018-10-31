@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../axios';
-import {updateObject} from '../../shared/utility';
+
+import {updateObject, updateNumbers, getTagsAndCharacNames} from '../../shared/utility';
 
 
 export const fetchFailed = () => {
@@ -23,50 +24,16 @@ export const initMinifigs = () => {
 				// Init the minifigs
                 dispatch(setMinifigs(response.data));
                 
-                // Set the total number of minifigs
-				const totalNumber = Object.keys(response.data).length;
-				dispatch(setTotalNumber(totalNumber));
+                // Set the total and owned numbers and the percentage
+				const numbersData = updateNumbers(response.data); // return {totalNumber: number, numberOwned: number, percentageOwned: number}
+				dispatch(setTotalNumber(numbersData.totalNumber));
+                dispatch(setTotalOwned(numbersData.numberOwned));
+                dispatch(setPercentageOwned(numbersData.percentageOwned));
 
-				// Set the number of minifigs, tags and character names
-                let numberOwned = 0;
-                let tags = []; // {name: string, amount: number}
-                let characNames = []; // {name: string, amount: number}
-                
-                // First we set the number owned
-                for (const i in response.data) {
-                    const owned = response.data[i].possessed;
-                    if(owned){numberOwned++}
-
-                    // Then we check the tags and add them to our array
-                    const minifigTags = response.data[i].tags;
-                    if (minifigTags) {
-                        for(let i in minifigTags){
-                            // If the tag is unique we had it to the array
-                            if(tags.map(tag => tag.name).indexOf(minifigTags[i]) === -1){
-                                tags.push({name: minifigTags[i], amount: 1});
-                            } else { // Or else we increment the amount of the existing tag
-                                const tagI = tags.map(tag => tag.name).indexOf(minifigTags[i])
-                                tags[tagI].amount++;
-                            }
-                        }
-                    }
-                    // We sort the tags alphabetically
-                    tags.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)); 
-
-                    const characName = response.data[i].characterName;
-                    if(characName){
-                        let index = characNames.map(charac => charac.name).indexOf(characName);
-                        if(index === -1){
-                            characNames.push({name: characName, amount: 1});
-                        } else {
-                            characNames[index].amount++;
-                        }
-                    }  
-                    characNames.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-                }
-                dispatch(setTotalOwned(numberOwned));
-                dispatch(setTags(tags));
-                dispatch(setCharacs(characNames));
+				// Set the tags and character names
+                let data = getTagsAndCharacNames(response.data); // return {tags: [name: string, amount: number], characNames: [name: string, amount: number]}
+                dispatch(setTags(data.tags));
+                dispatch(setCharacs(data.characNames));
 			})
 			.catch(error =>{
 				dispatch(fetchFailed());
@@ -105,6 +72,13 @@ export const setTotalOwned = (numberOwned) => {
 		type: actionTypes.SET_TOTAL_OWNED,
 		numberOwned: numberOwned
 	}
+}
+
+export const setPercentageOwned = (percentageOwned) => {
+    return {
+        type: actionTypes.SET_PERCENTAGE_OWNED,
+        percentageOwned: percentageOwned
+    }
 }
 
 export const setNumberPerPage = (numberPerPage) => {
@@ -192,5 +166,30 @@ export const setCharacs = (characs) => {
     return {
         type: actionTypes.SET_CHARACNAMES,
         characNames: characs
+    }
+}
+
+export const updateCharacNames = (oldName, newName) => {
+    return {
+        type: actionTypes.UPDATE_CHARACNAMES,
+        oldName: oldName,
+        newName: newName
+    }
+}
+
+export const editMinifig = (ref, updatedMinifig) => {
+    return {
+        type: actionTypes.EDIT_MINIFIG,
+        ref: ref,
+        updatedMinifig: updatedMinifig
+    }
+}
+
+export const editMinifigServer = (ref, updatedMinifig) => {
+    return dispatch => {
+        axios.patch('/minifigs/'+ref+'.json', updatedMinifig)
+        .then(response => {
+            editMinifig(ref, updatedMinifig);
+        });
     }
 }

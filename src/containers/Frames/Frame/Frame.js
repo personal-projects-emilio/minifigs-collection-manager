@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-
 import classes from './Frame.css';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
-import FrameMinifig from '../../components/FrameMinifig/FrameMinifig';
+import FrameMinifig from '../../../components/FrameMinifig/FrameMinifig';
 
 export class Frame extends Component {
 
     componentDidUpdate () {
-            // If the parameter isn't a frame we redirect to /frames
-            if (this.props.frames && this.props.match.params.frame){
-                if( Object.keys(this.props.frames).map(frame => frame).indexOf(this.props.match.params.frame) === -1) {
-                    this.props.history.push('/frames');
-                }
-                if (!this.props.match.isExact) {
-                    this.props.history.push(this.props.match.url);
-                }
-            } 
+        // If the parameter isn't a frame we redirect to /frames
+        if (this.props.frames && this.props.match.params.frame){
+            if( Object.keys(this.props.frames).map(frame => frame).indexOf(this.props.match.params.frame) === -1) {
+                this.props.history.push('/frames');
+            }
+            if (!this.props.match.isExact) {
+                this.props.history.push(this.props.match.url);
+            }
+        } 
     }
 
 
