@@ -1,5 +1,5 @@
 import * as actionTypes from './actions/actionTypes';
-import {updateObject, updateNumbers} from '../shared/utility';
+import {updateObject, updateNumbers, getTagsAndCharacNames} from '../shared/utility';
 
 const initialState = {
     error: false,
@@ -118,6 +118,20 @@ const updateCharacNames = (state, action) => {
     return updateObject(state, {characNames: updatedCharacNames});
 }
 
+const updateTags = (state, action) => {
+    console.log(action);
+    const updatedTags = [...state.tags]
+    if (action.action === "add") {
+        const index = updatedTags.map(tag => tag.name).indexOf(action.tag);
+        if (index === -1) {
+            updatedTags.push({name: action.tag, amount: 1});  
+        } else {
+            updatedTags[index].amount++;
+        }
+    }
+    return updateObject(state, {tags: updatedTags});
+}
+
 const setFrames = (state, action) => {
     return updateObject(state, {frames: action.frames});
 }
@@ -148,39 +162,74 @@ const editMinifig = (state, action) => {
                 } else {
                     const A = parseInt(a.replace(/\D/g, ''), 10);
                     const B = parseInt(b.replace(/\D/g, ''), 10);
-                    const value = (A > B) ? 1 : ((B > A) ? -1 : 1);
+                    const value = (A > B) ? 1 : ((B > A) ? -1 : 0);
                     return value;
                 }
             })
             .map(ref => updatedMinifigsSorted[ref] = updatedMinifigs[ref] );
     }
-    const minifigs = updatedMinifigsSorted !== {} ? updatedMinifigsSorted : updatedMinifigs;
+    const minifigs = !Object.keys(updatedMinifigsSorted).length ? updatedMinifigs : updatedMinifigsSorted;
     
-    // We change the value of the owned and total minifigs if need be.
+    // We update the numbers
     const numbersData = updateNumbers(minifigs);
-    return updateObject(state, {minifigs: minifigs, numberOwned: numbersData.numberOwned, percentageOwned: numbersData.percentageOwned, totalNumber: numbersData.totalNumber});
+    const data = getTagsAndCharacNames(minifigs);
+    return updateObject(state, {
+        minifigs: minifigs, 
+        numberOwned: numbersData.numberOwned, 
+        percentageOwned: numbersData.percentageOwned, 
+        totalNumber: numbersData.totalNumber, 
+        tags: data.tags, 
+        characNames: data.characNames
+    });
+}
+
+export const deleteMinifig = (state, action) => {
+    const minifigs = {...state.minifigs};
+    const totalNumber = state.totalNumber-1;
+    const numberOwned = minifigs[action.ref].possessed ? state.numberOwned-1 : state.numberOwned;
+    const percentageOwned = Math.round(numberOwned/totalNumber*10000)/100;
+    delete minifigs[action.ref];
+    const data = getTagsAndCharacNames(minifigs);
+    let tagSelected = state.tagSelected;
+    let characSelected = state.characSelected;
+    if (data.tags.map(tag => tag.name).indexOf(tagSelected) === -1) {
+        tagSelected= null;
+    }
+    console.log(tagSelected);
+    return updateObject(state, {
+        minifigs: minifigs,
+        numberOwned: numberOwned,
+        percentageOwned: percentageOwned,
+        totalNumber: totalNumber,
+        tags: data.tags,
+        characNames: data.characNames,
+        tagSelected: tagSelected,
+        characSelected: characSelected
+    });
 }
 
 
 const reducer = (state = initialState, action) => {
 	switch( action.type ) {
-		case actionTypes.SET_MINIFIGS: return setMinifigs(state, action);
+        case actionTypes.SET_MINIFIGS: return setMinifigs(state, action);
+        case actionTypes.SET_FRAMES: return setFrames(state, action);
         case actionTypes.FETCH_FAILED: return fetchFailed(state, action);
         case actionTypes.SET_TOTAL_NUMBER: return setTotalNumber(state, action);
         case actionTypes.SET_TOTAL_OWNED: return setTotalOwned(state, action);
         case actionTypes.SET_PERCENTAGE_OWNED: return setPercentageOwned(state, action);
 		case actionTypes.SET_NUMBER_PER_PAGE: return setNumberPerPage(state, action);
-		case actionTypes.SET_ACTIVE_PAGE: return setActivePage(state, action);
+        case actionTypes.SET_ACTIVE_PAGE: return setActivePage(state, action);
+        case actionTypes.SET_SHOW: return setShow(state, action);
 		case actionTypes.SET_POSSESSED: return setPossessed(state, action);
 		case actionTypes.SET_POSSESSION_TO_ALL: return setPossessionToAll(state, action);
-        case actionTypes.SET_SHOW: return setShow(state, action);
         case actionTypes.SET_TAG: return setTag(state, action);
         case actionTypes.SET_TAGS: return setTags(state, action);
         case actionTypes.SET_CHARACNAME: return setCharacName(state, action);
         case actionTypes.SET_CHARACNAMES: return setCharacNames(state, action);
-        case actionTypes.SET_FRAMES: return setFrames(state, action);
-        case actionTypes.EDIT_MINIFIG: return editMinifig(state, action);
         case actionTypes.UPDATE_CHARACNAMES: return updateCharacNames(state, action);
+        case actionTypes.UPDATE_TAGS: return updateTags(state, action);
+        case actionTypes.EDIT_MINIFIG: return editMinifig(state, action);
+        case actionTypes.DELETE_MINIFIG: return deleteMinifig(state, action);
 		default: return state;
 	}
 };

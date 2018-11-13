@@ -1,6 +1,9 @@
 import React from 'react';
-
 import classes from './Input.css';
+
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import Aux from '../../../hoc/Auxilliary/Auxilliary';
 
 const input = ( props ) => {
     let inputElement = null;
@@ -9,9 +12,37 @@ const input = ( props ) => {
     if (props.invalid && props.shouldValidate && props.touched) {
         inputClasses.push(classes.Invalid);
     }
+    let tags = null;
+    if (props.tags !== null) {
+        tags = props.tags.sort().map(tag => (
+            <Button color="default"
+                    key={tag}
+                    style={{margin:6}} 
+                    onClick={() => props.tagHandler(tag, "remove")}
+                    variant="contained">{tag}<Icon className={classes.Icon}>delete</Icon></Button>
+        ))
+    }
 
     switch ( props.elementType ) {
-        case ( 'input' ):
+        case ( 'input-list' ):
+            inputElement = (
+                <Aux>
+                    <div className={classes.TagsInput}>
+                        <input className={inputClasses.join(' ')}
+                                {...props.elementConfig}
+                                value={props.value}
+                                onChange={props.changed} />
+                        <Button color="default"
+                                style={{margin:6}} 
+                                onClick={() => props.tagHandler(props.value, "add")}
+                                variant="contained"><Icon className={classes.Icon}>add_circle</Icon></Button>
+                    </div>
+                    {tags.length ? tags : <p>You can add a tag by clicking on the + button</p>}
+                </Aux>
+                
+            );
+            break;
+        case ('input'): 
             inputElement = <input className={inputClasses.join(' ')}
                                   {...props.elementConfig}
                                   value={props.value}

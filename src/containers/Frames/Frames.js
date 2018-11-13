@@ -14,8 +14,7 @@ import Frame from './Frame/Frame';
 export class Frames extends Component {
     componentDidMount() {
         if(!this.props.minifigs){
-            this.props.onInitMinifigs();
-            this.props.onInitFrames();
+            this.props.fetchData();
         }
     }
 
@@ -56,8 +55,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-        onInitMinifigs: () => dispatch(actions.initMinifigs()),
-        onInitFrames: () => dispatch(actions.initFrames())
+        fetchData: () => dispatch(actions.fetchData())
 	}
 }
 

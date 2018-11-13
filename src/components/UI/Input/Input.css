@@ -34,3 +34,7 @@
 input::-webkit-calendar-picker-indicator {
     background-color: inherit;
 }
+
+.TagsInput {
+    display: flex;
+}

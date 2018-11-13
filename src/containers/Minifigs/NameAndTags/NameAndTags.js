@@ -10,19 +10,21 @@ import Button from '@material-ui/core/Button';
 
 
 class NameAndTags extends Component {
+    // Handler to set the tag and the search
     showByTagHandler = (tag) => {
-        this.props.setTag(tag);
-        const search = "?tag="+encodeURIComponent(tag);
-        this.props.history.push({
-            pathname: "/",
-            search: search
-        });
-             
+        if (this.props.tagSelected !== tag) {
+            this.props.setTag(tag);
+            const search = "?tag="+encodeURIComponent(tag);
+            this.props.history.push({
+                pathname: "/",
+                search: search
+            });
+        }         
     }
 
+    // Handler to set the character name and the search
     shoByCharacHandler = (charac) => {
         if (this.props.characSelected !== charac) {
-            console.log("Charac set in nameandTags");
             this.props.setCharac(charac);
             const search = "?characterName="+encodeURIComponent(charac);
             this.props.history.push({
@@ -31,14 +33,16 @@ class NameAndTags extends Component {
             });    
         }
     }
+
     render() {
         let nameAndTags = null;
         if (this.props.characterName && this.props.tags) {
             let tags = null;
-            if (this.props.tags) {
+            if (this.props.tags.length) {
                 tags = this.props.tags.map(tag => {
                     return(
                         <Button className={classes.Button}
+                                color={this.props.tagSelected === tag ? "primary" : "default"}
                                 onClick={() => this.showByTagHandler(tag)}
                                 variant="contained"
                                 key={tag}>
@@ -52,10 +56,10 @@ class NameAndTags extends Component {
                 <Aux>
                     <Divider/>
                     <div className={classes.Div}>
-                        <Button className={classes.Button} 
-                        //size="small" 
-                        onClick={() => this.shoByCharacHandler(this.props.characterName)}
-                        variant="contained">
+                        <Button className={classes.Button}
+                                color={this.props.characSelected === this.props.characterName ? "primary" : "default"}
+                                onClick={() => this.shoByCharacHandler(this.props.characterName)}
+                                variant="contained">
                             {this.props.characterName}
                         </Button>
                     </div>

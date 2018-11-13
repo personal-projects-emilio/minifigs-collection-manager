@@ -94,7 +94,9 @@ class Minifig extends Component {
                         <IconButton color="primary" onClick={this.editModeHandler}>
                             <Icon>edit</Icon>    
                         </IconButton>
-                        
+                        <IconButton color="primary" onClick={() => this.props.deleteMinifig(ref)}>
+                            <Icon>delete</Icon>    
+                        </IconButton>
                     </div>
 				</div>
 			</Aux>
@@ -104,11 +106,10 @@ class Minifig extends Component {
 
 const mapDispatchToProps = dispatch => {
 	return {
-        setPossessed: (minifigRef) => dispatch(actions.setPossessed(minifigRef))
+        setPossessed: (minifigRef) => dispatch(actions.setPossessed(minifigRef)),
+        deleteMinifig: (minifigRef) => dispatch(actions.deleteMinifig(minifigRef))
 	}
 }
 
 //export default connect(null, mapDispatchToProps)(Minifig);
 export default connect(null, mapDispatchToProps)(Minifig);
-	
-

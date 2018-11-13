@@ -2378,7 +2378,7 @@
     },
     "sw203": {
         "name": "Clone Trooper Clone Wars with Armor",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Clone Trooper",
         "tags": [
             "Clone Trooper",
@@ -3289,7 +3289,7 @@
     },
     "sw289": {
         "name": "General Maximillian Veers - Light Gray Helmet ",
-        "possessed": false,
+        "possessed": true,
         "characterName": "General Veers",
         "tags": [
             "Galactic Empire",
@@ -3299,7 +3299,7 @@
     },
     "sw290": {
         "name": "Han Solo, Reddish Brown Legs with Holster Pattern, Open Jacket",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Han Solo",
         "tags": [
             "Hoth",
@@ -3309,7 +3309,7 @@
     },
     "sw291": {
         "name": "Hoth Rebel Trooper",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Hoth Rebel",
         "tags": [
             "Hoth",
@@ -4962,7 +4962,7 @@
     },
     "sw459": {
         "name": "Imperial Probe Droid",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Imperial Probe Droid",
         "tags": [
             "Droid",
@@ -4982,7 +4982,7 @@
     },
     "sw461": {
         "name": "Luke Skywalker (Pilot, Printed Legs)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Luke Skywalker",
         "tags": [
             "Hoth",
@@ -4993,7 +4993,7 @@
     },
     "sw462": {
         "name": "Hoth Rebel Trooper, Stubble",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Hoth Rebel",
         "tags": [
             "Hoth",

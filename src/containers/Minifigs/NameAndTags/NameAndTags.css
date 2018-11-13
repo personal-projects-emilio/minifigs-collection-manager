@@ -8,9 +8,9 @@
 
 .Button {
     text-transform: none !important;
-    max-height: 40px !important;
     min-height: 20px !important;
     min-width: 20px !important;
+    max-width: 100% !important;
     padding: 5px !important;
     margin: 3px !important;
 }

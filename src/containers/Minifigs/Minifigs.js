@@ -16,23 +16,29 @@ class Minifigs extends Component {
     componentDidMount () {
         //Initiate the minifigs and the frames
         if(!this.props.minifigs){
-            this.props.onInitMinifigs();
-            this.props.onInitFrames();
+            this.props.fetchData();
         }
         
-        this.manageSearch(this.props.history.location.search);
+        // When we have tags and characNames we check the search
+        if (this.props.tags && this.props.characNames) {
+            this.manageSearch(this.props.history.location.search);
+        }
         
+        // If the minifig list is null and we have the minifigs and number per page we set it
         if(this.state.minifigsList === null && this.props.minifigs && this.props.numberPerPage) {
             this.setMinifigsList(this.state);
         }
     }
 
     componentDidUpdate (prevProps, prevState) {
+        // If we have a change of props we se the minifig list
         if((this.props.minifigs && this.props.numberPerPage) &&
         (this.props !== prevProps)){
 			this.setMinifigsList(prevState);
         }
-        this.manageSearch(this.props.history.location.search);
+        if (this.props.tags && this.props.characNames) {
+            this.manageSearch(this.props.history.location.search);
+        }
     }
 
     manageSearch (search) {
@@ -45,12 +51,18 @@ class Minifigs extends Component {
         const value = decodeURIComponent(search.split("=")[1]) ;
 
         //If we have a tag that is not already selected we set it
-        if (param === "tag" && value !== this.props.tagSelected) { 
-            this.props.setTag(value);
+        if (param === "tag" && value !== this.props.tagSelected) {
+            // If the tag exist we set it, else we redirect to "/"
+            if (this.props.tags.map(tag => tag.name).indexOf(value) !== -1) {
+                this.props.setTag(value);
+            } else {this.props.history.push('/')}
         }
         //If we have a characName that is not already selected we set it 
         if (param === "characterName" && value !== this.props.characSelected) { 
-            this.props.setCharac(value); 
+            // If the character name exist we set it, else we redirect to "/"
+            if (this.props.characNames.map(charac => charac.name).indexOf(value) !== -1) {
+                this.props.setCharac(value);
+            } else {this.props.history.push('/')}
         }
     }
 
@@ -60,7 +72,7 @@ class Minifigs extends Component {
         const end = begin + this.props.numberPerPage;
 
         // The list of minifigs we are showing
-        let minifigListObject = {}; // Our new empty object
+        let minifigListObject = {};
         Object.keys(this.props.minifigs).forEach(minifig => {
             const possession = this.props.minifigs[minifig].possessed;
             // First we check the possession
@@ -111,7 +123,7 @@ class Minifigs extends Component {
 		// While the minifigs aren't loaded we show a spinner, if we have an error we show a message
 		let minifigs = this.props.error ? <p>Minifigs can't be loaded!</p> : <CircularProgress className={classes.Spinner} size={200} thickness={1.5} />;
 		let pagination = null;
-        
+
         if (this.state.minifigsList) {
             // We map our list to show each minifig on the page
 			minifigs = this.state.minifigsList.map(minifig => {
@@ -169,8 +181,8 @@ const mapStateToProps = state => {
 		show: state.show,
 		totalNumber: state.totalNumber,
         numberOwned: state.numberOwned,
+        tags: state.tags,
         tagSelected: state.tagSelected,
-        showByTag: state.showByTag,
         characNames: state.characNames,
         characSelected: state.characSelected
 	}
@@ -178,8 +190,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-        onInitMinifigs: () => dispatch(actions.initMinifigs()),
-        onInitFrames: () => dispatch(actions.initFrames()),
+        fetchData: () => dispatch(actions.fetchData()),
         setActivePage: (activePage) => dispatch(actions.setActivePage(activePage)),
         setTag: (tag) => dispatch(actions.setTag(tag)),
         setCharac: (characSelected) => dispatch(actions.setCharac(characSelected))

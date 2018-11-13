@@ -17,32 +17,31 @@ export const setMinifigs = (minifigs) => {
 	}
 }
 
-export const initMinifigs = () => {
+export const fetchData = () => {
 	return dispatch => {
+        // We fetch the minifigs in our DB
 		axios.get('/minifigs.json')
 			.then(response => {
 				// Init the minifigs
                 dispatch(setMinifigs(response.data));
                 
                 // Set the total and owned numbers and the percentage
-				const numbersData = updateNumbers(response.data); // return {totalNumber: number, numberOwned: number, percentageOwned: number}
+                const numbersData = updateNumbers(response.data); 
+                // return {totalNumber: number, numberOwned: number, percentageOwned: number}
 				dispatch(setTotalNumber(numbersData.totalNumber));
                 dispatch(setTotalOwned(numbersData.numberOwned));
                 dispatch(setPercentageOwned(numbersData.percentageOwned));
 
 				// Set the tags and character names
-                let data = getTagsAndCharacNames(response.data); // return {tags: [name: string, amount: number], characNames: [name: string, amount: number]}
+                let data = getTagsAndCharacNames(response.data); 
+                // return {tags: [name: string, amount: number], characNames: [name: string, amount: number]}
                 dispatch(setTags(data.tags));
                 dispatch(setCharacs(data.characNames));
 			})
 			.catch(error =>{
 				dispatch(fetchFailed());
-			})
-	}
-};
-
-export const initFrames = () => {
-    return dispatch => {
+            })
+        // We fetch the frames in our DB
         axios.get('/frames.json')
             .then(response => {
                 dispatch(setFrames(response.data));
@@ -50,8 +49,8 @@ export const initFrames = () => {
             .catch(error =>{
                 dispatch(fetchFailed());
             })
-    }
-}
+	}
+};
 
 export const setFrames = (frames) => {
     return {
@@ -177,6 +176,14 @@ export const updateCharacNames = (oldName, newName) => {
     }
 }
 
+export const updateTags = (tag, action) => {
+    return {
+        type: actionTypes.UPDATE_TAGS,
+        tag: tag,
+        action: action
+    }
+}
+
 export const editMinifig = (ref, updatedMinifig) => {
     return {
         type: actionTypes.EDIT_MINIFIG,
@@ -191,5 +198,12 @@ export const editMinifigServer = (ref, updatedMinifig) => {
         .then(response => {
             editMinifig(ref, updatedMinifig);
         });
+    }
+}
+
+export const deleteMinifig = (ref) => {
+    return {
+        type: actionTypes.DELETE_MINIFIG,
+        ref: ref
     }
 }
