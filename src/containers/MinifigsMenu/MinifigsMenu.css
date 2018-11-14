@@ -33,6 +33,12 @@
     margin-left: 5px;
 }
 
+.Dropdown {
+    min-width: 60%;
+    max-width: 350px;
+    margin:auto;
+}
+
 .Tooltip {
 	position: relative;
 	margin-bottom: 0.5rem;
@@ -74,5 +80,5 @@
 	.MinifigsMenuHalf:first-of-type {
 	border-right: none;
 	border-bottom: 1px solid #ccc;
-}
+    }
 }

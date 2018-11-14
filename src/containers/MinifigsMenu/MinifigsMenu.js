@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import * as actions from '../../store/actions/minifigs';
 import classes from './MinifigsMenu.css';
 
+import Aux from '../../hoc/Auxilliary/Auxilliary';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
@@ -24,7 +25,11 @@ class MinifigsMenu extends Component {
 		this.props.setNumberPerPage(numberPerPage);
     }
     
-    handlerTagChange = (_event, _index, value) => {
+    handlerTagChange = (event) => {
+        let value = null;
+        if (event.target.value !== "" && event.target.value) {
+            value = event.target.value
+        }
         this.props.setTag(value);
         const search = value ? "?tag="+encodeURIComponent(value) : null;
         this.props.history.push({
@@ -33,7 +38,11 @@ class MinifigsMenu extends Component {
         });  
     }
 
-    handlerCharacChange = (_event, _index, value) => {
+    handlerCharacChange = (event) => {
+        let value = null;
+        if (event.target.value !== "" && event.target.value) {
+            value = event.target.value
+        }
         this.props.setCharac(value);
         const search =  value? "?characterName="+encodeURIComponent(value) : null;
         this.props.history.push({
@@ -76,6 +85,15 @@ class MinifigsMenu extends Component {
             <MinifigForm minifig={null} edit={false} onSubmit={this.toggleModalHandler}/>
         )
 
+        let dropdown = null;
+        if (this.props.tags && this.props.characNames) {
+            dropdown = (<Aux>
+                <Dropdown type="Tags" array={this.props.tags} handler={this.handlerTagChange} itemSelected={this.props.tagSelected ? this.props.tagSelected : ""} />
+                <Dropdown type="Characters Name" array={this.props.characNames} handler={this.handlerCharacChange} itemSelected={this.props.characSelected ? this.props.characSelected : ""}/>
+            </Aux>)
+            
+        }
+
 		return (
             
 			<div className={classes.MinifigsMenu}>
@@ -108,15 +126,14 @@ class MinifigsMenu extends Component {
 						<span>Show:</span> {showOptions}
 					</div>
 				</div>
-				{/*The second part is the button to choose how many minifigs we show*/}
+				{/*The second part is the button to choose how many minifigs we show, the dropdown to show by tags/charachNames and the button to add a minifig*/}
 				<div className={classes.MinifigsMenuHalf}>
 					<div>
                     	<p>Minifigs per page</p>
 						{buttonNumberPerPage}
                     </div>
-                    <div>
-                        <Dropdown type="Tags" array={this.props.tags} handler={this.handlerTagChange} itemSelected={this.props.tagSelected} />
-                        <Dropdown type="Characters Name" array={this.props.characNames} handler={this.handlerCharacChange} itemSelected={this.props.characSelected}/>
+                    <div className={classes.Dropdown}>
+                        {dropdown}
                     </div>
                     <Button color="primary"
 							style={{margin:6}} 

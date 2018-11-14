@@ -1,50 +1,53 @@
 import React from 'react';
-import Aux from '../../hoc/Auxilliary/Auxilliary';
-import MenuItem from 'material-ui/MenuItem';
-import SelectField from 'material-ui/SelectField';
-// import Input from '@material-ui/core/Input';
-// import InputLabel from '@material-ui/core/InputLabel';
-// import MenuItem from '@material-ui/core/MenuItem';
-// import FormControl from '@material-ui/core/FormControl';
-// import Select from '@material-ui/core/Select';
+import classes from './Dropdown.css';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { IconButton, Icon } from '@material-ui/core';
 
 const dropdown = (props) => {
     // array: []<Tags or CharacNames>
     // type: "Tags" or "Character Names"
     // handler: function()
     
-    let list = [<MenuItem value={null} key="null" primaryText={""}/>];
-
+    // List of MenuItem from our props.array with a empty value
+    let list = [<MenuItem value={""} key={props.type+"-null"}>None</MenuItem>];
     if (props.array) {
         props.array.map(item => {
-            return list.push(<MenuItem value={item.name} key={item.name} primaryText={item.name+" ("+item.amount+")"}/>)
+            return list.push(<MenuItem value={item.name} key={item.name}>{item.name+" ("+item.amount+")"}</MenuItem>)
         })
     }
 
-    return (
-        <Aux>
-            <SelectField value={props.itemSelected} 
-                         floatingLabelText={props.type}
-                         onChange={props.handler}>
-                    {list}
-            </SelectField>
-        </Aux>
-    );
+    // We show a clear icon button if there is a selected item
+    let closeButton = null;
+    if (props.itemSelected !== "") {
+        closeButton = (
+            <IconButton color="primary" onClick={props.handler}>
+                    <Icon>clear</Icon>    
+            </IconButton>
+        )
+    }
 
-    // return (
-    //     <FormControl classes={{width: '100%'}}>
-    //         <InputLabel shrink htmlFor={props.type}>
-    //             {props.type}
-    //         </InputLabel>
-    //         <Select value={props.itemSelected}
-    //                 onChange={props.handler}
-    //                 input={<Input name={props.type} id={props.type} />}
-    //                 displayEmpty
-    //                 name={props.type}>
-    //             {list}
-    //         </Select>
-    //     </FormControl>
-    // )
+    return (
+        <div className={classes.Dropdown}>
+            <FormControl fullWidth> 
+                <InputLabel shrink htmlFor={props.type}>
+                    {props.type}
+                </InputLabel>
+                <Select value={props.itemSelected}
+                        onChange={props.handler}
+                        displayEmpty
+                        autoWidth	
+                        input={<Input name={props.type} id={props.type} />}>
+                    {list}
+                </Select>
+            </FormControl>
+            {closeButton}
+        </div>
+        
+    )
 }
 	
 
