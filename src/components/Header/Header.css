@@ -40,11 +40,11 @@
 }
 
 .Link a:hover, .Link a:active, .Link a.Active  {
-    color: slategray;
+    color: #5d86bb;
 }
 
 .Active {
-    border-bottom: 5px solid slategray;
+    border-bottom: 5px solid #5d86bb;
 }
 
 @font-face {

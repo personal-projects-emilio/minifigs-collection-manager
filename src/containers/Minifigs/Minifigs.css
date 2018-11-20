@@ -32,14 +32,14 @@
     padding: 6px 12px;
     margin-left: -1px;
     line-height: 1.42857143;
-    color: rgb(0, 188, 212);
+    color: black;
     text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #e0e0e0;
+    border: 1px solid #a0a0a0;
 }
 
 .PaginationUl li a:hover {
-	background-color: #eee;
+	background-color: #d5d5d5;
 }
 
 .DisplayNone {
@@ -52,8 +52,8 @@
 	z-index: 3;
     color: #fff;
     cursor: default;
-	background-color: rgb(0, 188, 212);
-	border-color: rgb(0, 188, 212);
+	background-color: #5d86bb;
+	border-color: #5d86bb;
 }
 
 .PaginationUl li:first-child a {

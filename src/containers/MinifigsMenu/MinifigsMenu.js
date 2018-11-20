@@ -63,7 +63,8 @@ class MinifigsMenu extends Component {
 				key={number}
                 variant="contained"
 				style={{margin:6}}
-				color={(number === this.props.numberPerPage) ? "primary" : "default"}
+                classes={{disabled: classes.Disabled}}
+                disabled={(number === this.props.numberPerPage) ? true : false}
 				onClick={() => this.props.setNumberPerPage(number)} >{number}</Button>
         })
         
@@ -72,8 +73,9 @@ class MinifigsMenu extends Component {
             return(
                 <Button key={option}
                         variant="contained"
-                        onClick={() => this.props.setShow(option.toLowerCase())} 
-                        color={this.props.show === option.toLowerCase() ? "primary" : "default"}
+                        onClick={() => this.props.setShow(option.toLowerCase())}
+                        classes={{disabled: classes.Disabled}}
+                        disabled={this.props.show === option.toLowerCase() ? true : false}
                         style={{margin:6}}>{option} </Button>
             )
         })
@@ -88,8 +90,14 @@ class MinifigsMenu extends Component {
         let dropdown = null;
         if (this.props.tags && this.props.characNames) {
             dropdown = (<Aux>
-                <Dropdown type="Tags" array={this.props.tags} handler={this.handlerTagChange} itemSelected={this.props.tagSelected ? this.props.tagSelected : ""} />
-                <Dropdown type="Characters Name" array={this.props.characNames} handler={this.handlerCharacChange} itemSelected={this.props.characSelected ? this.props.characSelected : ""}/>
+                <Dropdown type="Characters Name" 
+                          array={this.props.characNames} 
+                          handler={this.handlerCharacChange} 
+                          itemSelected={this.props.characSelected ? this.props.characSelected : ""}/>
+                <Dropdown type="Tags" 
+                          array={this.props.tags} 
+                          handler={this.handlerTagChange} 
+                          itemSelected={this.props.tagSelected ? this.props.tagSelected : ""} />
             </Aux>)
             
         }
@@ -110,17 +118,16 @@ class MinifigsMenu extends Component {
 					</div>
 					<div>
 						<span>Set all to:</span>
-						<Button 
-							style={{margin:6}} 
-							onClick={() => this.props.setPossessionToAll(true)} 
-                            color={this.props.percentageOwned === 100 ? "primary": "default"}
-                            variant="contained">Possessed</Button>
-						<Button 
-							label="Not possessed" 
-							style={{margin:6}}
-                            color={this.props.percentageOwned === 0 ? "primary": "default"}
-							onClick={() => this.props.setPossessionToAll(false)} 
-                            variant="contained">Not possessed</Button>
+						<Button style={{margin:6}} 
+                                onClick={() => this.props.setPossessionToAll(true)} 
+                                color={this.props.percentageOwned === 100 ? "primary": "default"}
+                                disabled={this.props.percentageOwned === 100 ? true : false}
+                                variant="contained">Possessed</Button>
+						<Button style={{margin:6}}
+                                color={this.props.percentageOwned === 0 ? "primary": "default"}
+                                disabled={this.props.percentageOwned === 0 ? true : false}
+                                onClick={() => this.props.setPossessionToAll(false)} 
+                                variant="contained">Not possessed</Button>
 					</div>
 					<div>
 						<span>Show:</span> {showOptions}

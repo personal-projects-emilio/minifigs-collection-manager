@@ -42,7 +42,8 @@ class NameAndTags extends Component {
                 tags = this.props.tags.map(tag => {
                     return(
                         <Button className={classes.Button}
-                                color={this.props.tagSelected === tag ? "primary" : "default"}
+                                classes={{disabled: classes.Disabled}}
+                                disabled={this.props.tagSelected === tag ? true : false}
                                 onClick={() => this.showByTagHandler(tag)}
                                 variant="contained"
                                 key={tag}>
@@ -57,7 +58,8 @@ class NameAndTags extends Component {
                     <Divider/>
                     <div className={classes.Div}>
                         <Button className={classes.Button}
-                                color={this.props.characSelected === this.props.characterName ? "primary" : "default"}
+                                classes={{disabled: classes.Disabled}}
+                                disabled={this.props.characSelected === this.props.characterName ? true : false}
                                 onClick={() => this.shoByCharacHandler(this.props.characterName)}
                                 variant="contained">
                             {this.props.characterName}

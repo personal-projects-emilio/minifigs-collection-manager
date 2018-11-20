@@ -9162,7 +9162,7 @@
     },
     "sw880a": {
         "name": "Luke Skywalker, Tan Hair (8020356b alternate)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Luke Skywalker",
         "tags": [
             "Alternate Version",
@@ -9929,7 +9929,7 @@
     },
     "sw960": {
         "name": "Sandtrooper (Enlisted) - Black Pauldron, Ammo Pouch, Dirt Stains, Survival Backpack",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Sandtrooper",
         "tags": [
             "Galactic Empire",
@@ -9939,7 +9939,7 @@
     },
     "sw961": {
         "name": "Sandtrooper Squad Leader (Captain) - Orange Pauldron, Ammo Pouch, Dirt Stains, Survival Backpack (75221)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Sandtrooper",
         "tags": [
             "Galactic Empire",
@@ -9949,7 +9949,7 @@
     },
     "sw962": {
         "name": "First Order Stormtrooper Squad Leader (Pointed Mouth Pattern) (75190 alternate)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "First Order Stormtrooper",
         "tags": [
             "Alternate Version",
