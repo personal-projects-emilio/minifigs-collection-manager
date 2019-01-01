@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import * as actions from '../../../store/actions/minifigs';
+import * as actions from '../../../../store/actions/index';
 import classes from './NameAndTags.css';
 
 import Divider from '@material-ui/core/Divider';
-import Aux from '../../../hoc/Auxilliary/Auxilliary';
 import Button from '@material-ui/core/Button';
 
 
@@ -43,7 +42,7 @@ class NameAndTags extends Component {
                     return(
                         <Button className={classes.Button}
                                 classes={{disabled: classes.Disabled}}
-                                disabled={this.props.tagSelected === tag ? true : false}
+                                disabled={this.props.tagSelected === tag}
                                 onClick={() => this.showByTagHandler(tag)}
                                 variant="contained"
                                 key={tag}>
@@ -54,12 +53,12 @@ class NameAndTags extends Component {
             }
             
             nameAndTags = (
-                <Aux>
+                <React.Fragment>
                     <Divider/>
                     <div className={classes.Div}>
                         <Button className={classes.Button}
                                 classes={{disabled: classes.Disabled}}
-                                disabled={this.props.characSelected === this.props.characterName ? true : false}
+                                disabled={this.props.characSelected === this.props.characterName}
                                 onClick={() => this.shoByCharacHandler(this.props.characterName)}
                                 variant="contained">
                             {this.props.characterName}
@@ -67,24 +66,24 @@ class NameAndTags extends Component {
                     </div>
                     {/* If we have tags we render them */}
                     {tags ? (
-                        <Aux>
+                        <React.Fragment>
                             <Divider/>
                             <div className={classes.Div}>{ tags }</div>
-                        </Aux>
+                        </React.Fragment>
                     ) : null}
                     <Divider/>
-                </Aux>
+                </React.Fragment>
             )
         };
-        return <Aux>{nameAndTags}</Aux>
+        return <React.Fragment>{nameAndTags}</React.Fragment>
     }
 }
 
 // We get store state and action from redux with connect
 const mapStateToProps = state => {
 	return {
-        tagSelected: state.tagSelected,
-        characSelected: state.characSelected
+        tagSelected: state.minifigs.tagSelected,
+        characSelected: state.minifigs.characSelected
 	}
 }
 

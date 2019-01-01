@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../../../store/actions/minifigs';
+import * as actions from '../../../store/actions/index';
 
 import Input from '../../../components/UI/Input/Input';
 import {updateObject, checkValidity} from '../../../shared/utility';
+import Button from '@material-ui/core/Button';
 
 export class MinifigEdit extends Component {
     state = {
@@ -86,8 +87,9 @@ export class MinifigEdit extends Component {
         if (this.props.edit && this.props.minifig !== null) {
             const minifigForm = this.state.minifigForm;
             const minifig = this.props.minifig;
-            const updatedefValidation = updateObject(minifigForm["ref"].validation, {ref: minifig.ref})
-            const updatedRef = updateObject(minifigForm["ref"], {value: minifig.ref, valid: true, validation: updatedefValidation});
+            const minifigRef = this.props.minifigRef;
+            const updatedefValidation = updateObject(minifigForm["ref"].validation, {ref: minifigRef})
+            const updatedRef = updateObject(minifigForm["ref"], {value: minifigRef, valid: true, validation: updatedefValidation});
             const updatedName = updateObject(minifigForm["name"], {value: minifig.name, valid: true});
             const updatedcharacName = updateObject(minifigForm["characName"], {value: minifig.characterName, valid: true});
             const updatedTags = updateObject(this.state.minifigForm["tags"], {tags: minifig.tags});
@@ -119,13 +121,18 @@ export class MinifigEdit extends Component {
     tagHandler = (tag, action) => {
         let tags = [...this.state.minifigForm["tags"].tags];
         let value = this.state.minifigForm["tags"].value;
-        if (action === "remove") {
-            const index = tags.indexOf(tag);
-            tags.splice(index, 1);
-        }
-        if (action === "add") {
-            tags.push(tag)
-            value = "";
+        let tagTrim = tag.trim();
+        if (tagTrim !== "") {
+            if (action === "remove") {
+                const index = tags.indexOf(tagTrim);
+                tags.splice(index, 1);
+            }
+            if (action === "add") {
+                if (tags.indexOf(tagTrim) === -1) {
+                    tags.push(tagTrim)
+                }
+                value = "";
+            }
         }
         tags.sort();
         const updatedTags = updateObject(this.state.minifigForm["tags"], {tags: tags, value: value} );
@@ -133,22 +140,21 @@ export class MinifigEdit extends Component {
         this.setState({minifigForm: updatedForm});
     }
 
-    minifigHandler = (event) => {
+    submitHandler = (event) => {
         event.preventDefault();
-
-        //Be carefull we are using JSON.stringify below so the order of the properties is important!!!!! 
+        const minifigRef = this.state.minifigForm.ref.value.trim();
         const minifigData = {
-                ref: this.state.minifigForm.ref.value,
-                characterName: this.state.minifigForm.characName.value,
-                name: this.state.minifigForm.name.value,
+                characterName: this.state.minifigForm.characName.value.trim(),
+                name: this.state.minifigForm.name.value.trim(),
                 possessed: JSON.parse(this.state.minifigForm.possessed.value),
                 tags: this.state.minifigForm.tags.tags
         }
-
-        if (JSON.stringify(minifigData) !== JSON.stringify(this.props.minifig)) {
-            //this.props.editMinifigServer(this.props.minifig.ref, minifigData);
-            const ref = this.props.minifig ? this.props.minifig.ref :null;
-            this.props.editMinifig(ref, minifigData);
+        
+        // If a change was made
+        if (JSON.stringify(minifigData) !== JSON.stringify(this.props.minifig)
+        || minifigRef !== this.props.minifigRef) {
+            const oldMinifigRef = minifigRef === this.props.minifigRef ? null : this.props.minifigRef;
+            this.props.minifigFormHandler(minifigRef, oldMinifigRef, minifigData, this.props.edit);
         }
         this.props.onSubmit();
         this.resetForm();
@@ -198,7 +204,7 @@ export class MinifigEdit extends Component {
             })
         }
         let form = (
-            <form onSubmit={this.minifigHandler}>
+            <form onSubmit={this.submitHandler}>
                 {formElementArray.map(formElement => (
                     <Input key={formElement.id}
                            elementType={formElement.config.elementType}
@@ -214,32 +220,30 @@ export class MinifigEdit extends Component {
                            tagHandler={(tag, action) => this.tagHandler(tag, action)}
                     />
                 ))}
-                <button disabled={!this.state.formIsValid}>Submit</button>
+                <Button disabled={!this.state.formIsValid}
+                        variant="contained"
+                        color="primary"
+                        type="submit">Submit</Button>
             </form>
         )
-        return ( 
-            <div>
-                {form}
-            </div>
-        )
+        return form;
     }
 }
 
 //We get redux state and action
 const mapStateToProps = state => {
 	return {
-        minifigs: state.minifigs,
-        characNames: state.characNames,
-        tags: state.tags
+        minifigs: state.minifigs.minifigs,
+        characNames: state.minifigs.characNames,
+        tags: state.minifigs.tags
 	}
 }
 
 const mapDispatchToProps = dispatch => {
 	return {
-        //editMinifigServer: (ref, updatedMinifig) => dispatch(actions.editMinifigServer(ref, updatedMinifig)),
-        editMinifig: (ref, updatedMinifig) => dispatch(actions.editMinifig(ref, updatedMinifig)),
-        updateCharacNames: (oldName, newName) => dispatch(actions.updateCharacNames(oldName, newName)),
-        updateTags: (tag, action) => dispatch(actions.updateTags(tag, action))
+        minifigFormHandler: (minifigRef, oldMinifigRef, minifigData, edit) => {
+            dispatch(actions.minifigFormHandler(minifigRef, oldMinifigRef, minifigData, edit))
+        }        
 	}
 }
 

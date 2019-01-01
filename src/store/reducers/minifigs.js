@@ -1,5 +1,5 @@
-import * as actionTypes from './actions/actionTypes';
-import {updateObject, updateNumbers, getTagsAndCharacNames} from '../shared/utility';
+import * as actionTypes from '../actions/actionTypes';
+import {updateObject, updateNumbers, getTagsAndCharacNames} from '../../shared/utility';
 
 const initialState = {
     error: false,
@@ -15,14 +15,13 @@ const initialState = {
     characNames: null,
     characSelected: null,
     frames: null,
-    frameSelected: null
-
+    frameSelected: null,
+    trunks: null
 }
 
 const setMinifigs = (state, action) => {
 	return updateObject(state, {
-		minifigs: action.minifigs,
-		error: false
+        minifigs: action.minifigs
 	});
 }
 
@@ -46,7 +45,7 @@ const setPercentageOwned = (state, action) => {
 
 const setNumberPerPage = (state, action) => {
 	// If the active page is greater than the new number of page we set the activePage to the last page.
-    const numberOfPage =Math.ceil(state.totalNumber/action.numberPerPage);
+    const numberOfPage = Math.ceil(state.totalNumber/action.numberPerPage);
     const activePage = numberOfPage < state.activePage ? numberOfPage : state.activePage;
 	return updateObject( state, {numberPerPage: action.numberPerPage, activePage: activePage} );
 }
@@ -56,12 +55,11 @@ const setActivePage = (state, action) => {
 }
 
 const setPossessed = (state, action) => {
-    // First we update the minifig and the minifigs
-    const minifigs = state.minifigs, minifig = action.minifig;
-	const updatedMinifig = updateObject(minifigs[minifig], {possessed: !minifigs[minifig].possessed});
-    const updatedMinifigs = updateObject(minifigs, {[minifig]: updatedMinifig});
+    const minifigs = state.minifigs, updatedMinifig = action.updatedMinifig, minifigReg = action.minifigRef;
+    // We update the minifigs with our updatedMinifig
+    const updatedMinifigs = updateObject(minifigs, {[minifigReg]: updatedMinifig});
     // Then we update the total owned and percentage owned
-    const updatedTotalOwned = !minifigs[minifig].possessed ? state.numberOwned+1 : state.numberOwned-1;
+    const updatedTotalOwned = updatedMinifig.possessed ? state.numberOwned+1 : state.numberOwned-1;
     const percentageOwned = Math.round(updatedTotalOwned/state.totalNumber*10000)/100;
 	return updateObject( state, {minifigs: updatedMinifigs, numberOwned: updatedTotalOwned, percentageOwned: percentageOwned} );
 }
@@ -136,45 +134,11 @@ const setFrames = (state, action) => {
     return updateObject(state, {frames: action.frames});
 }
 
-const editMinifig = (state, action) => {
-    // We store the reference and delete it from the object to have one that respect our state model {name:"", characName:"", possessed: boolean, tags: array}
-    const newRef = action.updatedMinifig.ref;
-    delete action.updatedMinifig.ref;
-
-    // We create our updated Minifigs object
-    const updatedMinifig = updateObject(state.minifigs[newRef], {...action.updatedMinifig} );
-    let updatedMinifigs = updateObject(state.minifigs, {[newRef] : updatedMinifig});
-    
-    // If we have change the ref in edit mode we delete the old one
-    if (action.ref !== newRef && action.ref !== null){
-        delete updatedMinifigs[action.ref];
-    }
-
-    // We sort the minifigs if it's not an edit from the same ref, it's a bit too complex because 
-    // we have to make sure that 30564 is first, x162 is last and the swXXXX are after the swXXX
-    let updatedMinifigsSorted = {};
-    if (newRef !== action.ref) {
-        Object.keys(updatedMinifigs).sort((a,b) => {
-                if (a === "x162" || b === "30564" ) {
-                    return 1;
-                } else if (a === "30564" || b  === "x162") {
-                    return -1;
-                } else {
-                    const A = parseInt(a.replace(/\D/g, ''), 10);
-                    const B = parseInt(b.replace(/\D/g, ''), 10);
-                    const value = (A > B) ? 1 : ((B > A) ? -1 : 0);
-                    return value;
-                }
-            })
-            .map(ref => updatedMinifigsSorted[ref] = updatedMinifigs[ref] );
-    }
-    const minifigs = !Object.keys(updatedMinifigsSorted).length ? updatedMinifigs : updatedMinifigsSorted;
-    
-    // We update the numbers
-    const numbersData = updateNumbers(minifigs);
-    const data = getTagsAndCharacNames(minifigs);
+const minifigFormHandler = (state, action) => {
+    const numbersData = updateNumbers(action.minifigs);
+    const data = getTagsAndCharacNames(action.minifigs);
     return updateObject(state, {
-        minifigs: minifigs, 
+        minifigs: action.minifigs, 
         numberOwned: numbersData.numberOwned, 
         percentageOwned: numbersData.percentageOwned, 
         totalNumber: numbersData.totalNumber, 
@@ -186,16 +150,20 @@ const editMinifig = (state, action) => {
 export const deleteMinifig = (state, action) => {
     const minifigs = {...state.minifigs};
     const totalNumber = state.totalNumber-1;
-    const numberOwned = minifigs[action.ref].possessed ? state.numberOwned-1 : state.numberOwned;
+    const numberOwned = minifigs[action.minifigRef].possessed ? state.numberOwned-1 : state.numberOwned;
     const percentageOwned = Math.round(numberOwned/totalNumber*10000)/100;
-    delete minifigs[action.ref];
+    delete minifigs[action.minifigRef];
+    // We get the new tags and characNames after the deletion, we check if our 
+    // tagSelected and characSelected still exist, if not we set them to null
     const data = getTagsAndCharacNames(minifigs);
     let tagSelected = state.tagSelected;
     let characSelected = state.characSelected;
     if (data.tags.map(tag => tag.name).indexOf(tagSelected) === -1) {
-        tagSelected= null;
+        tagSelected = null;
     }
-    console.log(tagSelected);
+    if (data.characNames.map(characName => characName.name).indexOf(characSelected) === -1) {
+        characSelected = null;
+    }
     return updateObject(state, {
         minifigs: minifigs,
         numberOwned: numberOwned,
@@ -206,6 +174,10 @@ export const deleteMinifig = (state, action) => {
         tagSelected: tagSelected,
         characSelected: characSelected
     });
+}
+
+export const setTrunks = (state, action) => {
+    return updateObject(state, {trunks: action.trunks});
 }
 
 
@@ -228,8 +200,9 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SET_CHARACNAMES: return setCharacNames(state, action);
         case actionTypes.UPDATE_CHARACNAMES: return updateCharacNames(state, action);
         case actionTypes.UPDATE_TAGS: return updateTags(state, action);
-        case actionTypes.EDIT_MINIFIG: return editMinifig(state, action);
+        case actionTypes.MINIFIG_FORM_HANDLER: return minifigFormHandler(state, action);
         case actionTypes.DELETE_MINIFIG: return deleteMinifig(state, action);
+        case actionTypes.SET_TRUNKS: return setTrunks(state, action);
 		default: return state;
 	}
 };

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../../../store/actions/minifigs';
+import * as actions from '../../../store/actions/index';
 import classes from './Minifig.css';
 
 import Checkbox from '@material-ui/core/Checkbox';
@@ -8,9 +8,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
 import LogoLink from '../../../components/LogoLink/LogoLink';
 import Modal from '../../../components/UI/Modal/Modal';
-import Aux from '../../../hoc/Auxilliary/Auxilliary';
 import MinifigForm from '../MinifigForm/MinifigForm';
-import NameAndTags from '../NameAndTags/NameAndTags';
+import NameAndTags from './NameAndTags/NameAndTags';
 
 
 class Minifig extends Component {
@@ -33,31 +32,26 @@ class Minifig extends Component {
     }
 
     editModeHandler = () => {
-        this.setState({editMode: true})
+        this.setState({editMode: true});
     }
 
 	render () {
-        const ref = this.props.reference;
+        const minifigRef = this.props.reference;
         const minifigDetail = this.props.minifigDetail;
 		let zoomModal = null
         let editModal = null;
         if (this.state.zoomMode) {
 			zoomModal = (
-				<Aux>
+				<React.Fragment>
 					<p className={classes.ModalTitle}>{minifigDetail.name}</p>
-					<img className={classes.ModalPicture} src={'https://img.bricklink.com/ItemImage/MN/0/'+ref+'.png'} alt={ref + ' pictures'} />
-				</Aux>
+					<img className={classes.ModalPicture} src={'https://img.bricklink.com/ItemImage/MN/0/'+minifigRef+'.png'} alt={minifigRef + ' pictures'} />
+				</React.Fragment>
 			);
         }
 
         if (this.state.editMode) {
-            // We are using JSON.stringify in MinifigForm so the order of the properties is important!
-            const minifig = {
-                ref: ref,
-                ...minifigDetail
-            }
             editModal = (
-                <MinifigForm edit minifig={minifig} onSubmit={this.removeModalHandler}/>
+                <MinifigForm edit minifigRef={minifigRef} minifig={minifigDetail} onSubmit={this.removeModalHandler}/>
             )
         }
         let nameAndTags = null;
@@ -65,7 +59,7 @@ class Minifig extends Component {
             nameAndTags = <NameAndTags characterName={minifigDetail.characterName} tags={minifigDetail.tags} />
         };
 		return (
-			<Aux>
+			<React.Fragment>
                 {/* The zomm modal */}
 				<Modal show={this.state.zoomMode} modalClosed={this.removeModalHandler}>
 					{zoomModal}
@@ -77,39 +71,41 @@ class Minifig extends Component {
 				<div className={classes.Minifig}>
 					{/*Picture and reference of the minifig*/}
 					<div onClick={this.zoomModeHandler}>
-						<img className={classes.MinifigPicture} src={'https://img.bricklink.com/ItemImage/MN/0/'+ref+'.png'} alt={ref + ' pictures'} />
-						<p>{ref}</p>		
+						<img className={classes.MinifigPicture} src={'https://img.bricklink.com/ItemImage/MN/0/'+minifigRef+'.png'} alt={minifigRef + ' pictures'} />
+						<p>{minifigRef}</p>		
 					</div>
 					<div className={classes.LogoLinks}>
 						{/*Bricklink and Brickset logo with links*/}
-						<LogoLink minifigRef={ref} type={'bricklink'} />
-						<LogoLink minifigRef={ref} type={'brickset'} />
+						<LogoLink minifigRef={minifigRef} type={'bricklink'} />
+						<LogoLink minifigRef={minifigRef} type={'brickset'} />
 					</div>
                     { nameAndTags }
                     <div className={classes.EditDiv}>
                         <Checkbox
-                            checked={minifigDetail.possessed}
+                            // The !! is important for an error when we delete a minifig and the possessed is undefined
+                            checked={!!minifigDetail.possessed}
                             color="primary"
-                            onChange={() => this.props.setPossessed(ref)}/>
+                            onChange={() => this.props.setPossessed(minifigDetail, minifigRef)}/>
                         <IconButton color="primary" onClick={this.editModeHandler}>
                             <Icon>edit</Icon>    
                         </IconButton>
-                        <IconButton color="primary" onClick={() => this.props.deleteMinifig(ref)}>
+                        <IconButton color="primary" onClick={() => this.props.deleteMinifig(minifigRef)}>
                             <Icon>delete</Icon>    
                         </IconButton>
                     </div>
 				</div>
-			</Aux>
+			</React.Fragment>
 		);
 	}
 }
 
+
 const mapDispatchToProps = dispatch => {
 	return {
-        setPossessed: (minifigRef) => dispatch(actions.setPossessed(minifigRef)),
+        setPossessed: (minifig, minifigRef) => dispatch(actions.setPossessed(minifig, minifigRef)),
         deleteMinifig: (minifigRef) => dispatch(actions.deleteMinifig(minifigRef))
 	}
 }
 
-//export default connect(null, mapDispatchToProps)(Minifig);
 export default connect(null, mapDispatchToProps)(Minifig);
+

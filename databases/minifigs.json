@@ -1,13 +1,4 @@
 {
-    "30564": {
-        "name": "Aldar Beedo",
-        "possessed": false,
-        "characterName": "Aldar Beedo",
-        "tags": [
-            "Podracer",
-            "Tatooine"
-        ]
-    },
     "sw001a": {
         "name": "Battle Droid Tan with Back Plate",
         "possessed": true,
@@ -78,6 +69,7 @@
             "Mandalorian"
         ]
     },
+
     "sw003": {
         "name": "Darth Maul",
         "possessed": true,
@@ -1373,7 +1365,6 @@
         "possessed": true,
         "characterName": "Sandtrooper",
         "tags": [
-            "Alternate Version",
             "Galactic Empire",
             "Imperial Trooper",
             "Tatooine"
@@ -1782,7 +1773,7 @@
     },
     "sw148": {
         "name": "Mace Windu, Non-Light-Up",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Mace Windu",
         "tags": [
             "Galactic Republic",
@@ -2044,7 +2035,7 @@
     },
     "sw172a": {
         "name": "Qui-Gon Jinn (Light Flesh with Black Chin Dimple)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Qui-Gon Jinn",
         "tags": [
             "Galactic Republic",
@@ -3835,7 +3826,8 @@
         "tags": [
             "Droid",
             "Hoth",
-            "Medical Droid"
+            "Medical Droid",
+            "Rebel Alliance"
         ]
     },
     "sw346": {
@@ -8831,7 +8823,7 @@
     },
     "sw847a": {
         "name": "Imperial Probe Droid, Black Sensors, without Stand",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Imperial Probe Droid",
         "tags": [
             "Droid",
@@ -9723,7 +9715,7 @@
     },
     "sw939": {
         "name": "Anakin Skywalker",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Anakin Skywalker",
         "tags": [
             "Anakin",
@@ -9733,7 +9725,7 @@
     },
     "sw940": {
         "name": "Enfys Nest",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Enfys Nest",
         "tags": [
             "Cloud Riders",
@@ -9742,7 +9734,7 @@
     },
     "sw941": {
         "name": "Tobias Beckett",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Tobias Beckett",
         "tags": [
             "Beckett's Gang",
@@ -9752,7 +9744,7 @@
     },
     "sw942": {
         "name": "Weazel",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Weazel",
         "tags": [
             "Cloud Riders",
@@ -9800,7 +9792,7 @@
     },
     "sw947": {
         "name": "Elite Praetorian Guard",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Elite Praetorian Guard",
         "tags": [
             "First Order"
@@ -9888,7 +9880,7 @@
     },
     "sw956": {
         "name": "2-1B Medical Droid",
-        "possessed": false,
+        "possessed": true,
         "characterName": "2-1B",
         "tags": [
             "Droid",
@@ -9899,7 +9891,7 @@
     },
     "sw957": {
         "name": "Luke Skywalker (Bacta Tank Outfit)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Luke Skywalker",
         "tags": [
             "Hoth",
@@ -9909,7 +9901,7 @@
     },
     "sw958": {
         "name": "Princess Leia (Hoth Outfit White, Crooked Smile)",
-        "possessed": false,
+        "possessed": true,
         "characterName": "Princess Leia",
         "tags": [
             "Hoth",
@@ -9919,7 +9911,7 @@
     },
     "sw959": {
         "name": "FX-7 Medical Assistant Droid",
-        "possessed": false,
+        "possessed": true,
         "characterName": "FX-7",
         "tags": [
             "Droid",
@@ -10099,13 +10091,83 @@
             "Mandalorian"
         ]
     },
-    "x162": {
+    "sw978": {
+        "name": "Han Solo in Carbonite (Block with Handles)",
+        "possessed": true,
+        "characterName": "Han Solo",
+        "tags": [
+            "Bespin",
+            "Rebel Alliance",
+            "Smuggler",
+            "Tatooine"
+        ]
+    },
+    "sw979": {
+        "name": "Aldar Beedo",
+        "possessed": false,
+        "characterName": "Aldar Beedo",
+        "tags": [
+            "Podracer",
+            "Tatooine"
+        ]
+    },
+    "sw980": {
         "name": " Sebulba",
         "possessed": false,
         "characterName": "Sebulba",
         "tags": [
             "Podracer",
             "Tatooine"
+        ]
+    },
+    "sw981": {
+        "name": "Darth Vader (Bacta Tank)",
+        "possessed": true,
+        "characterName": "Darth Vader",
+        "tags": [
+            "Anakin",
+            "Galactic Empire",
+            "Mustafar",
+            "Sith"
+        ]
+    },
+    "sw982": {
+        "name": "Imperial Transport Pilot",
+        "possessed": true,
+        "characterName": "Imperial Transport Pilot",
+        "tags": [
+            "Galactic Empire",
+            "Imperial Pilot",
+            "Mustafar"
+        ]
+    },
+    "sw983": {
+        "name": "Mouse Droid",
+        "possessed": true,
+        "characterName": "Mouse Droid",
+        "tags": [
+            "Droid",
+            "Galactic Empire",
+            "Mustafar"
+        ]
+    },
+    "sw984": {
+        "name": "Han Solo in Carbonite (Brick 1 x 2 x 5)",
+        "possessed": true,
+        "characterName": "Han Solo",
+        "tags": [
+            "Bespin",
+            "Rebel Alliance",
+            "Smuggler",
+            "Tatooine"
+        ]
+    },
+    "sw985": {
+        "name": "Black VIP (5005747)",
+        "possessed": true,
+        "characterName": "Black VIP",
+        "tags": [
+            "Polybag"
         ]
     }
 }

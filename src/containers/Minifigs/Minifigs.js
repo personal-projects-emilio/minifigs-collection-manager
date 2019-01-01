@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../../store/actions/minifigs';
+import * as actions from '../../store/actions/index';
 import classes from './Minifigs.css';
 
 import Pagination from "react-js-pagination";
@@ -14,11 +14,6 @@ class Minifigs extends Component {
         totalItemsCount: null // The items count with our parameters ("missing", "owned", "all", tag or characterName)
     }
     componentDidMount () {
-        //Initiate the minifigs and the frames
-        if(!this.props.minifigs){
-            this.props.fetchData();
-        }
-        
         // When we have tags and characNames we check the search
         if (this.props.tags && this.props.characNames) {
             this.manageSearch(this.props.history.location.search);
@@ -174,23 +169,22 @@ class Minifigs extends Component {
 // We get redux state and action
 const mapStateToProps = state => {
 	return {
-		minifigs: state.minifigs,
-		numberPerPage: state.numberPerPage,
-		activePage: state.activePage,
-		error: state.error,
-		show: state.show,
-		totalNumber: state.totalNumber,
-        numberOwned: state.numberOwned,
-        tags: state.tags,
-        tagSelected: state.tagSelected,
-        characNames: state.characNames,
-        characSelected: state.characSelected
+		minifigs: state.minifigs.minifigs,
+		numberPerPage: state.minifigs.numberPerPage,
+		activePage: state.minifigs.activePage,
+		error: state.minifigs.error,
+		show: state.minifigs.show,
+		totalNumber: state.minifigs.totalNumber,
+        numberOwned: state.minifigs.numberOwned,
+        tags: state.minifigs.tags,
+        tagSelected: state.minifigs.tagSelected,
+        characNames: state.minifigs.characNames,
+        characSelected: state.minifigs.characSelected
 	}
 }
 
 const mapDispatchToProps = dispatch => {
 	return {
-        fetchData: () => dispatch(actions.fetchData()),
         setActivePage: (activePage) => dispatch(actions.setActivePage(activePage)),
         setTag: (tag) => dispatch(actions.setTag(tag)),
         setCharac: (characSelected) => dispatch(actions.setCharac(characSelected))

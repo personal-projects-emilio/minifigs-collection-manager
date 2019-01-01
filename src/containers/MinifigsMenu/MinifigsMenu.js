@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import * as actions from '../../store/actions/minifigs';
+import * as actions from '../../store/actions/index';
 import classes from './MinifigsMenu.css';
 
-import Aux from '../../hoc/Auxilliary/Auxilliary';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
@@ -89,7 +88,7 @@ class MinifigsMenu extends Component {
 
         let dropdown = null;
         if (this.props.tags && this.props.characNames) {
-            dropdown = (<Aux>
+            dropdown = (<React.Fragment>
                 <Dropdown type="Characters Name" 
                           array={this.props.characNames} 
                           handler={this.handlerCharacChange} 
@@ -98,8 +97,27 @@ class MinifigsMenu extends Component {
                           array={this.props.tags} 
                           handler={this.handlerTagChange} 
                           itemSelected={this.props.tagSelected ? this.props.tagSelected : ""} />
-            </Aux>)
+            </React.Fragment>)
             
+        }
+
+        let setAll = null;
+        if (!this.props.isAuth) {
+            setAll = (
+            <div>
+                <span>Set all to:</span>
+                <Button style={{margin:6}} 
+                        onClick={() => this.props.setPossessionToAll(true)} 
+                        color={this.props.percentageOwned === 100 ? "primary": "default"}
+                        disabled={this.props.percentageOwned === 100 ? true : false}
+                        variant="contained">Possessed</Button>
+                <Button style={{margin:6}}
+                        color={this.props.percentageOwned === 0 ? "primary": "default"}
+                        disabled={this.props.percentageOwned === 0 ? true : false}
+                        onClick={() => this.props.setPossessionToAll(false)} 
+                        variant="contained">Not possessed</Button>
+            </div>
+            );
         }
 
 		return (
@@ -116,29 +134,17 @@ class MinifigsMenu extends Component {
 						<span className={classes.TooltipText}>{this.props.percentageOwned}%</span>
 						<LinearProgress variant="determinate" value={this.props.percentageOwned}/>
 					</div>
-					<div>
-						<span>Set all to:</span>
-						<Button style={{margin:6}} 
-                                onClick={() => this.props.setPossessionToAll(true)} 
-                                color={this.props.percentageOwned === 100 ? "primary": "default"}
-                                disabled={this.props.percentageOwned === 100 ? true : false}
-                                variant="contained">Possessed</Button>
-						<Button style={{margin:6}}
-                                color={this.props.percentageOwned === 0 ? "primary": "default"}
-                                disabled={this.props.percentageOwned === 0 ? true : false}
-                                onClick={() => this.props.setPossessionToAll(false)} 
-                                variant="contained">Not possessed</Button>
-					</div>
+					{setAll}
 					<div>
 						<span>Show:</span> {showOptions}
 					</div>
+                    <div>
+                    	<span>Minifigs per page: </span>
+						{buttonNumberPerPage}
+                    </div>
 				</div>
 				{/*The second part is the button to choose how many minifigs we show, the dropdown to show by tags/charachNames and the button to add a minifig*/}
 				<div className={classes.MinifigsMenuHalf}>
-					<div>
-                    	<p>Minifigs per page</p>
-						{buttonNumberPerPage}
-                    </div>
                     <div className={classes.Dropdown}>
                         {dropdown}
                     </div>
@@ -155,16 +161,17 @@ class MinifigsMenu extends Component {
 // We get store state and action from redux with connect
 const mapStateToProps = state => {
 	return {
-		numberOwned: state.numberOwned,
-        totalNumber: state.totalNumber,
-        percentageOwned: state.percentageOwned,
-		numberPerPage: state.numberPerPage,
-		error: state.error,
-        show: state.show,
-        tagSelected: state.tagSelected,
-        tags: state.tags,
-        characNames: state.characNames,
-        characSelected: state.characSelected
+		numberOwned: state.minifigs.numberOwned,
+        totalNumber: state.minifigs.totalNumber,
+        percentageOwned: state.minifigs.percentageOwned,
+		numberPerPage: state.minifigs.numberPerPage,
+		error: state.minifigs.error,
+        show: state.minifigs.show,
+        tagSelected: state.minifigs.tagSelected,
+        tags: state.minifigs.tags,
+        characNames: state.minifigs.characNames,
+        characSelected: state.minifigs.characSelected,
+        isAuth: state.auth.token !== null
 	}
 }
 

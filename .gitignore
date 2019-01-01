@@ -9,6 +9,9 @@
 # production
 /build
 
+# config
+/src/auth
+
 # misc
 .DS_Store
 .env.local

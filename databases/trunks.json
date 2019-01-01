@@ -1,0 +1,918 @@
+{
+    "Prequel: Republic 1": [
+        {
+            "ref": "7141",
+            "name": "Naboo Fighter",
+            "pieces": "Complete",
+            "minifigs": "sw007 in frame"
+        },
+        {
+            "ref": "7161",
+            "name": "Gungan Sub",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "7259",
+            "name": "ARC-170 Fighter",
+            "pieces": "Complete",
+            "minifigs": "sw029 & 1 sw118 in frame"
+        },
+        {
+            "ref": "7260",
+            "name": "Wookiee Catamaran",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw011a & 1 sw129"
+        },
+        {
+            "ref": "7660",
+            "name": "Naboo N-1 Starfighter with Vulture Droid",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw028"
+        },
+        {
+            "ref": "7669",
+            "name": "Anakin's Jedi Starfighter",
+            "pieces": "Complete",
+            "minifigs": "Complete"
+        },
+        {
+            "ref": "7671",
+            "name": "AT-AP Walker",
+            "pieces": "Complete",
+            "minifigs": "1 sw189 in frame"
+        },
+        {
+            "ref": "7680",
+            "name": "The Twilight",
+            "pieces": "Complete",
+            "minifigs": "sw028 in frame"
+        },
+        {
+            "ref": "7751",
+            "name": "Ahsoka's Starfighter and Vulture Droid",
+            "pieces": "Complete",
+            "minifigs": "sw231 in frame"
+        },
+        {
+            "ref": "7931",
+            "name": "T-6 Jedi Shuttle",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw183"
+        },
+        {
+            "ref": "7964",
+            "name": "Republic Frigate",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw219"
+        },
+        {
+            "ref": "8039",
+            "name": "Venator-Class Republic Attack Cruiser",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw244 & sw221"
+        },
+        {
+            "ref": "8088",
+            "name": "ARC-170 Fighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "8098",
+            "name": "Clone Turbo Tank",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "9499",
+            "name": "Gungan Sub",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw301"
+        },
+        {
+            "ref": "75043",
+            "name": "AT-AP",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75045",
+            "name": "Republic AV-7 Anti-Vehicle Cannon",
+            "pieces": "Complete",
+            "minifigs": "sw538 & 1 sw537 in frame"
+        },
+        {
+            "ref": "75092",
+            "name": "Naboo Starfighter",
+            "pieces": "Complete",
+            "minifigs": "Complete"
+        },
+        {
+            "ref": "75151",
+            "name": "Clone Turbo Tank",
+            "pieces": "Complete",
+            "minifigs": "sw745 & sw746 in frame"
+        }
+    ],
+    "Prequel: Republic 2": [
+        {
+            "ref": "7143",
+            "name": "Jedi Starfighter",
+            "pieces": "Complete",
+            "minifigs": "In frame"
+        },
+        {
+            "ref": "7283",
+            "name": "Ultimate Space Battle",
+            "pieces": "Complete",
+            "minifigs": "sw152 in frame"
+        },
+        {
+            "ref": "7661",
+            "name": "Jedi Starfighter with Hyperdrive Booster",
+            "pieces": "Complete",
+            "minifigs": "sw162 in frame"
+        },
+        {
+            "ref": "7665",
+            "name": "Republic Cruiser",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "7674",
+            "name": "V-19 Torrent",
+            "pieces": "Complete",
+            "minifigs": "Complete"
+        },
+        {
+            "ref": "7675",
+            "name": "AT-TE Walker",
+            "pieces": "Complete",
+            "minifigs": "sw193 & sw194 in frame"
+        },
+        {
+            "ref": "7676",
+            "name": "Republic Attack Gunship",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw311 & sw197"
+        },
+        {
+            "ref": "7679",
+            "name": "Republic Fighter Tank",
+            "pieces": "Complete",
+            "minifigs": "sw203 in frame"
+        },
+        {
+            "ref": "7868",
+            "name": "Mace Windu's Jedi Starfighter",
+            "pieces": "Complete",
+            "minifigs": "sw312 & sw313 in frame"
+        },
+        {
+            "ref": "8019",
+            "name": "Republic Attack Shuttle",
+            "pieces": "Complete",
+            "minifigs": "sw220 in frame"
+        },
+        {
+            "ref": "8037",
+            "name": "Anakin's Y-wing Starfighter",
+            "pieces": "Complete",
+            "minifigs": "sw255 in frame"
+        },
+        {
+            "ref": "8093",
+            "name": "Plo Koon's Jedi starfighter",
+            "pieces": "Complete",
+            "minifigs": "sw119 in frame"
+        },
+        {
+            "ref": "9498",
+            "name": "Saesee Tiin's Jedi Starfighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw308"
+        },
+        {
+            "ref": "75004",
+            "name": "Z-95 Headhunter",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75019",
+            "name": "AT-TE",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75021",
+            "name": "Republic Gunship",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75046",
+            "name": "Coruscant Police Gunship",
+            "pieces": "Complete",
+            "minifigs": "1 sw531 & sw542 in frame"
+        },
+        {
+            "ref": "75087",
+            "name": "Anakin's Custom Jedi Starfighter",
+            "pieces": "Complete",
+            "minifigs": "sw615 in frame"
+        }
+    ],
+    "Prequel: CIS": [
+        {
+            "ref": "7111",
+            "name": "Droid Fighter",
+            "pieces": "Complete",
+            "minifigs": "/"
+        },
+        {
+            "ref": "7151",
+            "name": "Sith Infiltrator",
+            "pieces": "Complete",
+            "minifigs": "sw003 in frame"
+        },
+        {
+            "ref": "7155",
+            "name": "Trade Federation AAT",
+            "pieces": "Complete",
+            "minifigs": "Complete"
+        },
+        {
+            "ref": "7184",
+            "name": "Trade Federation MTT",
+            "pieces": "Complete",
+            "minifigs": "Complete"
+        },
+        {
+            "ref": "7252",
+            "name": "Droid Tri-Fighter",
+            "pieces": "Complete",
+            "minifigs": "Complete"
+        },
+        {
+            "ref": "7662",
+            "name": "Trade Federation MTT",
+            "pieces": "Complete",
+            "minifigs": "1 sw095 & sw164 in frame"
+        },
+        {
+            "ref": "7663",
+            "name": "Sith Infiltrator",
+            "pieces": "Complete",
+            "minifigs": "Complete"
+        },
+        {
+            "ref": "7673",
+            "name": "Magna Guard Starfighter",
+            "pieces": "Complete",
+            "minifigs": "1 sw190 in frame"
+        },
+        {
+            "ref": "7681",
+            "name": "Separatist Spider Droid",
+            "pieces": "Complete",
+            "minifigs": "sw202 in frame"
+        },
+        {
+            "ref": "7752",
+            "name": "Count Dooku's Solar Sailer",
+            "pieces": "Complete",
+            "minifigs": "sw225 in frame"
+        },
+        {
+            "ref": "7878",
+            "name": "Droid Gunship",
+            "pieces": "Complete",
+            "minifigs": "1 sw001 in frame"
+        },
+        {
+            "ref": "7957",
+            "name": "Sith Nightspeeder",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "7961",
+            "name": "Darth Maul's Sith Infiltrator",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "8016",
+            "name": "Hyena Droid Bomber",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "9515",
+            "name": "Malevolence",
+            "pieces": "Wanted list",
+            "minifigs": "sw224 & sw411 in frame"
+        },
+        {
+            "ref": "75016",
+            "name": "Homing Spider Droid",
+            "pieces": "Complete",
+            "minifigs": "sw469 in frame"
+        },
+        {
+            "ref": "75041",
+            "name": "Vulture Droid",
+            "pieces": "Complete",
+            "minifigs": "sw533 & sw536 in frame"
+        },
+        {
+            "ref": "75042",
+            "name": "Droid Gunship",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw518"
+        },
+        {
+            "ref": "75058",
+            "name": "MTT",
+            "pieces": "Complete",
+            "minifigs": "All in frame except the battle droids"
+        },
+        {
+            "ref": "75096",
+            "name": "Sith Infiltrator",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw527 & 2 sw652"
+        }
+    ],
+    "Prequel & Old Republic: Miscellaneous & Scene": [
+        {
+            "ref": "7121",
+            "name": "Naboo Swamp",
+            "pieces": "Complete",
+            "minifigs": "1 sw001a in frame"
+        },
+        {
+            "ref": "7131",
+            "name": "Anakin's Podracer",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "7153",
+            "name": "Jango Fett's Slave I",
+            "pieces": "Complete",
+            "minifigs": "Both in frame"
+        },
+        {
+            "ref": "7257",
+            "name": "Ultimate Lightaber Dual",
+            "pieces": "Complete",
+            "minifigs": "Both in frame"
+        },
+        {
+            "ref": "7930",
+            "name": "Bounty Hunter Assault Gunship",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "7962",
+            "name": "Anakin Skywalker and Sebulba's Podracers",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "8096",
+            "name": "Emperor Palpatine's Shuttle",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "9497",
+            "name": "Republic Stricker-class Starfighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "9500",
+            "name": "Sith Flury-class Interceptor",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "9526",
+            "name": "Palpatine's Arrest",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75017",
+            "name": "Duel on Geonosis",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw473"
+        },
+        {
+            "ref": "75022",
+            "name": "Mandalorian Speeder",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75024",
+            "name": "HH-87 Starhopper",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75025",
+            "name": "Jedi Defender-class Cruiser",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        }
+    ],
+    "Classic: Rebels": [
+        {
+            "ref": "6208",
+            "name": "B-wing Fighter",
+            "pieces": "Complete",
+            "minifigs": "Both in frame"
+        },
+        {
+            "ref": "6212",
+            "name": "X-wing",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw028"
+        },
+        {
+            "ref": "7140",
+            "name": "W-wing Fighter",
+            "pieces": "Complete",
+            "minifigs": "sw009 & sw034 in frame"
+        },
+        {
+            "ref": "7150",
+            "name": "TIE Fighter & Y-wing",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw029"
+        },
+        {
+            "ref": "7180",
+            "name": "B-wing at Rebel Control Center",
+            "pieces": "Complete",
+            "minifigs": "sw032 in frame"
+        },
+        {
+            "ref": "7190",
+            "name": "Millennium Falcon",
+            "pieces": "Complete",
+            "minifigs": "sw014 & sw026 in frame"
+        },
+        {
+            "ref": "7658",
+            "name": "Y-wing Fighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "9493",
+            "name": "X-wing Starfighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw217"
+        },
+        {
+            "ref": "9495",
+            "name": "Gold Leader's Y-wing Starfighter",
+            "pieces": "Complete",
+            "minifigs": "All in fram except sw370"
+        },
+        {
+            "ref": "75050",
+            "name": "B-wing",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75053",
+            "name": "The Ghost",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw578"
+        },
+        {
+            "ref": "75084",
+            "name": "Wookiee Gunship",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw627"
+        },
+        {
+            "ref": "75147",
+            "name": "StarScavenger",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75155",
+            "name": "Rebel U-wing Fighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75158",
+            "name": "Rebel Combat Frigate",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw565"
+        },
+        {
+            "ref": "75172",
+            "name": "Y-wing starfighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw585 & sw793"
+        },
+        {
+            "ref": "75187",
+            "name": "Captain Rex's AT-TE",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        }
+    ],
+    "Classic: Empire": [
+        {
+            "ref": "4479",
+            "name": "TIE Bomber",
+            "pieces": "Complete",
+            "minifigs": "In frame"
+        },
+        {
+            "ref": "6206",
+            "name": "TIE Interceptor",
+            "pieces": "Complete",
+            "minifigs": "In frame"
+        },
+        {
+            "ref": "6211",
+            "name": "Imperial Star Destroyer",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw040b"
+        },
+        {
+            "ref": "7146",
+            "name": "TIE Fighter",
+            "pieces": "Complete",
+            "minifigs": "sw036 in frame"
+        },
+        {
+            "ref": "7166",
+            "name": "Imperial Shuttle",
+            "pieces": "Complete",
+            "minifigs": "sw042 in frame"
+        },
+        {
+            "ref": "7659",
+            "name": "Imperial Landing Craft",
+            "pieces": "Complete",
+            "minifigs": "sw036b, sw109a & sw199 in frame, sw035b & sw188 here"
+        },
+        {
+            "ref": "7672",
+            "name": "Rogue Shadow",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "7915",
+            "name": "Imperial V-wing Starfighter",
+            "pieces": "Complete",
+            "minifigs": "Both in frame"
+        },
+        {
+            "ref": "8017",
+            "name": "Darth Vader's TIE Fighter",
+            "pieces": "Complete",
+            "minifigs": "In frame"
+        },
+        {
+            "ref": "8097",
+            "name": "TIE Defender",
+            "pieces": "Complete",
+            "minifigs": "Both in frame"
+        },
+        {
+            "ref": "8129",
+            "name": "AT-AT Walker",
+            "pieces": "Complete",
+            "minifigs": "qsw289, sw290 & sw291 in frame"
+        },
+        {
+            "ref": "9492",
+            "name": "TIE Fighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75054",
+            "name": "AT-AT",
+            "pieces": "Complete",
+            "minifigs": "All in frame except the 2 sw568"
+        },
+        {
+            "ref": "75055",
+            "name": "Imperial Star Destroyer",
+            "pieces": "Complete",
+            "minifigs": "sw582, sw584 & sw586 in frame"
+        },
+        {
+            "ref": "75082",
+            "name": "TIE Advanced Prototype",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75094",
+            "name": "Imperial Shuttle Tydirium",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw532"
+        },
+        {
+            "ref": "75106",
+            "name": "Imperial Assalt Carrier",
+            "pieces": "Complete",
+            "minifigs": "sw616, sw647 & sw648 in frame"
+        },
+        {
+            "ref": "75145",
+            "name": "Eclipse Fighter",
+            "pieces": "Complete",
+            "minifigs": "sw752 in frame"
+        },
+        {
+            "ref": "75152",
+            "name": "Imperial Assault Hovertank",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw795"
+        },
+        {
+            "ref": "75154",
+            "name": "TIE Striker",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        }
+    ],
+    "Classic: Miscellaneous & Scene": [
+        {
+            "ref": "4476",
+            "name": "Jabba's Prize",
+            "pieces": "Complete",
+            "minifigs": "sw075 in frame"
+        },
+        {
+            "ref": "4477",
+            "name": "T-16 Skyhopper",
+            "pieces": "Complete",
+            "minifigs": "In frame"
+        },
+        {
+            "ref": "4480",
+            "name": "Jabba's Palace",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw071"
+        },
+        {
+            "ref": "6209",
+            "name": "Slave I",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "6210",
+            "name": "Jabba's Sail Barge",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw002a & sw071"
+        },
+        {
+            "ref": "7104",
+            "name": "Desert Skiff",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "7128",
+            "name": "Speeder Bikes",
+            "pieces": "Complete",
+            "minifigs": "sw018 in frame"
+        },
+        {
+            "ref": "7139",
+            "name": "Ewok Attack",
+            "pieces": "Complete",
+            "minifigs": "sw050 & sw067 in frame"
+        },
+        {
+            "ref": "7144",
+            "name": "Slave I",
+            "pieces": "Complete",
+            "minifigs": "In frame"
+        },
+        {
+            "ref": "7251",
+            "name": "Darh Vader Transformation",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw144"
+        },
+        {
+            "ref": "7749",
+            "name": "Echo Base",
+            "pieces": "Complete",
+            "minifigs": "1 sw252 & sw253 in frame"
+        },
+        {
+            "ref": "7754",
+            "name": "Home One Mon Calamari Star Cruiser",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw247"
+        },
+        {
+            "ref": "7879",
+            "name": "Hoth Echo Base",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw011a & 2 sw115"
+        },
+        {
+            "ref": "7956",
+            "name": "Ewok Attack",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw005a"
+        },
+        {
+            "ref": "8038",
+            "name": "The Battle of Endor",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw005a, sw011a & sw217"
+        },
+        {
+            "ref": "8089",
+            "name": "Hoth Wampa Cave",
+            "pieces": "Complete",
+            "minifigs": "sw098 in frame"
+        },
+        {
+            "ref": "8097",
+            "name": "Slave I",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "9489",
+            "name": "Endor Rebel Trooper & Imperial Trooper Battle Pack",
+            "pieces": "Complete",
+            "minifigs": "sw005b & sw368 in frame"
+        },
+        {
+            "ref": "9496",
+            "name": "Desert Skiff",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "9516",
+            "name": "Jabba's Palace",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw011a, sw402 & sw412"
+        },
+        {
+            "ref": "75005",
+            "name": "Rancor Pit",
+            "pieces": "Complete",
+            "minifigs": "sw433 & sw434 in frame"
+        },
+        {
+            "ref": "75014",
+            "name": "Battle on Hoth",
+            "pieces": "Complete",
+            "minifigs": "sw461 & sw462 in frame"
+        },
+        {
+            "ref": "75020",
+            "name": "Jabba's Sail Barge",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw402"
+        },
+        {
+            "ref": "75081",
+            "name": "T-16 Skyhopper",
+            "pieces": "Complete",
+            "minifigs": "sw619 in frame"
+        },
+        {
+            "ref": "75093",
+            "name": "Death Star Final Duel",
+            "pieces": "Complete",
+            "minifigs": "sw634 & sw636 in frame"
+        },
+        {
+            "ref": "75171",
+            "name": "Battle on Scarif",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw815"
+        },
+        {
+            "ref": "75174",
+            "name": "Desert Skiff Escape",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        }
+    ],
+    "First Order & Resistance": [
+        {
+            "ref": "7657",
+            "name": "AT-ST",
+            "pieces": "Complete",
+            "minifigs": "In frame"
+        },
+        {
+            "ref": "75083",
+            "name": "AT-DP",
+            "pieces": "Complete",
+            "minifigs": "1 sw624 in frame"
+        },
+        {
+            "ref": "75099",
+            "name": "Rey's Speeder",
+            "pieces": "Complete",
+            "minifigs": "sw655 in frame"
+        },
+        {
+            "ref": "75100",
+            "name": "FO Snowspeeder",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw657"
+        },
+        {
+            "ref": "75101",
+            "name": "FO Special Forces TIE Fighter",
+            "pieces": "Complete",
+            "minifigs": "sw670 & 1 sw672 in frame"
+        },
+        {
+            "ref": "75102",
+            "name": "Poe's X-wing Fighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw661"
+        },
+        {
+            "ref": "75103",
+            "name": "FO Transporter",
+            "pieces": "Complete",
+            "minifigs": "sw668, sw669 & sw684 in frame"
+        },
+        {
+            "ref": "75104",
+            "name": "Kylo Ren's Command Shuttle",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw671"
+        },
+        {
+            "ref": "75139",
+            "name": "Battle on Takodana",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw667"
+        },
+        {
+            "ref": "75140",
+            "name": "Resistance Trooper Transport",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75148",
+            "name": "Encounter on Jakku",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75149",
+            "name": "Resistance X-wing Fighter",
+            "pieces": "Complete",
+            "minifigs": "All in frame except sw661"
+        },
+        {
+            "ref": "75153",
+            "name": "AT-ST Walker",
+            "pieces": "Complete",
+            "minifigs": "All in frame"
+        },
+        {
+            "ref": "75156",
+            "name": "Krennic's Imperial Shuttle",
+            "pieces": "Complete",
+            "minifigs": "All in frame except 1 sw756"
+        },
+        {
+            "ref": "75177",
+            "name": "FO Heavy Scout Walker",
+            "pieces": "Complete",
+            "minifigs": "sw853 & sw 854 in frame"
+        }
+    ]
+}

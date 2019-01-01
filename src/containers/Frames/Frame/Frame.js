@@ -44,8 +44,8 @@ export class Frame extends Component {
 
 const mapStateToProps = state => {
 	return {
-        minifigs: state.minifigs,
-        frames: state.frames
+        minifigs: state.minifigs.minifigs,
+        frames: state.minifigs.frames
 	}
 }
 

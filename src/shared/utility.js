@@ -7,21 +7,22 @@ export const updateObject = (oldObject, updatedProperties) => {
 
 export const checkValidity = (value, rules) => {
     let isValid = true;
+    const trimValue = value.trim();
     if (!rules) {
         return true;
     }
     
     if (rules.required) {
-        isValid = value.trim() !== '' && isValid;
+        isValid = trimValue !== '' && isValid;
     }
 
     if (rules.isARef) {
-        const pattern = /30564|x162|sw[0-9]{3,4}[abcds]?$/;
+        const pattern = /sw[0-9]{3,4}[abcds]?$/;
         let unique = true;
         if (rules.ref !== value || rules.ref === null) {
-            unique = rules.isARef.indexOf(value) === -1;
+            unique = rules.isARef.indexOf(trimValue) === -1;
         }
-        isValid = pattern.test(value) && isValid && unique;
+        isValid = pattern.test(trimValue) && isValid && unique;
     }
 
     return isValid;

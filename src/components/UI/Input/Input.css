@@ -38,3 +38,7 @@ input::-webkit-calendar-picker-indicator {
 .TagsInput {
     display: flex;
 }
+
+.Button {
+    text-transform: none !important;
+}

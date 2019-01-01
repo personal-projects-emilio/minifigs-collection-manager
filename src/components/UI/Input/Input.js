@@ -3,7 +3,6 @@ import classes from './Input.css';
 
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
-import Aux from '../../../hoc/Auxilliary/Auxilliary';
 
 const input = ( props ) => {
     let inputElement = null;
@@ -16,6 +15,7 @@ const input = ( props ) => {
     if (props.tags !== null) {
         tags = props.tags.sort().map(tag => (
             <Button color="default"
+                    className={classes.Button}
                     key={tag}
                     style={{margin:6}} 
                     onClick={() => props.tagHandler(tag, "remove")}
@@ -26,7 +26,7 @@ const input = ( props ) => {
     switch ( props.elementType ) {
         case ( 'input-list' ):
             inputElement = (
-                <Aux>
+                <React.Fragment>
                     <div className={classes.TagsInput}>
                         <input className={inputClasses.join(' ')}
                                 {...props.elementConfig}
@@ -38,7 +38,7 @@ const input = ( props ) => {
                                 variant="contained"><Icon className={classes.Icon}>add_circle</Icon></Button>
                     </div>
                     {tags.length ? tags : <p>You can add a tag by clicking on the + button</p>}
-                </Aux>
+                </React.Fragment>
                 
             );
             break;

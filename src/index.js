@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware, compose} from 'redux';
+import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
-import reducer from './store/reducer';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { BrowserRouter } from 'react-router-dom';
+
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import minifigsReducer from './store/reducers/minifigs';
+import authReducer from './store/reducers/auth';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, composeEnhancers(
+
+const rootReducer = combineReducers({
+    minifigs: minifigsReducer,
+    auth: authReducer
+});
+
+const store = createStore(rootReducer, composeEnhancers(
     applyMiddleware(thunk)
  ));
 

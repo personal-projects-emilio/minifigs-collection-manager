@@ -21,9 +21,9 @@ const dropdown = (props) => {
     }
 
     // We show a clear icon button if there is a selected item
-    let closeButton = null;
+    let clearButton = null;
     if (props.itemSelected !== "") {
-        closeButton = (
+        clearButton = (
             <IconButton color="primary" onClick={props.handler}>
                     <Icon>clear</Icon>    
             </IconButton>
@@ -44,7 +44,7 @@ const dropdown = (props) => {
                     {list}
                 </Select>
             </FormControl>
-            {closeButton}
+            {clearButton}
         </div>
         
     )
