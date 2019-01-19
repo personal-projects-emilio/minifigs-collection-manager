@@ -36,9 +36,9 @@ const store = createStore(rootReducer, composeEnhancers(
 const app = (
     <BrowserRouter>
         <Provider store={store}>
-            <MuiThemeProvider theme={theme}>
-                <App />
-            </MuiThemeProvider>
+                <MuiThemeProvider theme={theme}>
+                    <App />
+                </MuiThemeProvider>
         </Provider>
     </BrowserRouter>
 )

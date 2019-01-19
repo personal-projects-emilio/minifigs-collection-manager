@@ -18,11 +18,6 @@ class Minifig extends Component {
         editMode: false
 	}
 
-	// The component only update if its possessed props change or to open the modals
-	shouldComponentUpdate (nextProps, nextState) {
-		return nextProps.minifigDetail.possessed !== this.props.minifigDetail.possessed || nextState !== this.state;
-	}
-
 	zoomModeHandler = () => {
 		this.setState({zoomMode: true});
 	}
@@ -44,7 +39,9 @@ class Minifig extends Component {
 			zoomModal = (
 				<React.Fragment>
 					<p className={classes.ModalTitle}>{minifigDetail.name}</p>
-					<img className={classes.ModalPicture} src={'https://img.bricklink.com/ItemImage/MN/0/'+minifigRef+'.png'} alt={minifigRef + ' pictures'} />
+					<img className={classes.ModalPicture}
+                         src={'https://img.bricklink.com/ItemImage/MN/0/'+minifigRef+'.png'}
+                         alt={minifigRef + ' picture'} />
 				</React.Fragment>
 			);
         }
@@ -71,7 +68,9 @@ class Minifig extends Component {
 				<div className={classes.Minifig}>
 					{/*Picture and reference of the minifig*/}
 					<div onClick={this.zoomModeHandler}>
-						<img className={classes.MinifigPicture} src={'https://img.bricklink.com/ItemImage/MN/0/'+minifigRef+'.png'} alt={minifigRef + ' pictures'} />
+						<img className={classes.MinifigPicture}
+                             src={'https://img.bricklink.com/ItemImage/MN/0/'+minifigRef+'.png'} 
+                             alt={minifigRef + ' picture'} />
 						<p>{minifigRef}</p>		
 					</div>
 					<div className={classes.LogoLinks}>
@@ -100,12 +99,10 @@ class Minifig extends Component {
 }
 
 
-const mapDispatchToProps = dispatch => {
-	return {
-        setPossessed: (minifig, minifigRef) => dispatch(actions.setPossessed(minifig, minifigRef)),
-        deleteMinifig: (minifigRef) => dispatch(actions.deleteMinifig(minifigRef))
-	}
-}
+const mapDispatchToProps = dispatch => ({
+    setPossessed: (minifig, minifigRef) => dispatch(actions.setPossessed(minifig, minifigRef)),
+    deleteMinifig: (minifigRef) => dispatch(actions.deleteMinifig(minifigRef))
+})
 
 export default connect(null, mapDispatchToProps)(Minifig);
 

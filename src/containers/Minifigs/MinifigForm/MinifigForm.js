@@ -239,12 +239,8 @@ const mapStateToProps = state => {
 	}
 }
 
-const mapDispatchToProps = dispatch => {
-	return {
-        minifigFormHandler: (minifigRef, oldMinifigRef, minifigData, edit) => {
-            dispatch(actions.minifigFormHandler(minifigRef, oldMinifigRef, minifigData, edit))
-        }        
-	}
-}
-
+const mapDispatchToProps = dispatch => ({
+    minifigFormHandler: (minifigRef, oldMinifigRef, minifigData, edit) => 
+        dispatch(actions.minifigFormHandler(minifigRef, oldMinifigRef, minifigData, edit))   
+})
 export default connect(mapStateToProps, mapDispatchToProps)(MinifigEdit);

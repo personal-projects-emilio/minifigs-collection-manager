@@ -15,9 +15,9 @@ const dropdown = (props) => {
     // List of MenuItem from our props.array with a empty value
     let list = [<MenuItem value={""} key={props.type+"-null"}>None</MenuItem>];
     if (props.array) {
-        props.array.map(item => {
-            return list.push(<MenuItem value={item.name} key={item.name}>{item.name+" ("+item.amount+")"}</MenuItem>)
-        })
+        props.array.forEach(item => 
+            list.push(<MenuItem value={item.name} key={item.name}>{item.name+" ("+item.amount+")"}</MenuItem>)
+        )
     }
 
     // We show a clear icon button if there is a selected item

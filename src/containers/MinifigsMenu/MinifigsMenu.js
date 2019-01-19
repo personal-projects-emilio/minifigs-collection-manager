@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import * as actions from '../../store/actions/index';
 import classes from './MinifigsMenu.css';
 
+import Tooltip from '@material-ui/core/Tooltip';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
@@ -57,27 +58,25 @@ class MinifigsMenu extends Component {
 
 	render () {
 		// List of button for the choise of numberPerPage
-		const buttonNumberPerPage = this.state.numberPerPageChoices.map(number => {
-			return <Button
+		const buttonNumberPerPage = this.state.numberPerPageChoices.map(number => 
+            <Button
 				key={number}
                 variant="contained"
 				style={{margin:6}}
                 classes={{disabled: classes.Disabled}}
                 disabled={(number === this.props.numberPerPage) ? true : false}
 				onClick={() => this.props.setNumberPerPage(number)} >{number}</Button>
-        })
+        )
         
         // List of Button for the show options
-        const showOptions = this.state.showOptions.map(option => {
-            return(
-                <Button key={option}
-                        variant="contained"
-                        onClick={() => this.props.setShow(option.toLowerCase())}
-                        classes={{disabled: classes.Disabled}}
-                        disabled={this.props.show === option.toLowerCase() ? true : false}
-                        style={{margin:6}}>{option} </Button>
-            )
-        })
+        const showOptions = this.state.showOptions.map(option => 
+            <Button key={option}
+                    variant="contained"
+                    onClick={() => this.props.setShow(option.toLowerCase())}
+                    classes={{disabled: classes.Disabled}}
+                    disabled={this.props.show === option.toLowerCase() ? true : false}
+                    style={{margin:6}}>{option} </Button>
+        )
 
 		const spinner = <CircularProgress className={classes.Spinner} size={10} />;
         
@@ -88,16 +87,18 @@ class MinifigsMenu extends Component {
 
         let dropdown = null;
         if (this.props.tags && this.props.characNames) {
-            dropdown = (<React.Fragment>
-                <Dropdown type="Characters Name" 
-                          array={this.props.characNames} 
-                          handler={this.handlerCharacChange} 
-                          itemSelected={this.props.characSelected ? this.props.characSelected : ""}/>
-                <Dropdown type="Tags" 
-                          array={this.props.tags} 
-                          handler={this.handlerTagChange} 
-                          itemSelected={this.props.tagSelected ? this.props.tagSelected : ""} />
-            </React.Fragment>)
+            dropdown = (
+                <React.Fragment>
+                    <Dropdown type="Characters Name" 
+                                array={this.props.characNames} 
+                                handler={this.handlerCharacChange} 
+                                itemSelected={this.props.characSelected ? this.props.characSelected : ""}/>
+                    <Dropdown type="Tags" 
+                                array={this.props.tags} 
+                                handler={this.handlerTagChange} 
+                                itemSelected={this.props.tagSelected ? this.props.tagSelected : ""} />
+                </React.Fragment>
+            )
             
         }
 
@@ -130,10 +131,9 @@ class MinifigsMenu extends Component {
 				<div className={classes.MinifigsMenuHalf}>
 					<div className={classes.MinifigMenuText}>Minifigs in our database:{this.props.totalNumber ? this.props.totalNumber : spinner}</div>
 					<div className={classes.MinifigMenuText}>Mnifigs you own: {this.props.numberOwned !== null ? this.props.numberOwned : spinner}</div>
-					<div className={classes.Tooltip}>
-						<span className={classes.TooltipText}>{this.props.percentageOwned}%</span>
-						<LinearProgress variant="determinate" value={this.props.percentageOwned}/>
-					</div>
+                    <Tooltip title={this.props.percentageOwned+'%'} placement="top-end">
+                        <LinearProgress variant="determinate" value={this.props.percentageOwned}/>
+                    </Tooltip>		
 					{setAll}
 					<div>
 						<span>Show:</span> {showOptions}
@@ -159,31 +159,27 @@ class MinifigsMenu extends Component {
 }
 
 // We get store state and action from redux with connect
-const mapStateToProps = state => {
-	return {
-		numberOwned: state.minifigs.numberOwned,
-        totalNumber: state.minifigs.totalNumber,
-        percentageOwned: state.minifigs.percentageOwned,
-		numberPerPage: state.minifigs.numberPerPage,
-		error: state.minifigs.error,
-        show: state.minifigs.show,
-        tagSelected: state.minifigs.tagSelected,
-        tags: state.minifigs.tags,
-        characNames: state.minifigs.characNames,
-        characSelected: state.minifigs.characSelected,
-        isAuth: state.auth.token !== null
-	}
-}
+const mapStateToProps = state => ({
+    numberOwned: state.minifigs.numberOwned,
+    totalNumber: state.minifigs.totalNumber,
+    percentageOwned: state.minifigs.percentageOwned,
+    numberPerPage: state.minifigs.numberPerPage,
+    error: state.minifigs.error,
+    show: state.minifigs.show,
+    tagSelected: state.minifigs.tagSelected,
+    tags: state.minifigs.tags,
+    characNames: state.minifigs.characNames,
+    characSelected: state.minifigs.characSelected,
+    isAuth: state.auth.token !== null
+})
 
-const mapDispatchToProps = dispatch => {
-	return {
-		setNumberPerPage: (numberPerPage) => dispatch(actions.setNumberPerPage(numberPerPage)),
-		setPossessionToAll: (possessed) => dispatch(actions.setPossessionToAll(possessed)),
-        setShow: (show) => dispatch(actions.setShow(show)),
-        setTag: (tag) => dispatch(actions.setTag(tag)),
-        setCharac: (charac) => dispatch(actions.setCharac(charac))
-	}
-}
+const mapDispatchToProps = dispatch => ({
+    setNumberPerPage: (numberPerPage) => dispatch(actions.setNumberPerPage(numberPerPage)),
+    setPossessionToAll: (possessed) => dispatch(actions.setPossessionToAll(possessed)),
+    setShow: (show) => dispatch(actions.setShow(show)),
+    setTag: (tag) => dispatch(actions.setTag(tag)),
+    setCharac: (charac) => dispatch(actions.setCharac(charac))
+})
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MinifigsMenu));
 	

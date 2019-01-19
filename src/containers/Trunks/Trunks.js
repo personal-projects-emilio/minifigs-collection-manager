@@ -17,6 +17,12 @@ export class Trunks extends Component {
         expanded: null,
     }
 
+    componentDidMount() {
+        if (!this.props.match.isExact) {
+            this.props.history.push('/trunks');
+        }
+    }
+
     handleChange = panel => (_event, expanded) => {
         this.setState({
             expanded: expanded ? panel : null,
@@ -26,18 +32,16 @@ export class Trunks extends Component {
     render() {
         let trunks = this.props.error ? <p>Trunks can't be loaded!</p> : <CircularProgress className={classes.Spinner} size={200} thickness={1.5} />;
         if (this.props.trunks) {
-            trunks = Object.keys(this.props.trunks).map(trunk => {
-                return (
-                    <ExpansionPanel key={trunk} expanded={this.state.expanded === trunk} onChange={this.handleChange(trunk)}>
-                        <ExpansionPanelSummary expandIcon={<Icon>keyboard_arrow_down</Icon>}>
-                            {trunk}
-                        </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
-                            <Trunk></Trunk>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                )
-            })
+            trunks = Object.keys(this.props.trunks).map(trunk => (
+                <ExpansionPanel key={trunk} expanded={this.state.expanded === trunk} onChange={this.handleChange(trunk)}>
+                    <ExpansionPanelSummary expandIcon={<Icon>keyboard_arrow_down</Icon>}>
+                        {trunk}
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Trunk trunk={trunk}></Trunk>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+            ));
         }
         return <div className={classes.Trunks}>{trunks}</div>
     }

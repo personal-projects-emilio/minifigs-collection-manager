@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../../store/actions/minifigs';
 
 export class Trunk extends Component {
-
     render() {
-        
-        return <div>test</div>
+        let trunk = null;
+        if(this.props.trunks){
+            let trunkArray = this.props.trunks[this.props.trunk];
+            console.log(trunkArray);
+            trunk = trunkArray.map(el => (
+                <div key={el.name + el.ref +'trunk'}>{el.ref +': '+el.name}</div>
+            ));
+        }
+        return <div>{trunk}</div>
     }
 }
 
 const mapStateToProps = state => ({
-    trunks: state.trunks,
-    error: state.error
+    trunks: state.minifigs.trunks,
+    error: state.minifigs.error
 })
 
-const mapDispatchToProps = dispatch => {
-	return {
-        fetchData: () => dispatch(actions.fetchData())
-	}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Trunk)
+export default connect(mapStateToProps, null)(Trunk)

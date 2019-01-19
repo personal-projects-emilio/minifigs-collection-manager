@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "LSWCM",
+  "name": "Lego SW Collection Manager",
   "icons": [],
   "start_url": "./index.html",
   "display": "standalone",

@@ -7,7 +7,7 @@ import FrameMinifig from '../../../components/FrameMinifig/FrameMinifig';
 
 export class Frame extends Component {
 
-    componentDidUpdate () {
+    componentDidMount () {
         // If the parameter isn't a frame we redirect to /frames
         if (this.props.frames && this.props.match.params.frame){
             if( Object.keys(this.props.frames).map(frame => frame).indexOf(this.props.match.params.frame) === -1) {
@@ -26,7 +26,7 @@ export class Frame extends Component {
         const SelectedFrame = this.props.match.params.frame;
         
         // If we have a frame in the params, frames and minifigs we render the frame
-        if (this.props.minifigs && this.props.frames[SelectedFrame]){
+        if (this.props.minifigs && this.props.frames && this.props.frames[SelectedFrame]){
             frame = this.props.frames[SelectedFrame].map((minifig,i) => {
                 const name = minifig.ref !== "" ? this.props.minifigs[minifig.ref].characterName : null        
                 return <FrameMinifig key={SelectedFrame + i}    
@@ -42,11 +42,9 @@ export class Frame extends Component {
     }
 }
 
-const mapStateToProps = state => {
-	return {
-        minifigs: state.minifigs.minifigs,
-        frames: state.minifigs.frames
-	}
-}
+const mapStateToProps = state => ({
+    minifigs: state.minifigs.minifigs,
+    frames: state.minifigs.frames
+})
 
 export default connect(mapStateToProps, null)(Frame);

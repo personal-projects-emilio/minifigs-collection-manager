@@ -167,29 +167,25 @@ class Minifigs extends Component {
 }
 
 // We get redux state and action
-const mapStateToProps = state => {
-	return {
-		minifigs: state.minifigs.minifigs,
-		numberPerPage: state.minifigs.numberPerPage,
-		activePage: state.minifigs.activePage,
-		error: state.minifigs.error,
-		show: state.minifigs.show,
-		totalNumber: state.minifigs.totalNumber,
-        numberOwned: state.minifigs.numberOwned,
-        tags: state.minifigs.tags,
-        tagSelected: state.minifigs.tagSelected,
-        characNames: state.minifigs.characNames,
-        characSelected: state.minifigs.characSelected
-	}
-}
+const mapStateToProps = state => ({
+    minifigs: state.minifigs.minifigs,
+    numberPerPage: state.minifigs.numberPerPage,
+    activePage: state.minifigs.activePage,
+    error: state.minifigs.error,
+    show: state.minifigs.show,
+    totalNumber: state.minifigs.totalNumber,
+    numberOwned: state.minifigs.numberOwned,
+    tags: state.minifigs.tags,
+    tagSelected: state.minifigs.tagSelected,
+    characNames: state.minifigs.characNames,
+    characSelected: state.minifigs.characSelected
+})
 
-const mapDispatchToProps = dispatch => {
-	return {
-        setActivePage: (activePage) => dispatch(actions.setActivePage(activePage)),
-        setTag: (tag) => dispatch(actions.setTag(tag)),
-        setCharac: (characSelected) => dispatch(actions.setCharac(characSelected))
-	}
-}
+const mapDispatchToProps = dispatch => ({
+    setActivePage: (activePage) => dispatch(actions.setActivePage(activePage)),
+    setTag: (tag) => dispatch(actions.setTag(tag)),
+    setCharac: (characSelected) => dispatch(actions.setCharac(characSelected))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Minifigs);
 

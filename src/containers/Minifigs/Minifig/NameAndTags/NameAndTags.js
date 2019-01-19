@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import * as actions from '../../../../store/actions/index';
+import { push } from 'react-router-redux';
+import * as actions from '../../../../store/actions';
 import classes from './NameAndTags.css';
 
 import Divider from '@material-ui/core/Divider';
@@ -17,7 +18,7 @@ class NameAndTags extends Component {
             this.props.history.push({
                 pathname: "/",
                 search: search
-            });
+            })
         }         
     }
 
@@ -29,7 +30,7 @@ class NameAndTags extends Component {
             this.props.history.push({
                 pathname: "/",
                 search: search
-            });    
+            })
         }
     }
 
@@ -38,18 +39,16 @@ class NameAndTags extends Component {
         if (this.props.characterName && this.props.tags) {
             let tags = null;
             if (this.props.tags.length) {
-                tags = this.props.tags.map(tag => {
-                    return(
-                        <Button className={classes.Button}
-                                classes={{disabled: classes.Disabled}}
-                                disabled={this.props.tagSelected === tag}
-                                onClick={() => this.showByTagHandler(tag)}
-                                variant="contained"
-                                key={tag}>
-                            {tag}
-                        </Button>
-                    )
-                })  
+                tags = this.props.tags.map(tag => (
+                    <Button className={classes.Button}
+                            classes={{disabled: classes.Disabled}}
+                            disabled={this.props.tagSelected === tag}
+                            onClick={() => this.showByTagHandler(tag)}
+                            variant="contained"
+                            key={tag}>
+                        {tag}
+                    </Button>
+                ))
             }
             
             nameAndTags = (
@@ -80,18 +79,15 @@ class NameAndTags extends Component {
 }
 
 // We get store state and action from redux with connect
-const mapStateToProps = state => {
-	return {
-        tagSelected: state.minifigs.tagSelected,
-        characSelected: state.minifigs.characSelected
-	}
-}
+const mapStateToProps = state => ({
+    tagSelected: state.minifigs.tagSelected,
+    characSelected: state.minifigs.characSelected
+})
 
-const mapDispatchToProps = dispatch => {
-    return {
-        setTag: (tag) => dispatch(actions.setTag(tag)),
-        setCharac: (characSelected) => dispatch(actions.setCharac(characSelected))
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    setTag: tag => dispatch(actions.setTag(tag)),
+    setCharac: characSelected => dispatch(actions.setCharac(characSelected)),
+    push: path => dispatch(push(path))
+})
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NameAndTags));
