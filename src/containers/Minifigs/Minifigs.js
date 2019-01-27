@@ -18,7 +18,7 @@ class Minifigs extends Component {
         if (this.props.tags && this.props.characNames) {
             this.manageSearch(this.props.history.location.search);
         }
-        
+
         // If the minifig list is null and we have the minifigs and number per page we set it
         if(this.state.minifigsList === null && this.props.minifigs && this.props.numberPerPage) {
             this.setMinifigsList(this.state);
@@ -52,8 +52,8 @@ class Minifigs extends Component {
                 this.props.setTag(value);
             } else {this.props.history.push('/')}
         }
-        //If we have a characName that is not already selected we set it 
-        if (param === "characterName" && value !== this.props.characSelected) { 
+        //If we have a characName that is not already selected we set it
+        if (param === "characterName" && value !== this.props.characSelected) {
             // If the character name exist we set it, else we redirect to "/"
             if (this.props.characNames.map(charac => charac.name).indexOf(value) !== -1) {
                 this.props.setCharac(value);
@@ -71,7 +71,7 @@ class Minifigs extends Component {
         Object.keys(this.props.minifigs).forEach(minifig => {
             const possession = this.props.minifigs[minifig].possessed;
             // First we check the possession
-            if ((this.props.show === "all") 
+            if ((this.props.show === "all")
                 || (this.props.show === "owned" && possession)
                 || (this.props.show === "missing" && !possession)){
                     // Then we check if we have a tag selected
@@ -89,8 +89,8 @@ class Minifigs extends Component {
                             minifigListObject[minifig] = minifig;
                         }
                     } else {minifigListObject[minifig] = minifig;}
-                
-            } 
+
+            }
         })
         // The number of minifigs we are showing for the pagination
         const totalItemsCount = Object.keys(minifigListObject).length;
@@ -103,13 +103,13 @@ class Minifigs extends Component {
         if ( numberOfPage < this.props.activePage && numberOfPage > 0) {
             this.props.setActivePage(numberOfPage);
         }
-        // The minifigs that we are showing on our active page 
+        // The minifigs that we are showing on our active page
         const minifigsList = Object.keys(minifigListObject).slice(begin, end);
         if ((this.state.minifigsList === null) || (minifigsList !== state.minifigsList)){
             this.setState({minifigsList : minifigsList});
         }
     }
-	
+
 	handlePageChange = (pageNumber) => {
 		this.props.setActivePage(pageNumber);
 	}

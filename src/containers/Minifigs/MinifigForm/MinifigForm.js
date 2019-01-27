@@ -77,7 +77,7 @@ export class MinifigEdit extends Component {
                 value: false,
                 validation: {},
                 valid: true
-            }     
+            }
         },
         formIsValid: false
     }
@@ -92,7 +92,7 @@ export class MinifigEdit extends Component {
             const updatedRef = updateObject(minifigForm["ref"], {value: minifigRef, valid: true, validation: updatedefValidation});
             const updatedName = updateObject(minifigForm["name"], {value: minifig.name, valid: true});
             const updatedcharacName = updateObject(minifigForm["characName"], {value: minifig.characterName, valid: true});
-            const updatedTags = updateObject(this.state.minifigForm["tags"], {tags: minifig.tags});
+            const updatedTags = updateObject(minifigForm["tags"], {tags: minifig.tags});
             const updatedPossession = updateObject(minifigForm["possessed"], {value: minifig.possessed, valid: true});
             const updatedForm = updateObject(minifigForm, {
                 ref : updatedRef,
@@ -107,8 +107,8 @@ export class MinifigEdit extends Component {
 
     componentDidUpdate() {
         if (this.props.minifigs && JSON.stringify(this.state.minifigForm["ref"].validation.isARef) !== JSON.stringify(Object.keys(this.props.minifigs))
-            && this.props.characNames && JSON.stringify(this.state.minifigForm["characName"].datalist) !== JSON.stringify(this.props.characNames)
-            && this.props.tags && JSON.stringify(this.state.minifigForm["tags"].datalist) !== JSON.stringify(this.props.tags)) {
+            || this.props.characNames && JSON.stringify(this.state.minifigForm["characName"].datalist) !== JSON.stringify(this.props.characNames)
+            || this.props.tags && JSON.stringify(this.state.minifigForm["tags"].datalist) !== JSON.stringify(this.props.tags)) {
             const updatedRefValidation = updateObject(this.state.minifigForm["ref"].validation, {isARef: Object.keys(this.props.minifigs)})
             const updatedRef = updateObject(this.state.minifigForm["ref"], {validation: updatedRefValidation});
             const updatedTags = updateObject(this.state.minifigForm["tags"], {datalist: this.props.tags});
@@ -121,15 +121,15 @@ export class MinifigEdit extends Component {
     tagHandler = (tag, action) => {
         let tags = [...this.state.minifigForm["tags"].tags];
         let value = this.state.minifigForm["tags"].value;
-        let tagTrim = tag.trim();
-        if (tagTrim !== "") {
+        let tagTrimed = tag.trim();
+        if (tagTrimed !== "") {
             if (action === "remove") {
-                const index = tags.indexOf(tagTrim);
+                const index = tags.indexOf(tagTrimed);
                 tags.splice(index, 1);
             }
             if (action === "add") {
-                if (tags.indexOf(tagTrim) === -1) {
-                    tags.push(tagTrim)
+                if (tags.indexOf(tagTrimed) === -1) {
+                    tags.push(tagTrimed)
                 }
                 value = "";
             }
@@ -149,7 +149,7 @@ export class MinifigEdit extends Component {
                 possessed: JSON.parse(this.state.minifigForm.possessed.value),
                 tags: this.state.minifigForm.tags.tags
         }
-        
+
         // If a change was made
         if (JSON.stringify(minifigData) !== JSON.stringify(this.props.minifig)
         || minifigRef !== this.props.minifigRef) {
@@ -176,7 +176,7 @@ export class MinifigEdit extends Component {
             });
         this.setState({minifigForm: updatedMinifigForm, formIsValid: false});
     }
-    
+
     inputChangedHandler = (event, inputIdentifier) => {
         // We update the element with the value, we check for validity and we set touched to true
         const updatedMinifigElement = updateObject(this.state.minifigForm[inputIdentifier], {
@@ -186,7 +186,7 @@ export class MinifigEdit extends Component {
         }) ;
         // We update the form
         const updatedMinifigForm = updateObject(this.state.minifigForm, { [inputIdentifier] : updatedMinifigElement });
-        // We check is the formIsValid   
+        // We check is the formIsValid
         let formIsValid = true;
         for (let inputIdentifier in updatedMinifigForm) {
             formIsValid = updatedMinifigForm[inputIdentifier].valid && formIsValid;
@@ -231,16 +231,14 @@ export class MinifigEdit extends Component {
 }
 
 //We get redux state and action
-const mapStateToProps = state => {
-	return {
-        minifigs: state.minifigs.minifigs,
-        characNames: state.minifigs.characNames,
-        tags: state.minifigs.tags
-	}
-}
+const mapStateToProps = state => ({
+    minifigs: state.minifigs.minifigs,
+    characNames: state.minifigs.characNames,
+    tags: state.minifigs.tags
+});
 
 const mapDispatchToProps = dispatch => ({
-    minifigFormHandler: (minifigRef, oldMinifigRef, minifigData, edit) => 
-        dispatch(actions.minifigFormHandler(minifigRef, oldMinifigRef, minifigData, edit))   
-})
+    minifigFormHandler: (minifigRef, oldMinifigRef, minifigData, edit) => dispatch(actions.minifigFormHandler(minifigRef, oldMinifigRef, minifigData, edit))
+});
+
 export default connect(mapStateToProps, mapDispatchToProps)(MinifigEdit);

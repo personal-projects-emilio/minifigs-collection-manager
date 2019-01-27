@@ -6320,5 +6320,17 @@
       "name" : "Clone Commander Gree (75234)",
       "possessed" : false,
       "tags" : [ "41st", "Clone Commander", "Clone Trooper", "Galactic Republic", "Kashyyyk", "Phase II" ]
+    },
+    "sw1004" : {
+      "characterName" : "Mouse Droid",
+      "name" : "Mouse Droid - Black / Dark Bluish Gray, Open Studs Wheels",
+      "possessed" : false,
+      "tags" : [ "Droid", "Galactic Empire" ]
+    },
+    "sw1005" : {
+      "characterName" : "Resistance Bomber Pilot",
+      "name" : "Resistance Bomber Pilot - Finch Dallow",
+      "possessed" : false,
+      "tags" : [ "Cobal Squadron", "Resistance", "Resistance Pilot" ]
     }
   }

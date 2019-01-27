@@ -17,7 +17,7 @@ const input = ( props ) => {
             <Button color="default"
                     className={classes.Button}
                     key={tag}
-                    style={{margin:6}} 
+                    style={{margin:6}}
                     onClick={() => props.tagHandler(tag, "remove")}
                     variant="contained">{tag}<Icon className={classes.Icon}>delete</Icon></Button>
         ))
@@ -33,16 +33,16 @@ const input = ( props ) => {
                                 value={props.value}
                                 onChange={props.changed} />
                         <Button color="default"
-                                style={{margin:6}} 
+                                style={{margin:6}}
                                 onClick={() => props.tagHandler(props.value, "add")}
                                 variant="contained"><Icon className={classes.Icon}>add_circle</Icon></Button>
                     </div>
                     {tags.length ? tags : <p>You can add a tag by clicking on the + button</p>}
                 </React.Fragment>
-                
+
             );
             break;
-        case ('input'): 
+        case ('input'):
             inputElement = <input className={inputClasses.join(' ')}
                                   {...props.elementConfig}
                                   value={props.value}

@@ -14,9 +14,9 @@ export class App extends Component {
         this.props.onTryAutoSignup();
         if (!this.props.minifigs || !this.props.frames || !this.props.trunks) {
             this.props.fetchData();
-        }  
+        }
     }
-    
+
     render() {
         return (
         <Layout>
@@ -25,7 +25,7 @@ export class App extends Component {
                 <Route path="/trunks" component={Trunks} />
                 <Route path="/auth" component={Auth} />
                 <Route exact path="/" component={Minifigs} />
-                <Redirect to='/' />       
+                <Redirect to='/' />
             </Switch>
         </Layout>
         );
@@ -41,5 +41,5 @@ const mapDispatchToProps = dispatch => ({
     onTryAutoSignup: () => dispatch(actions.authCheckState()),
     fetchData: () => dispatch(actions.fetchData())
 })
-  
+
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

@@ -19,7 +19,7 @@ class NameAndTags extends Component {
                 pathname: "/",
                 search: search
             })
-        }         
+        }
     }
 
     // Handler to set the character name and the search
@@ -50,7 +50,7 @@ class NameAndTags extends Component {
                     </Button>
                 ))
             }
-            
+
             nameAndTags = (
                 <React.Fragment>
                     <Divider/>

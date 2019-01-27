@@ -8,15 +8,15 @@ const logoLink = (props) => {
 	let logo = null;
 	switch(props.type) {
 		case 'bricklink':
-			logo =  <a 	className={classes.LogoLink} 
-						href={"https://www.bricklink.com/v2/catalog/catalogitem.page?M="+props.minifigRef} 
+			logo =  <a 	className={classes.LogoLink}
+						href={"https://www.bricklink.com/v2/catalog/catalogitem.page?M="+props.minifigRef}
 						target="_blank">
 							<img alt='bricklink logo' src={bricklinkLogo} />
 					</a>
 			break;
 		case 'brickset':
-			logo =  <a 	className={classes.LogoLink} 
-						href={'https://brickset.com/minifigs/'+props.minifigRef} 
+			logo =  <a 	className={classes.LogoLink}
+						href={'https://brickset.com/minifigs/'+props.minifigRef}
 						target="_blank">
 							<img alt='brickset logo' src={bricksetLogo} />
 					</a>
@@ -28,4 +28,3 @@ const logoLink = (props) => {
 }
 
 export default logoLink;
-	

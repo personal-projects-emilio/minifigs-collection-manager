@@ -16,7 +16,7 @@ export class Frame extends Component {
             if (!this.props.match.isExact) {
                 this.props.history.push(this.props.match.url);
             }
-        } 
+        }
     }
 
 
@@ -24,14 +24,14 @@ export class Frame extends Component {
         let frame = <CircularProgress className={classes.Spinner} size={200} thickness={1.5} />;
         let frameClasses = [classes.Frame];
         const SelectedFrame = this.props.match.params.frame;
-        
+
         // If we have a frame in the params, frames and minifigs we render the frame
         if (this.props.minifigs && this.props.frames && this.props.frames[SelectedFrame]){
             frame = this.props.frames[SelectedFrame].map((minifig,i) => {
-                const name = minifig.ref !== "" ? this.props.minifigs[minifig.ref].characterName : null        
-                return <FrameMinifig key={SelectedFrame + i}    
-                                     minifig={minifig.ref || null} 
-                                     set={minifig.set || null}   
+                const name = minifig.ref !== "" ? this.props.minifigs[minifig.ref].characterName : null
+                return <FrameMinifig key={SelectedFrame + i}
+                                     minifig={minifig.ref || null}
+                                     set={minifig.set || null}
                                      name={name} />
             });
             const backgroundClass = classes[SelectedFrame.replace(/\d+|\s+/g, '')];

@@ -45,7 +45,7 @@ export class Frames extends Component {
                 <Route path="/frames/:frame" component={Frame} />
                 <Route path="/frames" exact render={() => <div className={classes.SelectFrame}><p>Select a frame</p></div>}/>
             </React.Fragment>
-            
+
         )
     }
 }

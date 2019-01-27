@@ -40,16 +40,12 @@ export  class Header extends Component {
     )
   }
 }
-const mapStateToProps = state => {
-    return {
-        isAuth: state.auth.token !== null
-    };
-};
+const mapStateToProps = state => ({
+    isAuth: state.auth.token !== null
+});
 
-const mapDispatchToProps = dispatch => {
-    return {
-        logout: () => dispatch( actions.logout() )
-    };
-};
+const mapDispatchToProps = dispatch => ({
+    logout: () => dispatch( actions.logout() )
+});
 
 export default withRouter(connect( mapStateToProps, mapDispatchToProps )(Header) );

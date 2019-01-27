@@ -69,9 +69,9 @@ class Minifig extends Component {
 					{/*Picture and reference of the minifig*/}
 					<div onClick={this.zoomModeHandler}>
 						<img className={classes.MinifigPicture}
-                             src={'https://img.bricklink.com/ItemImage/MN/0/'+minifigRef+'.png'} 
+                             src={'https://img.bricklink.com/ItemImage/MN/0/'+minifigRef+'.png'}
                              alt={minifigRef + ' picture'} />
-						<p>{minifigRef}</p>		
+						<p>{minifigRef}</p>
 					</div>
 					<div className={classes.LogoLinks}>
 						{/*Bricklink and Brickset logo with links*/}
@@ -86,10 +86,10 @@ class Minifig extends Component {
                             color="primary"
                             onChange={() => this.props.setPossessed(minifigDetail, minifigRef)}/>
                         <IconButton color="primary" onClick={this.editModeHandler}>
-                            <Icon>edit</Icon>    
+                            <Icon>edit</Icon>
                         </IconButton>
                         <IconButton color="primary" onClick={() => this.props.deleteMinifig(minifigRef)}>
-                            <Icon>delete</Icon>    
+                            <Icon>delete</Icon>
                         </IconButton>
                     </div>
 				</div>

@@ -108,20 +108,16 @@ class Auth extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        loading: state.auth.loading,
-        error: state.auth.error,
-        isAuth: state.auth.token !== null,
-        authRedirectPath: state.auth.authRedirectPath
-    };
-};
+const mapStateToProps = state => ({
+    loading: state.auth.loading,
+    error: state.auth.error,
+    isAuth: state.auth.token !== null,
+    authRedirectPath: state.auth.authRedirectPath
+});
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onAuth: ( email, password, isSignup ) => dispatch( actions.auth( email, password, isSignup ) ),
-        onSetAuthRedirectPath: () => dispatch( actions.setAuthRedirectPath( '/' ) )
-    };
-};
+const mapDispatchToProps = dispatch => ({
+    onAuth: ( email, password, isSignup ) => dispatch( actions.auth( email, password, isSignup ) ),
+    onSetAuthRedirectPath: () => dispatch( actions.setAuthRedirectPath( '/' ) )
+});
 
 export default connect( mapStateToProps, mapDispatchToProps )( Auth );

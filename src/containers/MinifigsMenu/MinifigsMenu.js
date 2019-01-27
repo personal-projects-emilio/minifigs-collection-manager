@@ -24,7 +24,7 @@ class MinifigsMenu extends Component {
 	handlerNumberPerPage = (numberPerPage) => {
 		this.props.setNumberPerPage(numberPerPage);
     }
-    
+
     handlerTagChange = (event) => {
         let value = null;
         if (event.target.value !== "" && event.target.value) {
@@ -35,7 +35,7 @@ class MinifigsMenu extends Component {
         this.props.history.push({
             pathname: "/",
             search: search
-        });  
+        });
     }
 
     handlerCharacChange = (event) => {
@@ -48,7 +48,7 @@ class MinifigsMenu extends Component {
         this.props.history.push({
             pathname: "/",
             search: search
-        }); 
+        });
     }
 
     toggleModalHandler = () => {
@@ -58,7 +58,7 @@ class MinifigsMenu extends Component {
 
 	render () {
 		// List of button for the choise of numberPerPage
-		const buttonNumberPerPage = this.state.numberPerPageChoices.map(number => 
+		const buttonNumberPerPage = this.state.numberPerPageChoices.map(number =>
             <Button
 				key={number}
                 variant="contained"
@@ -67,9 +67,9 @@ class MinifigsMenu extends Component {
                 disabled={(number === this.props.numberPerPage) ? true : false}
 				onClick={() => this.props.setNumberPerPage(number)} >{number}</Button>
         )
-        
+
         // List of Button for the show options
-        const showOptions = this.state.showOptions.map(option => 
+        const showOptions = this.state.showOptions.map(option =>
             <Button key={option}
                     variant="contained"
                     onClick={() => this.props.setShow(option.toLowerCase())}
@@ -79,7 +79,7 @@ class MinifigsMenu extends Component {
         )
 
 		const spinner = <CircularProgress className={classes.Spinner} size={10} />;
-        
+
         // Modal for adding a minifig
         const modal = (
             <MinifigForm minifig={null} edit={false} onSubmit={this.toggleModalHandler}/>
@@ -89,17 +89,17 @@ class MinifigsMenu extends Component {
         if (this.props.tags && this.props.characNames) {
             dropdown = (
                 <React.Fragment>
-                    <Dropdown type="Characters Name" 
-                                array={this.props.characNames} 
-                                handler={this.handlerCharacChange} 
+                    <Dropdown type="Characters Name"
+                                array={this.props.characNames}
+                                handler={this.handlerCharacChange}
                                 itemSelected={this.props.characSelected ? this.props.characSelected : ""}/>
-                    <Dropdown type="Tags" 
-                                array={this.props.tags} 
-                                handler={this.handlerTagChange} 
+                    <Dropdown type="Tags"
+                                array={this.props.tags}
+                                handler={this.handlerTagChange}
                                 itemSelected={this.props.tagSelected ? this.props.tagSelected : ""} />
                 </React.Fragment>
             )
-            
+
         }
 
         let setAll = null;
@@ -107,22 +107,22 @@ class MinifigsMenu extends Component {
             setAll = (
             <div>
                 <span>Set all to:</span>
-                <Button style={{margin:6}} 
-                        onClick={() => this.props.setPossessionToAll(true)} 
+                <Button style={{margin:6}}
+                        onClick={() => this.props.setPossessionToAll(true)}
                         color={this.props.percentageOwned === 100 ? "primary": "default"}
                         disabled={this.props.percentageOwned === 100 ? true : false}
                         variant="contained">Possessed</Button>
                 <Button style={{margin:6}}
                         color={this.props.percentageOwned === 0 ? "primary": "default"}
                         disabled={this.props.percentageOwned === 0 ? true : false}
-                        onClick={() => this.props.setPossessionToAll(false)} 
+                        onClick={() => this.props.setPossessionToAll(false)}
                         variant="contained">Not possessed</Button>
             </div>
             );
         }
 
 		return (
-            
+
 			<div className={classes.MinifigsMenu}>
                 <Modal show={this.state.showModal} modalClosed={this.toggleModalHandler}>
                         {modal}
@@ -133,7 +133,7 @@ class MinifigsMenu extends Component {
 					<div className={classes.MinifigMenuText}>Mnifigs you own: {this.props.numberOwned !== null ? this.props.numberOwned : spinner}</div>
                     <Tooltip title={this.props.percentageOwned+'%'} placement="top-end">
                         <LinearProgress variant="determinate" value={this.props.percentageOwned}/>
-                    </Tooltip>		
+                    </Tooltip>
 					{setAll}
 					<div>
 						<span>Show:</span> {showOptions}
@@ -149,7 +149,7 @@ class MinifigsMenu extends Component {
                         {dropdown}
                     </div>
                     <Button color="primary"
-							style={{margin:6}} 
+							style={{margin:6}}
 							onClick={() => this.toggleModalHandler()}
                             variant="contained">Add a minifig<Icon className={classes.Icon}>add_circle</Icon></Button>
 				</div>
@@ -182,4 +182,3 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MinifigsMenu));
-	

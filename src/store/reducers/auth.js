@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/actionTypes';
+import * as types from '../types';
 import { updateObject } from '../../shared/utility';
 
 const initialState = {
@@ -9,41 +9,18 @@ const initialState = {
     authRedirectPath: '/'
 };
 
-const authStart = ( state, _action ) => {
-    return updateObject( state, { error: null, loading: true } );
-};
-
-const authSuccess = (state, action) => {
-    return updateObject( state, { 
-        token: action.idToken,
-        userId: action.userId,
-        error: null,
-        loading: false
-     } );
-};
-
-const authFail = (state, action) => {
-    return updateObject( state, {
-        error: action.error,
-        loading: false
-    });
-};
-
-const authLogout = (state, _action) => {
-    return updateObject(state, { token: null, userId: null });
-};
-
-const setAuthRedirectPath = (state, action) => {
-    return updateObject(state, { authRedirectPath: action.path })
-}
-
 const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {
-        case actionTypes.AUTH_START: return authStart(state, action);
-        case actionTypes.AUTH_SUCCESS: return authSuccess(state, action);
-        case actionTypes.AUTH_FAIL: return authFail(state, action);
-        case actionTypes.AUTH_LOGOUT: return authLogout(state, action);
-        case actionTypes.SET_AUTH_REDIRECT_PATH: return setAuthRedirectPath(state,action);
+        case types.AUTH_START:
+            return updateObject(state, {error: null, loading: true});
+        case types.AUTH_SUCCESS:
+        return updateObject(state, {token: action.idToken, userId: action.userId, error: null, loading: false});
+        case types.AUTH_FAIL:
+            return updateObject( state, {error: action.error, loading: false});
+        case types.AUTH_LOGOUT:
+            return updateObject(state, {token: null, userId: null});
+        case types.SET_AUTH_REDIRECT_PATH:
+            return updateObject(state, { authRedirectPath: action.path });
         default:
             return state;
     }

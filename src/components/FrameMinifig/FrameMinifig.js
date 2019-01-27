@@ -6,8 +6,8 @@ const frame = (props) => {
     if (props.minifig) {
         content = (
             <React.Fragment>
-                <img className={classes.Picture} 
-                     src={'https://img.bricklink.com/ItemImage/MN/0/'+props.minifig+'.png'} 
+                <img className={classes.Picture}
+                     src={'https://img.bricklink.com/ItemImage/MN/0/'+props.minifig+'.png'}
                      alt={props.minifig + ' picture'} />
                 {props.name ?<a className={classes.Name}>{props.name}</a> : null}
                 <a>{props.minifig}</a>

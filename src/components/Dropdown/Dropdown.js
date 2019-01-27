@@ -11,11 +11,11 @@ const dropdown = (props) => {
     // array: []<Tags or CharacNames>
     // type: "Tags" or "Character Names"
     // handler: function()
-    
+
     // List of MenuItem from our props.array with a empty value
     let list = [<MenuItem value={""} key={props.type+"-null"}>None</MenuItem>];
     if (props.array) {
-        props.array.forEach(item => 
+        props.array.forEach(item =>
             list.push(<MenuItem value={item.name} key={item.name}>{item.name+" ("+item.amount+")"}</MenuItem>)
         )
     }
@@ -25,31 +25,31 @@ const dropdown = (props) => {
     if (props.itemSelected !== "") {
         clearButton = (
             <IconButton color="primary" onClick={props.handler}>
-                    <Icon>clear</Icon>    
+                    <Icon>clear</Icon>
             </IconButton>
         )
     }
 
     return (
         <div className={classes.Dropdown}>
-            <FormControl fullWidth> 
+            <FormControl fullWidth>
                 <InputLabel shrink htmlFor={props.type}>
                     {props.type}
                 </InputLabel>
                 <Select value={props.itemSelected}
                         onChange={props.handler}
                         displayEmpty
-                        autoWidth	
+                        autoWidth
                         input={<Input name={props.type} id={props.type} />}>
                     {list}
                 </Select>
             </FormControl>
             {clearButton}
         </div>
-        
+
     )
 }
-	
+
 
 export default dropdown;
 

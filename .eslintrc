@@ -1,0 +1,10 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+        "arrow-body-style": [1, "as-needed"],
+        "no-trailing-spaces": 1
+    }
+  }

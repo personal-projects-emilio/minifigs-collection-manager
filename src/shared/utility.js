@@ -9,7 +9,7 @@ export const checkValidity = (value, rules) => {
     if (!rules) {
         return true;
     }
-    
+
     if (rules.required) {
         isValid = trimValue !== '' && isValid;
     }
@@ -60,7 +60,7 @@ export const getTagsAndCharacNames = (minifigs) => {
             } else {
                 characNames[index].amount++;
             }
-        }  
+        }
     }
     tags.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
     characNames.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
