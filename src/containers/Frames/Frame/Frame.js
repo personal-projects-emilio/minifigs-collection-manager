@@ -34,7 +34,7 @@ export class Frame extends Component {
                                      set={minifig.set || null}
                                      name={name} />
             });
-            const backgroundClass = classes[SelectedFrame.replace(/\d+|\s+/g, '')];
+            const backgroundClass = classes[SelectedFrame.replace(/\d+|\s+|.+?:/g, '')];
             frameClasses.push(backgroundClass);
         }
 

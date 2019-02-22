@@ -43,15 +43,16 @@ export const getTagsAndCharacNames = (minifigs) => {
         const minifigTags = minifigs[i].tags;
         if (minifigTags) {
             for(let i in minifigTags){
+                let index = tags.map(tag => tag.name).indexOf(minifigTags[i]);
                 // If the tag is unique we had it to the array
-                if(tags.map(tag => tag.name).indexOf(minifigTags[i]) === -1){
+                if(index === -1){
                     tags.push({name: minifigTags[i], amount: 1});
                 } else { // Or else we increment the amount of the existing tag
-                    const tagI = tags.map(tag => tag.name).indexOf(minifigTags[i])
-                    tags[tagI].amount++;
+                    tags[index].amount++;
                 }
             }
         }
+        // We do the same with the character name
         const characName = minifigs[i].characterName;
         if(characName){
             let index = characNames.map(charac => charac.name).indexOf(characName);
