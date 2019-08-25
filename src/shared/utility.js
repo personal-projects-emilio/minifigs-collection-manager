@@ -15,7 +15,7 @@ export const checkValidity = (value, rules) => {
     }
 
     if (rules.isARef) {
-        const pattern = /sw[0-9]{3,4}[abcds]?$/;
+        const pattern = /sw[0-9]{4}[abcds]?$/;
         let unique = true;
         if (rules.ref !== value || rules.ref === null) {
             unique = rules.isARef.indexOf(trimValue) === -1;

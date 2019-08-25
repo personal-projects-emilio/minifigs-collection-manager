@@ -25,6 +25,12 @@
             "minifigs": "All in frame except sw0011a & 1 sw0129"
         },
         {
+            "ref": "7261",
+            "name": "Clone Turbo Tank",
+            "pieces": "Complete",
+            "minifigs": "All in frames except sw0001b & sw0126"
+        },
+        {
             "ref": "7660",
             "name": "Naboo N-1 Starfighter with Vulture Droid",
             "pieces": "Complete",
@@ -117,6 +123,12 @@
     ],
     "Prequel: Republic 2": [
         {
+            "ref": "4482",
+            "name": "AT-TE",
+            "pieces": "Complete",
+            "minifigs": "1 sw0058 in frame"
+        },
+        {
             "ref": "7143",
             "name": "Jedi Starfighter",
             "pieces": "Complete",
@@ -169,6 +181,12 @@
             "name": "Mace Windu's Jedi Starfighter",
             "pieces": "Complete",
             "minifigs": "sw0312 & sw0313 in frame"
+        },
+        {
+            "ref": "7877",
+            "name": "Naboo Starfighter",
+            "pieces": "Complete",
+            "minifigs": "ssw0340 & sw0347 & sw0349 in frame"
         },
         {
             "ref": "8019",
@@ -349,8 +367,14 @@
     ],
     "Prequel & Old Republic: Miscellaneous & Scene": [
         {
+            "ref": "7103",
+            "name": "Jedi Duel",
+            "pieces": "Complete",
+            "minifigs": "sw0060 in frame"
+        },
+        {
             "ref": "7121",
-            "name": "Naboo sw0amp",
+            "name": "Naboo swamp",
             "pieces": "Complete",
             "minifigs": "1 sw0001a in frame"
         },
@@ -367,10 +391,22 @@
             "minifigs": "Both in frame"
         },
         {
+            "ref": "7159",
+            "name": "Star Wars Bucket",
+            "pieces": "Complete",
+            "minifigs": "sw0006 in frame"
+        },
+        {
             "ref": "7171",
             "name": "Mose Espa Podrace",
             "pieces": "Complete",
             "minifigs": "sw0039 & sw0043 & sw0064 & sw0980 in frame"
+        },
+        {
+            "ref": "7186",
+            "name": "Watto's Junkyard",
+            "pieces": "Complete",
+            "minifigs": "Both in frames"
         },
         {
             "ref": "7257",
@@ -395,6 +431,12 @@
             "name": "Emperor Palpatine's Shuttle",
             "pieces": "Complete",
             "minifigs": "All in frame"
+        },
+        {
+            "ref": "8128",
+            "name": "Cad Bane's Speeder",
+            "pieces": "Complete",
+            "minifigs": "sw0244 & sw0247 in frame"
         },
         {
             "ref": "9497",
@@ -447,6 +489,12 @@
             "minifigs": "sw0106 in frame"
         },
         {
+            "ref": "4504",
+            "name": "Millennium Falcon",
+            "pieces": "Complete",
+            "minifigs": "sw0080 & sw0081 in frames"
+        },
+        {
             "ref": "6208",
             "name": "B-wing Fighter",
             "pieces": "Complete",
@@ -481,6 +529,12 @@
             "name": "Millennium Falcon",
             "pieces": "Complete",
             "minifigs": "sw0014 & sw0026 in frame"
+        },
+        {
+            "ref": "7262",
+            "name": "TIE Fighter and Y-wing",
+            "pieces": "Complete",
+            "minifigs": "sw0004 & sw0033a in frame"
         },
         {
             "ref": "7658",
@@ -579,6 +633,18 @@
             "name": "Imperial Shuttle",
             "pieces": "Complete",
             "minifigs": "sw0042 in frame"
+        },
+        {
+            "ref": "7263",
+            "name": "TIE Fighter",
+            "pieces": "Complete",
+            "minifigs": "sw035a in frame"
+        },
+        {
+            "ref": "7264",
+            "name": "Imperial Inspection",
+            "pieces": "Complete",
+            "minifigs": "1 sw0114 & 1 sw0122 & sw0124 in frames"
         },
         {
             "ref": "7659",
@@ -733,6 +799,12 @@
             "minifigs": "All in frame except sw0144"
         },
         {
+            "ref": "7666",
+            "name": "Hoth Rebel Base",
+            "pieces": "Complete",
+            "minifigs": "sw012b & sw0165 & 1 sw0167 in frames"
+        },
+        {
             "ref": "7749",
             "name": "Echo Base",
             "pieces": "Complete",
@@ -833,6 +905,12 @@
             "name": "Desert Skiff Escape",
             "pieces": "Complete",
             "minifigs": "All in frame"
+        },
+        {
+            "ref": "75229",
+            "name": "Death Star Escape",
+            "pieces": "Complete",
+            "minifigs": "All in frames"
         }
     ],
     "First Order & Resistance": [
