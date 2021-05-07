@@ -35,7 +35,7 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "macaddress": ">=0.2.9",
     "material-ui": "^0.20.2",
     "merge": ">=1.2.1",
